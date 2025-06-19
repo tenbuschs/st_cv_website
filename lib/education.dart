@@ -14,10 +14,8 @@ class EducationPage extends StatelessWidget {
     return MainLayout(
       toggleLocale: toggleLocale,
       locale: locale,
-      child: Padding(
-
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
+      silvers: [ SliverToBoxAdapter(
+        child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
@@ -37,7 +35,7 @@ class EducationPage extends StatelessWidget {
           ],
         ),
       ),
-
+      ]
     );
   }
 }

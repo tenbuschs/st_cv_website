@@ -8,6 +8,7 @@ import 'education.dart' as edu;
 import 'experience.dart' as exp;
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'l10n/app_localizations.dart';
 
 
 void main() async {
@@ -18,7 +19,7 @@ void main() async {
 
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -54,14 +55,24 @@ class _MyAppState extends State<MyApp> {
             foregroundColor: Colors.white,
           ),
         ),
+
+        inputDecorationTheme: InputDecorationTheme(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF2D6045), width: 2.0),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey, width: 1.0),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          focusColor: Color(0xFF2D6045),
+          floatingLabelStyle: TextStyle(color: Color(0xFF2D6045)),
+        ),
+
       ),
       locale: _locale,
-      supportedLocales: const [Locale('en'), Locale('de')],
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       initialRoute: '/home',
       routes: {
        // '/': (context) => LoginPage(),
@@ -92,7 +103,7 @@ class _MyAppState extends State<MyApp> {
 
 class AuthGate extends StatelessWidget {
   final Widget child;
-  const AuthGate({required this.child});
+  const AuthGate({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

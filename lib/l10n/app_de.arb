@@ -1,0 +1,9 @@
+{
+  "@@locale": "de",
+  "greeting": "Moin, ich bin Simon",
+  "profession": "Softwareentwickler",
+  "loginDescription": "Bitte melden Sie sich an, um mein Profil zu sehen.",
+  "loginFailed": "Login fehlgeschlagen. Bitte versuchen Sie es erneut.",
+  "experience": "Berufserfahrung",
+  "education": "Ausbildung"
+}

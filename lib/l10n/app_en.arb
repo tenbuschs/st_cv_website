@@ -1,0 +1,9 @@
+{
+  "@@locale": "en",
+  "greeting": "Hi, I'm Simon",
+  "profession": "Mechatronics & Precision Agriculture Engineer",
+  "loginDescription": "Please log in to see my profile.",
+  "loginFailed": "Login failed. Check username and password.",
+  "experience": "Experience",
+  "education": "Education"
+}

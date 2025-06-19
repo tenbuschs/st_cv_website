@@ -34,7 +34,7 @@ dependencies:
   url_launcher: ^6.2.4      # The URL Launcher package provides a way to launch URLs in a mobile app.
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
+  intl: ^0.20.2                 # The intl package provides internationalization and localization support.
   font_awesome_flutter: ^10.7.0  # The Font Awesome Flutter package provides a wide range of icons.
 
   scrollable_positioned_list: ^0.3.8
@@ -66,6 +66,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+  # enable language support for the app
+  generate: true                # This enables code generation for localization files.
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -104,3 +107,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
