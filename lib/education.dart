@@ -18,7 +18,7 @@ class EducationPage extends StatelessWidget {
         silvers: [
           Timeline(
             groupedEvents:
-            groupedEducations,
+            groupByYear(getEducations(context)),
           ),
           ]
     );

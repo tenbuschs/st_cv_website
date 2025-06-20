@@ -6,5 +6,91 @@
   "loginFailed": "Login fehlgeschlagen. Bitte versuchen Sie es erneut.",
   "experience": "Berufserfahrung",
   "education": "Ausbildung",
-  "currentlyWorking": "Heute"
+  "volunteering": "Nebenmissionen & Fleißbienchen",
+  "currentlyWorking": "Heute",
+
+  "kroneTitle": "Ingenieur in der Elektronikentwicklung",
+  "kroneCompany": "Maschinenfabrik Bernard KRONE GmbH & Co. KG",
+  "kroneLocation": "Spelle, Deutschland",
+  "kroneDescription": "Duales Studium und anschließend Tätigkeit als Werkstudent.",
+  "kroneHighlight1": "Entwicklung einer Joysticklenkung für den Feldhäcksler BiG X",
+  "kroneHighlight2":"Weiterentwicklung der Überladeautomatik AutoFill am BiG X",
+  "kroneHighlight3":"Mitentwicklung eines neuen ISOBUS User Interface",
+  "kroneHighlight4": "Mitwirken bei vertraulichen Vorentwicklungsprojekten",
+
+  "etsTitle": "Enginnering Technischer Systeme, Fachrichtung Mechatronik (B.Eng.)",
+  "etsCompany": "Hochschule Osnabrück",
+  "etsLocation": "Lingen (Ems), Deutschland",
+  "etsDescription": "Duales Studium",
+
+  "bwaTitle": "Wirtschaftsingenieurwesen Agrar / Lebensmittel",
+  "bwaCompany": "Hochschule Osnabrück",
+  "bwaLocation": "Osnabrück, Deutschland",
+  "bwaDescription": "Deutsches Bla bla bla",
+
+  "lincolnTitle": "Master in Precision Agriculture (M.Sc.)",
+  "lincolnCompany": "Lincoln University",
+  "lincolnLocation": "Lincoln, Neuseeland",
+  "lincolnDescription": "Masterstudiengang mit Fokus auf Präzisionslandwirtschaftstechnologien und -praktiken.",
+
+  "thwTitle": "Helfer beim Technischen Hilfswerk",
+  "thwCompany": "Technisches Hilfswerk (THW)",
+  "thwLocationLingen": "Lingen (Ems), Deutschland",
+  "thwLocationOsna": "Osnabrück, Deutschland",
+  "thwDescription": "Freiwilliger Helfer bei der Bundesanstalt THW. Ausbildung und Unterstützung in verschiedenen Notfallsituationen des Zivil- und Katastrophenschutzes.",
+
+  "facultyCouncilTitle": "Studentische Vertretung im Fakultätsrat",
+  "facultyCouncilCompany": "Hochschule Osnabrück",
+  "facultyCouncilLocation": "Osnabrück, Deutschland",
+  "facultyCouncilDescription": "Vertretung der studentischen Interessen im Fakultätsrat, Mitwirkung an Entscheidungsprozessen bezüglich akademischer Richtlinien und Programme.",
+
+  "buddyTitle": "Student Buddy",
+  "buddyCompany": "Lincoln University",
+  "buddyLocation": "Lincoln, Neuseeland",
+  "buddyDescription": "Unterstützung neuer Studierender beim Übergang zum Universitätsleben, Bereitstellung von Orientierung und Unterstützung.",
+
+  "courseRepTitle": "Course Representative",
+  "courseRepCompany": "Lincoln University",
+  "courseRepLocation": "Lincoln, Neusseland",
+  "courseRepDescription": "Bindeglied zwischen Studierenden und Fakultät, Sammlung von Feedback und Vertretung studentischer Anliegen in kursbezogenen Angelegenheiten.",
+
+  "saudhofTitle": "Erntehelfer",
+  "saudhofCompany": "Matthias Saudhof",
+  "saudhofLocation": "Nelben, Deutschland",
+  "saudhofDescription": "Unterstützung bei landwirtschaftlichen Arbeiten als Erntehelfer, mit Fokus auf praktische Anwendungen der Agrartechnik.",
+
+  "marshTitle": "Machinery Operator",
+  "marshCompany": "Marsh Contracting Ltd.",
+  "marshLocation": "Te Puke, Neuseeland",
+  "marshDescription": "Arbeit als Treckerfahrer im Bereich Grünlandwirtschaft in Neuseeland, mit dem Ziel, internationale Erfahrungen in landwirtschaftlichen Praktiken zu sammeln.",
+
+  "schuetzTitle": "Maschinenführer",
+  "schuetzCompany": "Schütz Landmaschinen OHG",
+  "schuetzLocation": "Calbe (Saale), Deutschland",
+  "schuetzDescription": "Bedienung von Mähdreschern und anderen landwirtschaftlichen Maschinen, mit Fokus auf praktische Anwendungen der Agrartechnik.",
+
+  "dillonTitle": "Machinery Operator",
+  "dillonCompany": "Dillon Harvesting Ltd.",
+  "dillonLocation": "Riversdale, Neuseeland",
+  "dillonDescription": "Arbeiten als Treckerfahrer in den Bereichen Ernte, Bodenbearbeitung und Aussat",
+
+  "msfTitle": "Machinery Operator",
+  "msfCompany": "Mount Sheridan Farms",
+  "msfLocation": "Varley, WA, Australien",
+  "msfDescription": "Aussaat und Ernte von Weizen, Gerste, Raps und anderen Feldfrüchten in Australien, mit dem Ziel, Erfahrungen in großflächigen landwirtschaftlichen Betrieben zu sammeln.",
+
+  "latviaTitle": "Maschinenführer",
+  "latviaCompany": "SIA Rapsulauks",
+  "latviaLocation": "Satiki, Lettland",
+  "latviaDescription": "Arbeit auf einem deutschsprachigen Betrieb in Lettland, mit Fokus auf praktische Anwendungen der Präzisionslandwirtschaftstechnologien.",
+
+  "dalhausTitle": "Aushilfe",
+  "dalhausCompany": "Ludger Dalhaus",
+  "dalhausLocation": "Dorsten, Deutschland",
+  "dalhausDescription": "Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.",
+
+  "sudenTitle": "Praktikum als Land- und Baumaschinenmechaniker",
+  "sudenCompany": "Suden Baumaschinen GmbH",
+  "sudenLocation": "Dorsten, Deutschland",
+  "sudenDescription": "Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln."
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'event_lists.dart' as exp_list;
+import 'event_lists.dart' ;
 import 'main_layout.dart';
 import 'timeline.dart';
 
@@ -23,7 +23,6 @@ class _ExperiencePageState extends State<ExperiencePage> {
 
   @override
   Widget build(BuildContext context) {
-    final groupedExperiences = exp_list.groupByYear(exp_list.experiences);
 
     return MainLayout(
       toggleLocale: widget.toggleLocale,
@@ -31,8 +30,9 @@ class _ExperiencePageState extends State<ExperiencePage> {
       silvers: [
         Timeline(
           groupedEvents:
-              groupedExperiences, // Map<String, List<Experience>>Replace with your logic// Replace with your logic
+          groupByYear(getExperiences(context)),
         ),
+
         SliverToBoxAdapter(child: SizedBox(height: 24)),
 
         // Map Footer
@@ -41,37 +41,34 @@ class _ExperiencePageState extends State<ExperiencePage> {
             height: 300,
             child: FlutterMap(
               options: MapOptions(
-                initialCenter: LatLng(51.0, 10.0),
-                initialZoom: 5,
-              ),
+                initialCenter: LatLng(0, 0), // Center on the world
+                initialZoom: 1.5,            // Zoomed out to show most of the world
+                 ),
               children: [
                 TileLayer(
-                  urlTemplate:
-                      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                   subdomains: const ['a', 'b', 'c'],
                 ),
                 MarkerLayer(
-                  markers:
-                      exp_list.experiences.map((exp) {
-                        return Marker(
-                          point: LatLng(exp.latitude, exp.longitude),
-                          width: 40,
-                          height: 40,
-                          child: GestureDetector(
-                            // onTap: () => scrollToExperience(exp.id),
-                            child: const Icon(
-                              Icons.location_on,
-                              color: Color(0xFF2D6045),
-                              size: 30,
-                            ),
-                          ),
-                        );
-                      }).toList(),
+                  markers: getExperiences(context).map((exp) {
+                    return Marker(
+                      point: LatLng(exp.latitude, exp.longitude),
+                      width: 40,
+                      height: 40,
+                      child: const Icon(
+                        Icons.location_on,
+                        color: Color(0xFF2D6045),
+                        size: 30,
+                      ),
+                    );
+                  }).toList(),
                 ),
               ],
-            ),
+            )
           ),
         ),
+
+        SliverToBoxAdapter(child: SizedBox(height: 24)),
       ],
     );
   }
