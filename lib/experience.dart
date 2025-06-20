@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'experience_list.dart' as exp_list;
+import 'event_lists.dart' as exp_list;
 import 'main_layout.dart';
 import 'timeline.dart';
 
@@ -22,21 +20,6 @@ class ExperiencePage extends StatefulWidget {
 }
 
 class _ExperiencePageState extends State<ExperiencePage> {
-  final ScrollController _scrollController = ScrollController();
-  final Map<String, GlobalKey> _experienceKeys = {};
-
-  // final List<exp_list.Experience> experiences = exp_list.experiences;
-
-  void scrollToExperience(String id) {
-    final key = _experienceKeys[id];
-    if (key != null && key.currentContext != null) {
-      Scrollable.ensureVisible(
-        key.currentContext!,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
 
   @override
   Widget build(BuildContext context) {

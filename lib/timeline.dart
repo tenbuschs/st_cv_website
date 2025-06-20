@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'experience_list.dart';
+import 'event_lists.dart';
 import 'package:intl/intl.dart';
 import 'l10n/app_localizations.dart';
 
 class Timeline extends StatelessWidget {
-  final Map<String, List<Experience>> groupedEvents;
+  final Map<String, List<CvEvent>> groupedEvents;
   // final Color Function(String) categoryColor;
 
   const Timeline({
@@ -147,7 +147,7 @@ class Timeline extends StatelessWidget {
             ],
           ),
         );
-      }, childCount: groupedExperiences.length),
+      }, childCount: groupedEvents.length),
     );
   }
 }
