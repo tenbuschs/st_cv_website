@@ -16,78 +16,117 @@ class MainLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentRoute = ModalRoute.of(context)?.settings.name;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         toolbarHeight: 0, // Hide default toolbar if not needed
         bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(120), // Adjust as needed
-    child:  Wrap(
-    alignment: WrapAlignment.center,
-    spacing: 16,
-    runSpacing: 8,
-    children: [
-                TextButton(
-                  onPressed:
-                      () => Navigator.pushReplacementNamed(context, '/home'),
-                  child: const Text(
-                    'Home',
-                    style: TextStyle(color: Colors.white),
+          preferredSize: Size.fromHeight(120), // Adjust as needed
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 16,
+            children: [
+              TextButton(
+                onPressed:
+                    () => Navigator.pushReplacementNamed(context, '/home'),
+                child: Text(
+                  'Home',
+                  style: TextStyle(
+                    color:
+                        currentRoute == '/home'
+                            ? Color(0xFF2D6045)
+                            : Colors.white,
+                    fontWeight:
+                        currentRoute == '/home'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                   ),
                 ),
-                TextButton(
-                  onPressed:
-                      () =>
-                          Navigator.pushReplacementNamed(context, '/education'),
-                  child: Text(
-                    AppLocalizations.of(context)!.education,
-                    style: TextStyle(color: Colors.white),
+              ),
+              TextButton(
+                onPressed:
+                    () => Navigator.pushReplacementNamed(context, '/education'),
+                child: Text(
+                  AppLocalizations.of(context)!.education,
+                  style: TextStyle(
+                    color:
+                        currentRoute == '/education'
+                            ? Color(0xFF2D6045)
+                            : Colors.white,
+                    fontWeight:
+                        currentRoute == '/education'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                   ),
                 ),
-                TextButton(
-                  onPressed:
-                      () => Navigator.pushReplacementNamed(
-                        context,
-                        '/experience',
-                      ),
-                  child: Text(
-                    AppLocalizations.of(context)!.experience,
-                    style: TextStyle(color: Colors.white),
+              ),
+              TextButton(
+                onPressed:
+                    () =>
+                        Navigator.pushReplacementNamed(context, '/experience'),
+                child: Text(
+                  AppLocalizations.of(context)!.experience,
+                  style: TextStyle(
+                    color:
+                        currentRoute == '/experience'
+                            ? Color(0xFF2D6045)
+                            : Colors.white,
+                    fontWeight:
+                        currentRoute == '/experience'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                   ),
                 ),
-                TextButton(
-                  onPressed:
-                      () => Navigator.pushReplacementNamed(
-                    context,
-                    '/volunteering',
-                  ),
-                  child: Text(
-                    AppLocalizations.of(context)!.volunteering,
-                    style: TextStyle(color: Colors.white),
+              ),
+              TextButton(
+                onPressed:
+                    () => Navigator.pushReplacementNamed(
+                      context,
+                      '/volunteering',
+                    ),
+                child: Text(
+                  AppLocalizations.of(context)!.volunteering,
+                  style: TextStyle(
+                    color:
+                        currentRoute == '/volunteering'
+                            ? Color(0xFF2D6045)
+                            : Colors.white,
+                    fontWeight:
+                        currentRoute == '/volunteering'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                   ),
                 ),
-      TextButton(
-        onPressed:
-            () => Navigator.pushReplacementNamed(
-          context,
-          '/portfolio',
-        ),
-        child: Text(
-          "Portfolio",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
+              ),
+              TextButton(
+                onPressed:
+                    () => Navigator.pushReplacementNamed(context, '/portfolio'),
+                child: Text(
+                  "Portfolio",
+                  style: TextStyle(
+                    color:
+                        currentRoute == '/portfolio'
+                            ? Color(0xFF2D6045)
+                            : Colors.white,
+                    fontWeight:
+                        currentRoute == '/portfolio'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                  ),
+                ),
+              ),
 
-                const SizedBox(width: 32),
-                IconButton(
-                  icon: Icon(Icons.language, color: Colors.grey[300]),
-                  onPressed: toggleLocale,
-                ),
-              ],
-            ),
+              const SizedBox(width: 32),
+              IconButton(
+                icon: Icon(Icons.language, color: Colors.grey[300]),
+                onPressed: toggleLocale,
+              ),
+            ],
           ),
-
+        ),
       ),
       body: Center(
         child: ConstrainedBox(

@@ -4,6 +4,42 @@ import 'package:flutter/material.dart';
 List<CvEvent> getExperiences(BuildContext context) {
   return [
     CvEvent(
+      id: 'sdc',
+      title: AppLocalizations.of(context)!.sdcTitle,
+      location: AppLocalizations.of(context)!.sdcLocation,
+      latitude: 52.356022,  //TBD
+      longitude: 7.472193,  //TBD
+      company: AppLocalizations.of(context)!.sdcCompany,
+      startDate: '2025-06-15',
+      endDate: null,
+      description: AppLocalizations.of(context)!.sdcDescription,
+      category: 'part-time',
+      imageAssets: [
+      ],
+      highlights: [
+      ],
+      links: [],
+      references: [],
+    ),
+    CvEvent(
+      id: 'ra',
+      title: AppLocalizations.of(context)!.raTitle,
+      location: AppLocalizations.of(context)!.locationLincoln,
+      latitude: 52.356022,  //TBD
+      longitude: 7.472193,  //TBD
+      company: AppLocalizations.of(context)!.luName,
+      startDate: '2025-01-15',
+      endDate: null,
+      description: AppLocalizations.of(context)!.raDescription,
+      category: 'part-time',
+      imageAssets: [
+      ],
+      highlights: [
+      ],
+      links: [],
+      references: [],
+    ),
+    CvEvent(
       id: 'krone',
       title: AppLocalizations.of(context)!.kroneTitle,
       location: AppLocalizations.of(context)!.kroneLocation,
@@ -13,10 +49,9 @@ List<CvEvent> getExperiences(BuildContext context) {
       startDate: '2018-08-01',
       endDate: '2024-01-31',
       description: AppLocalizations.of(context)!.kroneDescription,
-      category: 'Beruf',
+      category: 'job',
       imageAssets: [
         'lib/assets/krone_01.jpg',
-        // Add more asset paths as needed
       ],
       highlights: [
         AppLocalizations.of(context)!.kroneHighlight1,
@@ -37,7 +72,7 @@ List<CvEvent> getExperiences(BuildContext context) {
       startDate: '2016-07-01',
       endDate: '2016-08-31',
       description: AppLocalizations.of(context)!.saudhofDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: ['lib/assets/saudhof_01.jpg', 'lib/assets/saudhof_02.jpg'],
       highlights: ['tbd'],
       links: [],
@@ -53,7 +88,7 @@ List<CvEvent> getExperiences(BuildContext context) {
       startDate: '2018-02-01',
       endDate: '2018-04-30',
       description: AppLocalizations.of(context)!.marshDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: [],
       highlights: [],
       links: [],
@@ -69,7 +104,7 @@ List<CvEvent> getExperiences(BuildContext context) {
       startDate: '2017-07-01',
       endDate: '2021-08-31',
       description: AppLocalizations.of(context)!.schuetzDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: ['lib/assets/schuetz_01.jpg'],
       highlights: ['tbd'],
       links: [],
@@ -82,10 +117,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       latitude: -32.767139,
       longitude: 119.449047,
       company: AppLocalizations.of(context)!.msfCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      startDate: '2024-05-01',
+      endDate: '2025-01-15',
       description: AppLocalizations.of(context)!.msfDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: [],
       highlights: [],
       links: [],
@@ -98,10 +133,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       latitude: -45.934391,
       longitude: 168.670269,
       company: AppLocalizations.of(context)!.dillonCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      startDate: '2024-02-15',
+      endDate: '2024-04-30',
       description: AppLocalizations.of(context)!.dillonDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: [],
       highlights: [],
       links: [],
@@ -113,28 +148,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       location: AppLocalizations.of(context)!.latviaLocation,
       latitude: 56.808549,
       longitude: 22.525651,
-
       company: AppLocalizations.of(context)!.latviaCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      startDate: '2022-07-01',
+      endDate: '2022-09-05',
       description: AppLocalizations.of(context)!.latviaDescription,
-      category: 'Beruf',
-      imageAssets: [],
-      highlights: [],
-      links: [],
-      references: [],
-    ),
-    CvEvent(
-      id: 'schuetz',
-      title: AppLocalizations.of(context)!.schuetzTitle,
-      location: AppLocalizations.of(context)!.schuetzLocation,
-      latitude: 51.930423,
-      longitude: 11.804522,
-      company: AppLocalizations.of(context)!.schuetzCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
-      description: AppLocalizations.of(context)!.schuetzDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: [],
       highlights: [],
       links: [],
@@ -143,14 +161,14 @@ List<CvEvent> getExperiences(BuildContext context) {
     CvEvent(
       id: 'dalhaus',
       title: AppLocalizations.of(context)!.dalhausTitle,
-      location: AppLocalizations.of(context)!.dalhausLocation,
+      location: AppLocalizations.of(context)!.locationDorsten,
       latitude: 51.628001,
       longitude: 6.996859,
       company: AppLocalizations.of(context)!.dalhausCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      startDate: '2009-04-01',
+      endDate: '2017-07-30',
       description: AppLocalizations.of(context)!.dalhausDescription,
-      category: 'Beruf',
+      category: 'part-time',
       imageAssets: [],
       highlights: [],
       links: [],
@@ -159,41 +177,35 @@ List<CvEvent> getExperiences(BuildContext context) {
     CvEvent(
       id: 'suden',
       title: AppLocalizations.of(context)!.sudenTitle,
-      location: AppLocalizations.of(context)!.sudenLocation,
+      location: AppLocalizations.of(context)!.locationDorsten,
       latitude: 51.658620,
       longitude: 7.011799,
       company: AppLocalizations.of(context)!.sudenCompany,
-      startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      startDate: '2014-09-01',
+      endDate: '2014-09-15',
       description: AppLocalizations.of(context)!.sudenDescription,
-      category: 'Beruf',
+      category: 'seasonal',
       imageAssets: [],
       highlights: [],
       links: [],
       references: [],
     ),
   ];
-
-
-
 }
 
 List<CvEvent> getEducations(BuildContext context) {
   return [
     CvEvent(
-      id: 'ets',
-      title: AppLocalizations.of(context)!.etsTitle,
-      location: AppLocalizations.of(context)!.etsLocation,
-      latitude: 51.930423,
-      //tbd
-      longitude: 11.804522,
-      //tbd
-      company: 'University of Applied Sciences Osnabrück',
-      startDate: '2018-08-01',
-      endDate: '2021-07-31',
-      //tbd
-      description: 'tbd',
-      category: 'Uni',
+      id: 'master',
+      title: AppLocalizations.of(context)!.masterTitle,
+      location: AppLocalizations.of(context)!.locationLincoln,
+      latitude: 51.930423,   //tbd
+      longitude: 11.804522,   //tbd
+      company:  AppLocalizations.of(context)!.luName,
+      startDate: '2024-07-15',
+      endDate: null,
+      description: AppLocalizations.of(context)!.masterDescription,
+      category: 'uni',
       imageAssets: [],
       highlights: ['tbd'],
       links: [],
@@ -202,36 +214,52 @@ List<CvEvent> getEducations(BuildContext context) {
     CvEvent(
       id: 'bwa',
       title: AppLocalizations.of(context)!.bwaTitle,
-      location: AppLocalizations.of(context)!.bwaLocation,
+      location: AppLocalizations.of(context)!.locationOsna,
       latitude: 51.930423,   //tbd
-      longitude: 11.804522,   //tbd
-      company: 'University of Applied Sciences Osnabrück',
+      longitude: 11.804522,  //tbd
+      company: AppLocalizations.of(context)!.hsosName,
       startDate: '2021-09-01',
       endDate: '2024-01-29',
-      //tbd
-      description: 'tbd',
-      category: 'Uni',
+      description: AppLocalizations.of(context)!.bwaDescription,
+      category: 'uni',
       imageAssets: [],
-      highlights: ['tbd'],
+      highlights: [],
       links: [],
       references: [],
     ),
     CvEvent(
-      id: 'lincoln',
-      title: AppLocalizations.of(context)!.lincolnTitle,
-      location: AppLocalizations.of(context)!.lincolnLocation,
-      latitude: 51.930423,   //tbd
-      longitude: 11.804522,   //tbd
-      company:  AppLocalizations.of(context)!.lincolnCompany,
-      startDate: '2021-09-01',
-      endDate: '2024-01-29',      //tbd
-      description: AppLocalizations.of(context)!.lincolnDescription,
-      category: 'Uni',
+      id: 'ets',
+      title: AppLocalizations.of(context)!.etsTitle,
+      location: AppLocalizations.of(context)!.locationLingen,
+      latitude: 51.930423,      //tbd
+      longitude: 11.804522,     //tbd
+      company: AppLocalizations.of(context)!.hsosName,
+      startDate: '2018-08-01',
+      endDate: '2021-07-31',
+      description: AppLocalizations.of(context)!.etsDescription,
+      category: 'uni',
       imageAssets: [],
-      highlights: ['tbd'],
+      highlights: [],
       links: [],
       references: [],
     ),
+    CvEvent(
+      id: 'school',
+      title: AppLocalizations.of(context)!.schoolTitle,
+      location: AppLocalizations.of(context)!.locationGladbeck,
+      latitude: 51.930423,     //tbd
+      longitude: 11.804522,    //tbd
+      company: AppLocalizations.of(context)!.schoolName,
+      startDate: '2005-08-01',
+      endDate: '2017-07-31',
+      description: AppLocalizations.of(context)!.schoolDescription,
+      category: 'uni',
+      imageAssets: [],
+      highlights: [],
+      links: [],
+      references: [],
+    ),
+
   ];
 }
 
@@ -241,7 +269,7 @@ List<CvEvent> getVolunteering(BuildContext context) {
     CvEvent(
       id: 'thw_lingen',
       title: AppLocalizations.of(context)!.thwTitle,
-      location: AppLocalizations.of(context)!.thwLocationLingen,
+      location: AppLocalizations.of(context)!.locationLingen,
       latitude: 51.930423,     //tbd
       longitude: 11.804522,     //tbd
       company: AppLocalizations.of(context)!.thwCompany,
@@ -250,7 +278,7 @@ List<CvEvent> getVolunteering(BuildContext context) {
       endDate: '2024-01-29',
       //tbd
       description: AppLocalizations.of(context)!.thwDescription,
-      category: 'Ehrenamt',
+      category: 'volunteer',
       imageAssets: [],
       highlights: ['tbd'],
       links: ['https://www.thw.de/EN/homepage/homepage_node.html'],
@@ -259,7 +287,7 @@ List<CvEvent> getVolunteering(BuildContext context) {
     CvEvent(
       id: 'thw_osna',
       title: AppLocalizations.of(context)!.thwTitle,
-      location: AppLocalizations.of(context)!.thwLocationOsna,
+      location: AppLocalizations.of(context)!.locationOsna,
       latitude: 51.930423,
       //tbd
       longitude: 11.804522,
@@ -270,7 +298,7 @@ List<CvEvent> getVolunteering(BuildContext context) {
       endDate: null,
       //tbd
       description: AppLocalizations.of(context)!.thwDescription,
-      category: 'Ehrenamt',
+      category: 'volunteer',
       imageAssets: [],
       highlights: ['tbd'],
       links: ['https://www.thw.de/EN/homepage/homepage_node.html'],
@@ -279,18 +307,18 @@ List<CvEvent> getVolunteering(BuildContext context) {
     CvEvent(
       id: 'faculty_council',
       title: AppLocalizations.of(context)!.facultyCouncilTitle,
-      location: AppLocalizations.of(context)!.facultyCouncilLocation,
+      location: AppLocalizations.of(context)!.locationOsna,
       latitude: 51.930423,
       //tbd
       longitude: 11.804522,
       //tbd
-      company: AppLocalizations.of(context)!.facultyCouncilCompany,
+      company: AppLocalizations.of(context)!.hsosName,
       startDate: '2022-01-01',
       //tbd
       endDate: '2023-12-31',
       //tbd
       description: AppLocalizations.of(context)!.facultyCouncilDescription,
-      category: 'Ehrenamt',
+      category: 'volunteer',
       imageAssets: [],
       highlights: ['tbd'],
       links: [],
@@ -299,16 +327,14 @@ List<CvEvent> getVolunteering(BuildContext context) {
     CvEvent(
       id: 'buddy',
       title: AppLocalizations.of(context)!.buddyTitle,
-      location: AppLocalizations.of(context)!.buddyLocation,
-      latitude: 51.930423,
-      //tbd
-      longitude: 11.804522,
-      //tbd
-      company: AppLocalizations.of(context)!.buddyCompany,
+      location: AppLocalizations.of(context)!.locationLincoln,
+      latitude: 51.930423,      //tbd
+      longitude: 11.804522,      //tbd
+      company: AppLocalizations.of(context)!.luName,
       startDate: '2024-10-01',
       endDate: null,
       description: AppLocalizations.of(context)!.buddyDescription,
-      category: 'Ehrenamt',
+      category: 'volunteer',
       imageAssets: [],
       highlights: ['tbd'],
       links: [
@@ -321,18 +347,18 @@ List<CvEvent> getVolunteering(BuildContext context) {
     CvEvent(
       id: 'course_rep',
       title: AppLocalizations.of(context)!.courseRepTitle,
-      location: AppLocalizations.of(context)!.courseRepLocation,
+      location: AppLocalizations.of(context)!.locationLincoln,
       latitude: 51.930423,
       //tbd
       longitude: 11.804522,
       //tbd
-      company: AppLocalizations.of(context)!.courseRepLocation,
+      company: AppLocalizations.of(context)!.luName,
       startDate: '2025-02-18',
       //tbd
       endDate: null,
       //tbd
       description: AppLocalizations.of(context)!.courseRepDescription,
-      category: 'Ehrenamt',
+      category: 'volunteer',
       imageAssets: [],
       highlights: ['tbd'],
       links: [

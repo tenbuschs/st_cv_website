@@ -194,20 +194,8 @@ abstract class AppLocalizations {
   /// No description provided for @etsTitle.
   ///
   /// In en, this message translates to:
-  /// **'Engineer of Technical Systems, Specialization Mechatronics'**
+  /// **'B.Eng. Engineering of Technical Systems (Mechatronics)'**
   String get etsTitle;
-
-  /// No description provided for @etsCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'University of Applied Sciences Osnabrück'**
-  String get etsCompany;
-
-  /// No description provided for @etsLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Lingen (Ems), Germany'**
-  String get etsLocation;
 
   /// No description provided for @etsDescription.
   ///
@@ -218,20 +206,8 @@ abstract class AppLocalizations {
   /// No description provided for @bwaTitle.
   ///
   /// In en, this message translates to:
-  /// **'Agri-Food Engineering and Business'**
+  /// **'B.Eng. Agri-Food Engineering and Business'**
   String get bwaTitle;
-
-  /// No description provided for @bwaCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'University of Applied Sciences Osnabrück'**
-  String get bwaCompany;
-
-  /// No description provided for @bwaLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Osnabrück, Germany'**
-  String get bwaLocation;
 
   /// No description provided for @bwaDescription.
   ///
@@ -239,29 +215,17 @@ abstract class AppLocalizations {
   /// **'Bla bla bla'**
   String get bwaDescription;
 
-  /// No description provided for @lincolnTitle.
+  /// No description provided for @masterTitle.
   ///
   /// In en, this message translates to:
-  /// **'Master in Precision Agriculture (M.Sc.)'**
-  String get lincolnTitle;
+  /// **'M.Sc.Precision Agriculture'**
+  String get masterTitle;
 
-  /// No description provided for @lincolnCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln University'**
-  String get lincolnCompany;
-
-  /// No description provided for @lincolnLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln, New Zealand'**
-  String get lincolnLocation;
-
-  /// No description provided for @lincolnDescription.
+  /// No description provided for @masterDescription.
   ///
   /// In en, this message translates to:
   /// **'Master\'s program focusing on precision agriculture technologies and practices.'**
-  String get lincolnDescription;
+  String get masterDescription;
 
   /// No description provided for @thwTitle.
   ///
@@ -275,18 +239,6 @@ abstract class AppLocalizations {
   /// **'German Federal Agency for Technical Relief'**
   String get thwCompany;
 
-  /// No description provided for @thwLocationLingen.
-  ///
-  /// In en, this message translates to:
-  /// **'Lingen (Ems), Germany'**
-  String get thwLocationLingen;
-
-  /// No description provided for @thwLocationOsna.
-  ///
-  /// In en, this message translates to:
-  /// **'Osnabrück, Germany'**
-  String get thwLocationOsna;
-
   /// No description provided for @thwDescription.
   ///
   /// In en, this message translates to:
@@ -298,18 +250,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Student Representative in Faculty Council'**
   String get facultyCouncilTitle;
-
-  /// No description provided for @facultyCouncilCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'University of Applied Sciences Osnabrück'**
-  String get facultyCouncilCompany;
-
-  /// No description provided for @facultyCouncilLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Osnabrück, Germany'**
-  String get facultyCouncilLocation;
 
   /// No description provided for @facultyCouncilDescription.
   ///
@@ -323,18 +263,6 @@ abstract class AppLocalizations {
   /// **'Student Buddy'**
   String get buddyTitle;
 
-  /// No description provided for @buddyCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln University'**
-  String get buddyCompany;
-
-  /// No description provided for @buddyLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln, New Zealand'**
-  String get buddyLocation;
-
   /// No description provided for @buddyDescription.
   ///
   /// In en, this message translates to:
@@ -346,18 +274,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Course Representative'**
   String get courseRepTitle;
-
-  /// No description provided for @courseRepCompany.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln University'**
-  String get courseRepCompany;
-
-  /// No description provided for @courseRepLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Lincoln, New Zealand'**
-  String get courseRepLocation;
 
   /// No description provided for @courseRepDescription.
   ///
@@ -521,12 +437,6 @@ abstract class AppLocalizations {
   /// **'Ludger Dalhaus'**
   String get dalhausCompany;
 
-  /// No description provided for @dalhausLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Dorsten, Germany'**
-  String get dalhausLocation;
-
   /// No description provided for @dalhausDescription.
   ///
   /// In en, this message translates to:
@@ -545,17 +455,107 @@ abstract class AppLocalizations {
   /// **'Suden Baumaschinen GmbH'**
   String get sudenCompany;
 
-  /// No description provided for @sudenLocation.
-  ///
-  /// In en, this message translates to:
-  /// **'Dorsten, Germany'**
-  String get sudenLocation;
-
   /// No description provided for @sudenDescription.
   ///
   /// In en, this message translates to:
   /// **'Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.'**
   String get sudenDescription;
+
+  /// No description provided for @raTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Residential Assistant'**
+  String get raTitle;
+
+  /// No description provided for @raDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Assisting in the management of student housing, providing support and guidance to residents.'**
+  String get raDescription;
+
+  /// No description provided for @locationDorsten.
+  ///
+  /// In en, this message translates to:
+  /// **'Dorsten, Germany'**
+  String get locationDorsten;
+
+  /// No description provided for @locationLingen.
+  ///
+  /// In en, this message translates to:
+  /// **'Lingen (Ems), Germany'**
+  String get locationLingen;
+
+  /// No description provided for @locationOsna.
+  ///
+  /// In en, this message translates to:
+  /// **'Osnabrück, Germany'**
+  String get locationOsna;
+
+  /// No description provided for @locationLincoln.
+  ///
+  /// In en, this message translates to:
+  /// **'Lincoln, New Zealand'**
+  String get locationLincoln;
+
+  /// No description provided for @locationGladbeck.
+  ///
+  /// In en, this message translates to:
+  /// **'Gladbeck, Germany'**
+  String get locationGladbeck;
+
+  /// No description provided for @luName.
+  ///
+  /// In en, this message translates to:
+  /// **'Lincoln University'**
+  String get luName;
+
+  /// No description provided for @hsosName.
+  ///
+  /// In en, this message translates to:
+  /// **'University of Applied Sciences Osnabrück'**
+  String get hsosName;
+
+  /// No description provided for @schoolTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'School Education up to General Higher Qualification for University Entrance'**
+  String get schoolTitle;
+
+  /// No description provided for @schoolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Hermannschule (Primary School) and Ratsgymnasium (High School)'**
+  String get schoolName;
+
+  /// No description provided for @schoolDescription.
+  ///
+  /// In en, this message translates to:
+  /// **' G12 blabla '**
+  String get schoolDescription;
+
+  /// No description provided for @sdcTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Event and Facilities Support'**
+  String get sdcTitle;
+
+  /// No description provided for @sdcCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Selwyn District Council'**
+  String get sdcCompany;
+
+  /// No description provided for @sdcLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Rolleston, New Zealand'**
+  String get sdcLocation;
+
+  /// No description provided for @sdcDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Assisting with the setup and management of events and facilities, providing support to the local community.'**
+  String get sdcDescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

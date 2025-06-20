@@ -18,40 +18,26 @@
   "kroneHighlight3":  "Development of a new ISOBUS user interface",
   "kroneHighlight4": "Working on confidential pre-development projects",
 
-  "etsTitle": "Engineer of Technical Systems, Specialization Mechatronics",
-  "etsCompany": "University of Applied Sciences Osnabrück",
-  "etsLocation": "Lingen (Ems), Germany",
+  "etsTitle": "B.Eng. Engineering of Technical Systems (Mechatronics)",
   "etsDescription": "Dual Studies",
 
-  "bwaTitle": "Agri-Food Engineering and Business",
-  "bwaCompany": "University of Applied Sciences Osnabrück",
-  "bwaLocation": "Osnabrück, Germany",
+  "bwaTitle": "B.Eng. Agri-Food Engineering and Business",
   "bwaDescription": "Bla bla bla",
 
-  "lincolnTitle": "Master in Precision Agriculture (M.Sc.)",
-  "lincolnCompany": "Lincoln University",
-  "lincolnLocation": "Lincoln, New Zealand",
-  "lincolnDescription": "Master's program focusing on precision agriculture technologies and practices.",
+  "masterTitle": "M.Sc.Precision Agriculture",
+  "masterDescription": "Master's program focusing on precision agriculture technologies and practices.",
 
   "thwTitle": "Volunteer at German Federal Agency for Technical Relief",
   "thwCompany": "German Federal Agency for Technical Relief",
-  "thwLocationLingen": "Lingen (Ems), Germany",
-  "thwLocationOsna": "Osnabrück, Germany",
   "thwDescription": "Volunteer work with the German Federal Agency for Technical Relief, providing assistance in various emergency situations.",
 
   "facultyCouncilTitle": "Student Representative in Faculty Council",
-  "facultyCouncilCompany": "University of Applied Sciences Osnabrück",
-  "facultyCouncilLocation": "Osnabrück, Germany",
   "facultyCouncilDescription": "Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.",
 
   "buddyTitle": "Student Buddy",
-  "buddyCompany": "Lincoln University",
-  "buddyLocation": "Lincoln, New Zealand",
   "buddyDescription": "Assisting new students in their transition to university life, providing guidance and support.",
 
   "courseRepTitle": "Course Representative",
-  "courseRepCompany": "Lincoln University",
-  "courseRepLocation": "Lincoln, New Zealand",
   "courseRepDescription": "Acting as a liaison between students and faculty, gathering feedback and representing student concerns in course-related matters.",
 
   "saudhofTitle": "Machinery Operator",
@@ -86,11 +72,31 @@
 
   "dalhausTitle": "Farm Hand",
   "dalhausCompany": "Ludger Dalhaus",
-  "dalhausLocation": "Dorsten, Germany",
   "dalhausDescription": "Assisting in various farm operations, gaining practical experience in agricultural practices.",
 
   "sudenTitle": "Internship as an Agricultural and Construction Machinery Mechanic ",
   "sudenCompany": "Suden Baumaschinen GmbH",
-  "sudenLocation": "Dorsten, Germany",
-  "sudenDescription": "Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering."
+  "sudenDescription": "Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.",
+
+  "raTitle": "Residential Assistant",
+  "raDescription": "Assisting in the management of student housing, providing support and guidance to residents.",
+
+  "locationDorsten": "Dorsten, Germany",
+  "locationLingen": "Lingen (Ems), Germany",
+  "locationOsna": "Osnabrück, Germany",
+  "locationLincoln": "Lincoln, New Zealand",
+  "locationGladbeck": "Gladbeck, Germany",
+
+  "luName": "Lincoln University",
+  "hsosName": "University of Applied Sciences Osnabrück",
+
+  "schoolTitle": "School Education up to General Higher Qualification for University Entrance",
+  "schoolName": "Hermannschule (Primary School) and Ratsgymnasium (High School)",
+  "schoolDescription": " G12 blabla ",
+
+  "sdcTitle": "Event and Facilities Support",
+  "sdcCompany": "Selwyn District Council",
+  "sdcLocation": "Rolleston, New Zealand",
+  "sdcDescription": "Assisting with the setup and management of events and facilities, providing support to the local community."
+
 }

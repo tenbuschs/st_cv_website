@@ -5,12 +5,10 @@ import 'l10n/app_localizations.dart';
 
 class Timeline extends StatelessWidget {
   final Map<String, List<CvEvent>> groupedEvents;
-  // final Color Function(String) categoryColor;
 
   const Timeline({
     super.key,
     required this.groupedEvents,
-    // required this.categoryColor,
   });
 
   @override
@@ -51,7 +49,7 @@ class Timeline extends StatelessWidget {
                   ],
                 ),
               ),
-              // Expandable experience tiles
+              // Expandable event tiles
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,10 +71,7 @@ class Timeline extends StatelessWidget {
                         child: ExpansionTile(
                           collapsedBackgroundColor: Colors.grey[900],
                           backgroundColor: Colors.grey[850],
-                          leading: Icon(
-                            Icons.work,
-                            color: _categoryColor(exp.category),
-                          ),
+                          leading: _categoryIcon(exp.category),
                           title: Text(
                             exp.title,
                             style: const TextStyle(
@@ -89,7 +84,12 @@ class Timeline extends StatelessWidget {
                           ),
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(bottom: 8.0),
+                              padding: const EdgeInsets.only(
+                                bottom: 16.0,
+                                top: 16.0,
+                                left: 16,
+                                right: 16,
+                              ),
                               child: Text(
                                 exp.description,
                                 style: const TextStyle(fontSize: 16),
@@ -97,7 +97,7 @@ class Timeline extends StatelessWidget {
                             ),
                             if (exp.highlights.isNotEmpty)
                               Padding(
-                                padding: const EdgeInsets.only(bottom: 8.0),
+                                padding: const EdgeInsets.only(bottom: 16.0, left: 16),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -121,6 +121,32 @@ class Timeline extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                            if (exp.references.isNotEmpty)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 16.0, left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      'Reference on request:',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    ...exp.references.map(
+                                          (h) => Row(
+                                        children: [
+                                          const Text(
+                                            '• ',
+                                            style: TextStyle(fontSize: 16),
+                                          ),
+                                          Expanded(child: Text(h)),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             if (exp.imageAssets.isNotEmpty)
                               SizedBox(
                                 height: 160,
@@ -129,7 +155,8 @@ class Timeline extends StatelessWidget {
                                   itemBuilder:
                                       (context, index) => Padding(
                                         padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0,
+                                          horizontal: 16.0,
+                                          vertical: 15.0,
                                         ),
                                         child: Image.asset(
                                           exp.imageAssets[index],
@@ -162,15 +189,51 @@ String formatPeriod(String startDate, String? endDate, BuildContext context) {
   return '$start – $end';
 }
 
-Color _categoryColor(String category) {
+
+Icon _categoryIcon(String category) {
+  // This function can be expanded to return different icons based on the category
   switch (category) {
-    case 'Beruf':
-      return const Color(0xFF2D6045);
-    case 'Ehrenamt':
-      return Colors.blueAccent;
-    case 'Uni':
-      return Colors.orangeAccent;
+    case 'job':
+      return const Icon(
+        Icons.work,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
+    case 'part-time':
+      return const Icon(
+        Icons.work,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
+    case 'seasonal':
+      return const Icon(
+        Icons.av_timer,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
+    case 'uni':
+      return const Icon(
+        Icons.school,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
+    case 'volunteer':
+      return const Icon(
+        Icons.volunteer_activism,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
+    case 'internship':
+      return const Icon(
+        Icons.business_center,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
     default:
-      return Colors.grey;
+      return const Icon(
+        Icons.work,
+        color: Color(0xFF2D6045),
+        size: 30,
+      );
   }
 }

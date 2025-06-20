@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 16),
               _NavTile(
                 title: AppLocalizations.of(context)!.volunteering,
-                imagePath: 'lib/assets/portfolio.jpg',
+                imagePath: 'lib/assets/volunteering.jpg',
               ),
               const SizedBox(height: 16),
               _NavTile(

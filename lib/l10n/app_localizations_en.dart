@@ -57,40 +57,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kroneHighlight4 => 'Working on confidential pre-development projects';
 
   @override
-  String get etsTitle => 'Engineer of Technical Systems, Specialization Mechatronics';
-
-  @override
-  String get etsCompany => 'University of Applied Sciences Osnabrück';
-
-  @override
-  String get etsLocation => 'Lingen (Ems), Germany';
+  String get etsTitle => 'B.Eng. Engineering of Technical Systems (Mechatronics)';
 
   @override
   String get etsDescription => 'Dual Studies';
 
   @override
-  String get bwaTitle => 'Agri-Food Engineering and Business';
-
-  @override
-  String get bwaCompany => 'University of Applied Sciences Osnabrück';
-
-  @override
-  String get bwaLocation => 'Osnabrück, Germany';
+  String get bwaTitle => 'B.Eng. Agri-Food Engineering and Business';
 
   @override
   String get bwaDescription => 'Bla bla bla';
 
   @override
-  String get lincolnTitle => 'Master in Precision Agriculture (M.Sc.)';
+  String get masterTitle => 'M.Sc.Precision Agriculture';
 
   @override
-  String get lincolnCompany => 'Lincoln University';
-
-  @override
-  String get lincolnLocation => 'Lincoln, New Zealand';
-
-  @override
-  String get lincolnDescription => 'Master\'s program focusing on precision agriculture technologies and practices.';
+  String get masterDescription => 'Master\'s program focusing on precision agriculture technologies and practices.';
 
   @override
   String get thwTitle => 'Volunteer at German Federal Agency for Technical Relief';
@@ -99,22 +81,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get thwCompany => 'German Federal Agency for Technical Relief';
 
   @override
-  String get thwLocationLingen => 'Lingen (Ems), Germany';
-
-  @override
-  String get thwLocationOsna => 'Osnabrück, Germany';
-
-  @override
   String get thwDescription => 'Volunteer work with the German Federal Agency for Technical Relief, providing assistance in various emergency situations.';
 
   @override
   String get facultyCouncilTitle => 'Student Representative in Faculty Council';
-
-  @override
-  String get facultyCouncilCompany => 'University of Applied Sciences Osnabrück';
-
-  @override
-  String get facultyCouncilLocation => 'Osnabrück, Germany';
 
   @override
   String get facultyCouncilDescription => 'Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.';
@@ -123,22 +93,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get buddyTitle => 'Student Buddy';
 
   @override
-  String get buddyCompany => 'Lincoln University';
-
-  @override
-  String get buddyLocation => 'Lincoln, New Zealand';
-
-  @override
   String get buddyDescription => 'Assisting new students in their transition to university life, providing guidance and support.';
 
   @override
   String get courseRepTitle => 'Course Representative';
-
-  @override
-  String get courseRepCompany => 'Lincoln University';
-
-  @override
-  String get courseRepLocation => 'Lincoln, New Zealand';
 
   @override
   String get courseRepDescription => 'Acting as a liaison between students and faculty, gathering feedback and representing student concerns in course-related matters.';
@@ -222,9 +180,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dalhausCompany => 'Ludger Dalhaus';
 
   @override
-  String get dalhausLocation => 'Dorsten, Germany';
-
-  @override
   String get dalhausDescription => 'Assisting in various farm operations, gaining practical experience in agricultural practices.';
 
   @override
@@ -234,8 +189,53 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sudenCompany => 'Suden Baumaschinen GmbH';
 
   @override
-  String get sudenLocation => 'Dorsten, Germany';
+  String get sudenDescription => 'Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.';
 
   @override
-  String get sudenDescription => 'Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.';
+  String get raTitle => 'Residential Assistant';
+
+  @override
+  String get raDescription => 'Assisting in the management of student housing, providing support and guidance to residents.';
+
+  @override
+  String get locationDorsten => 'Dorsten, Germany';
+
+  @override
+  String get locationLingen => 'Lingen (Ems), Germany';
+
+  @override
+  String get locationOsna => 'Osnabrück, Germany';
+
+  @override
+  String get locationLincoln => 'Lincoln, New Zealand';
+
+  @override
+  String get locationGladbeck => 'Gladbeck, Germany';
+
+  @override
+  String get luName => 'Lincoln University';
+
+  @override
+  String get hsosName => 'University of Applied Sciences Osnabrück';
+
+  @override
+  String get schoolTitle => 'School Education up to General Higher Qualification for University Entrance';
+
+  @override
+  String get schoolName => 'Hermannschule (Primary School) and Ratsgymnasium (High School)';
+
+  @override
+  String get schoolDescription => ' G12 blabla ';
+
+  @override
+  String get sdcTitle => 'Event and Facilities Support';
+
+  @override
+  String get sdcCompany => 'Selwyn District Council';
+
+  @override
+  String get sdcLocation => 'Rolleston, New Zealand';
+
+  @override
+  String get sdcDescription => 'Assisting with the setup and management of events and facilities, providing support to the local community.';
 }

@@ -57,40 +57,22 @@ class AppLocalizationsDe extends AppLocalizations {
   String get kroneHighlight4 => 'Mitwirken bei vertraulichen Vorentwicklungsprojekten';
 
   @override
-  String get etsTitle => 'Enginnering Technischer Systeme, Fachrichtung Mechatronik (B.Eng.)';
-
-  @override
-  String get etsCompany => 'Hochschule Osnabrück';
-
-  @override
-  String get etsLocation => 'Lingen (Ems), Deutschland';
+  String get etsTitle => 'B.Eng. Enginnering Technischer Systeme, Fachrichtung Mechatronik';
 
   @override
   String get etsDescription => 'Duales Studium';
 
   @override
-  String get bwaTitle => 'Wirtschaftsingenieurwesen Agrar / Lebensmittel';
-
-  @override
-  String get bwaCompany => 'Hochschule Osnabrück';
-
-  @override
-  String get bwaLocation => 'Osnabrück, Deutschland';
+  String get bwaTitle => 'B.Eng. Wirtschaftsingenieurwesen Agrar / Lebensmittel';
 
   @override
   String get bwaDescription => 'Deutsches Bla bla bla';
 
   @override
-  String get lincolnTitle => 'Master in Precision Agriculture (M.Sc.)';
+  String get masterTitle => 'M.Sc.in Precision Agriculture';
 
   @override
-  String get lincolnCompany => 'Lincoln University';
-
-  @override
-  String get lincolnLocation => 'Lincoln, Neuseeland';
-
-  @override
-  String get lincolnDescription => 'Masterstudiengang mit Fokus auf Präzisionslandwirtschaftstechnologien und -praktiken.';
+  String get masterDescription => 'Masterstudiengang mit Fokus auf Präzisionslandwirtschaftstechnologien und -praktiken.';
 
   @override
   String get thwTitle => 'Helfer beim Technischen Hilfswerk';
@@ -99,22 +81,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get thwCompany => 'Technisches Hilfswerk (THW)';
 
   @override
-  String get thwLocationLingen => 'Lingen (Ems), Deutschland';
-
-  @override
-  String get thwLocationOsna => 'Osnabrück, Deutschland';
-
-  @override
   String get thwDescription => 'Freiwilliger Helfer bei der Bundesanstalt THW. Ausbildung und Unterstützung in verschiedenen Notfallsituationen des Zivil- und Katastrophenschutzes.';
 
   @override
   String get facultyCouncilTitle => 'Studentische Vertretung im Fakultätsrat';
-
-  @override
-  String get facultyCouncilCompany => 'Hochschule Osnabrück';
-
-  @override
-  String get facultyCouncilLocation => 'Osnabrück, Deutschland';
 
   @override
   String get facultyCouncilDescription => 'Vertretung der studentischen Interessen im Fakultätsrat, Mitwirkung an Entscheidungsprozessen bezüglich akademischer Richtlinien und Programme.';
@@ -123,22 +93,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get buddyTitle => 'Student Buddy';
 
   @override
-  String get buddyCompany => 'Lincoln University';
-
-  @override
-  String get buddyLocation => 'Lincoln, Neuseeland';
-
-  @override
   String get buddyDescription => 'Unterstützung neuer Studierender beim Übergang zum Universitätsleben, Bereitstellung von Orientierung und Unterstützung.';
 
   @override
   String get courseRepTitle => 'Course Representative';
-
-  @override
-  String get courseRepCompany => 'Lincoln University';
-
-  @override
-  String get courseRepLocation => 'Lincoln, Neusseland';
 
   @override
   String get courseRepDescription => 'Bindeglied zwischen Studierenden und Fakultät, Sammlung von Feedback und Vertretung studentischer Anliegen in kursbezogenen Angelegenheiten.';
@@ -222,9 +180,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dalhausCompany => 'Ludger Dalhaus';
 
   @override
-  String get dalhausLocation => 'Dorsten, Deutschland';
-
-  @override
   String get dalhausDescription => 'Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.';
 
   @override
@@ -234,8 +189,53 @@ class AppLocalizationsDe extends AppLocalizations {
   String get sudenCompany => 'Suden Baumaschinen GmbH';
 
   @override
-  String get sudenLocation => 'Dorsten, Deutschland';
+  String get sudenDescription => 'Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln.';
 
   @override
-  String get sudenDescription => 'Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln.';
+  String get raTitle => 'Residential Assistant';
+
+  @override
+  String get raDescription => 'Erster Ansprechpartner für Studierende in Wohnheimen, Unterstützung bei der Organisation von Veranstaltungen und Aktivitäten, Förderung einer positiven Wohnatmosphäre.';
+
+  @override
+  String get locationDorsten => 'Dorsten, Deutschland';
+
+  @override
+  String get locationLingen => 'Lingen (Ems), Deutschland';
+
+  @override
+  String get locationOsna => 'Osnabrück, Deutschland';
+
+  @override
+  String get locationLincoln => 'Lincoln, Neuseeland';
+
+  @override
+  String get locationGladbeck => 'Gladbeck, Deutschland';
+
+  @override
+  String get luName => 'Lincoln University';
+
+  @override
+  String get hsosName => 'Hochschule Osnabrück';
+
+  @override
+  String get schoolTitle => 'Schulbildung bis zur Allgemeinen Hochschulreife';
+
+  @override
+  String get schoolName => 'Hermannschule (Grundschule) und Ratsgymnasium';
+
+  @override
+  String get schoolDescription => ' G12 blabla ';
+
+  @override
+  String get sdcTitle => 'Event and Facilities Support';
+
+  @override
+  String get sdcCompany => 'Selwyn District Council';
+
+  @override
+  String get sdcLocation => 'Rolleston, Neuseeland';
+
+  @override
+  String get sdcDescription => 'Unterstützung bei der Organisation von Veranstaltungen und der Verwaltung von Einrichtungen, Förderung der Gemeinschaftsaktivitäten im Selwyn District.';
 }
