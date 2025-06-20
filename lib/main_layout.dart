@@ -37,8 +37,8 @@ class MainLayout extends StatelessWidget {
                   onPressed:
                       () =>
                           Navigator.pushReplacementNamed(context, '/education'),
-                  child: const Text(
-                    'Education',
+                  child: Text(
+                    AppLocalizations.of(context)!.education,
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -48,8 +48,8 @@ class MainLayout extends StatelessWidget {
                         context,
                         '/experience',
                       ),
-                  child: const Text(
-                    'Experience',
+                  child: Text(
+                    AppLocalizations.of(context)!.experience,
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

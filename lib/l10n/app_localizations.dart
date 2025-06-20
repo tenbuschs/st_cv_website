@@ -104,7 +104,7 @@ abstract class AppLocalizations {
   /// No description provided for @profession.
   ///
   /// In en, this message translates to:
-  /// **'Mechatronics & Precision Agriculture Engineer'**
+  /// **'Precision Agriculture Engineer'**
   String get profession;
 
   /// No description provided for @loginDescription.
@@ -118,6 +118,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Login failed. Check username and password.'**
   String get loginFailed;
+
+  /// No description provided for @experience.
+  ///
+  /// In en, this message translates to:
+  /// **'Experience'**
+  String get experience;
+
+  /// No description provided for @education.
+  ///
+  /// In en, this message translates to:
+  /// **'Education'**
+  String get education;
+
+  /// No description provided for @currentlyWorking.
+  ///
+  /// In en, this message translates to:
+  /// **'Current'**
+  String get currentlyWorking;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

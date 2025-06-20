@@ -12,11 +12,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get greeting => 'Moin, ich bin Simon';
 
   @override
-  String get profession => 'Softwareentwickler';
+  String get profession => 'Ingenieur für Präzisionslandwirtschaft';
 
   @override
   String get loginDescription => 'Bitte melden Sie sich an, um mein Profil zu sehen.';
 
   @override
   String get loginFailed => 'Login fehlgeschlagen. Bitte versuchen Sie es erneut.';
+
+  @override
+  String get experience => 'Berufserfahrung';
+
+  @override
+  String get education => 'Ausbildung';
+
+  @override
+  String get currentlyWorking => 'Heute';
 }
