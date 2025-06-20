@@ -9,14 +9,14 @@ import 'experience.dart' as exp;
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'l10n/app_localizations.dart';
-
+import 'volunteering.dart';
+import 'portfolio.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -31,9 +31,9 @@ class _MyAppState extends State<MyApp> {
   void _toggleLocale() {
     setState(() {
       _locale =
-      _locale.languageCode == 'en'
-          ? const Locale('de')
-          : const Locale('en');
+          _locale.languageCode == 'en'
+              ? const Locale('de')
+              : const Locale('en');
     });
   }
 
@@ -44,9 +44,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color(0xFF121212),
         textTheme: GoogleFonts.interTextTheme(
-          ThemeData
-              .dark()
-              .textTheme,
+          ThemeData.dark().textTheme,
         ).apply(bodyColor: Colors.grey[200], displayColor: Colors.grey[200]),
         cardColor: const Color(0xFF1E4030),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -68,38 +66,48 @@ class _MyAppState extends State<MyApp> {
           focusColor: Color(0xFF2D6045),
           floatingLabelStyle: TextStyle(color: Color(0xFF2D6045)),
         ),
-
       ),
       locale: _locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       initialRoute: '/home',
       routes: {
-       // '/': (context) => LoginPage(),
-       /* '/home': (context) =>
-            HomePage(
-                toggleLocale: _toggleLocale,
-                locale: _locale
+        '/home':
+            (context) => AuthGate(
+              child: HomePage(toggleLocale: _toggleLocale, locale: _locale),
             ),
-        '/education': (context) => edu.EducationPage(  toggleLocale: _toggleLocale,
-            locale: _locale),
-        '/experience': (context) => exp.ExperiencePage(  toggleLocale: _toggleLocale,
-            locale: _locale),*/
-        '/home': (context) => AuthGate(child: HomePage(
-            toggleLocale: _toggleLocale,
-            locale: _locale
-        ),),
-        '/education': (context) => AuthGate(child: edu.EducationPage(  toggleLocale: _toggleLocale,
-            locale: _locale),),
-        '/experience': (context) => AuthGate(child: exp.ExperiencePage(  toggleLocale: _toggleLocale,
-            locale: _locale),),
+        '/education':
+            (context) => AuthGate(
+              child: edu.EducationPage(
+                toggleLocale: _toggleLocale,
+                locale: _locale,
+              ),
+            ),
+        '/experience':
+            (context) => AuthGate(
+              child: exp.ExperiencePage(
+                toggleLocale: _toggleLocale,
+                locale: _locale,
+              ),
+            ),
+        '/volunteering':
+            (context) => AuthGate(
+              child: VolunteeringPage(
+                toggleLocale: _toggleLocale,
+                locale: _locale,
+              ),
+            ),
+        '/portfolio':
+            (context) => AuthGate(
+              child: PortfolioPage(
+                toggleLocale: _toggleLocale,
+                locale: _locale,
+              ),
+            ),
       },
     );
   }
 }
-
-
-
 
 class AuthGate extends StatelessWidget {
   final Widget child;

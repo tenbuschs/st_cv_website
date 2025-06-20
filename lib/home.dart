@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/services.dart' show rootBundle;
 import 'main_layout.dart';
+import 'l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
   final VoidCallback toggleLocale;
@@ -19,181 +20,183 @@ class HomePage extends StatelessWidget {
     return MainLayout(
       toggleLocale: toggleLocale,
       locale: locale,
-      silvers: [ SliverToBoxAdapter(
-        child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+      silvers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // About Me
+              Text(
+                isGerman
+                    ? 'Ich bin ein leidenschaftlicher Spezialist für Präzisionslandwirtschaft mit Erfahrung in Datenanalyse, R und GIS.'
+                    : 'I am passionate about Precision Agriculture with experience in arable farming, software development, and field research.',
+                style: GoogleFonts.inter(fontSize: 16),
+              ),
+              const SizedBox(height: 32),
 
-                // About Me
-                Text(
-                  isGerman
-                      ? 'Ich bin ein leidenschaftlicher Spezialist für Präzisionslandwirtschaft mit Erfahrung in Datenanalyse, R und GIS.'
-                      : 'I am passionate about Precision Agriculture with experience in arable farming, software development, and field research.',
-                  style: GoogleFonts.inter(fontSize: 16),
-                ),
-                const SizedBox(height: 32),
+              // Navigation Tiles
+              _NavTile(
+                title: isGerman ? 'Ausbildung' : 'Education',
+                imagePath: 'lib/assets/education.jpeg',
+              ),
+              const SizedBox(height: 16),
+              _NavTile(
+                title: isGerman ? 'Berufserfahrung' : 'Experience',
+                imagePath: 'lib/assets/experience.jpg',
+              ),
+              const SizedBox(height: 16),
+              _NavTile(
+                title: AppLocalizations.of(context)!.volunteering,
+                imagePath: 'lib/assets/portfolio.jpg',
+              ),
+              const SizedBox(height: 16),
+              _NavTile(
+                title: 'Portfolio',
+                imagePath: 'lib/assets/portfolio.jpg',
+              ),
 
-                // Navigation Tiles
-                _NavTile(
-                  title: isGerman ? 'Ausbildung' : 'Education',
-                  imagePath: 'lib/assets/education.jpeg',
-                ),
-                const SizedBox(height: 16),
-                _NavTile(
-                  title: isGerman ? 'Berufserfahrung' : 'Experience',
-                  imagePath: 'lib/assets/experience.jpg',
-                ),
-                const SizedBox(height: 16),
-                _NavTile(
-                  title: 'Portfolio',
-                  imagePath: 'lib/assets/portfolio.jpg',
-                ),
+              const SizedBox(height: 32),
 
-                const SizedBox(height: 32),
-
-                // Footer
-                Center(
-                  child: ElevatedButton.icon(
-                    label: Text(
-                      isGerman ? 'Lebenslauf herunterladen' : 'Download CV',
-                    ),
-                    icon: const Icon(Icons.download),
-                    onPressed: () async {
-                      const url = 'https://example.com/MaxMustermannCV.pdf';
-                      if (await canLaunchUrl(Uri.parse(url))) {
-                        await launchUrl(Uri.parse(url));
-                      }
-                    },
+              // Footer
+              Center(
+                child: ElevatedButton.icon(
+                  label: Text(
+                    isGerman ? 'Lebenslauf herunterladen' : 'Download CV',
+                  ),
+                  icon: const Icon(Icons.download),
+                  onPressed: () async {
+                    const url = 'https://example.com/MaxMustermannCV.pdf';
+                    if (await canLaunchUrl(Uri.parse(url))) {
+                      await launchUrl(Uri.parse(url));
+                    }
+                  },
+                ),
+              ),
+              const SizedBox(height: 32),
+              Center(
+                child: Text(
+                  isGerman ? 'Kontakt' : 'Contact',
+                  style: GoogleFonts.inter(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 32),
-                Center(
-                  child: Text(
-                    isGerman ? 'Kontakt' : 'Contact',
-                    style: GoogleFonts.inter(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(height: 20),
+
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.email, size: 16, color: Colors.grey[300]),
+                      const SizedBox(width: 8),
+                      const Text('simon@tenbusch.de'),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.phone, size: 16, color: Colors.grey[300]),
+                      const SizedBox(width: 8),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('NZ: +64 27 321 00 61'),
+                          SizedBox(height: 4),
+                          Text('DE: +49 1578 646 1 989'),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 20),
+
+              Center(
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.download),
+                  label: Text(isGerman ? 'Kontakt speichern' : 'Save Contact'),
+                  onPressed: () async {
+                    final data = await rootBundle.load(
+                      'lib/assets/contact.vcf',
+                    );
+                    final bytes = data.buffer.asUint8List();
+                    final blob = html.Blob([bytes], 'text/vcard');
+                    final url = html.Url.createObjectUrlFromBlob(blob);
+                    final anchor =
+                        html.AnchorElement(href: url)
+                          ..setAttribute('download', 'SimonTenbusch.vcf')
+                          ..click();
+                    html.Url.revokeObjectUrl(url);
+                  },
+                ),
+              ),
+
+              const SizedBox(height: 32),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      icon: const Icon(Icons.mail, color: Colors.black),
+                      onPressed:
+                          () =>
+                              launchUrl(Uri.parse('mailto:simon@tenbusch.de')),
                     ),
                   ),
-                ),
-                const SizedBox(height: 20),
-
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.email, size: 16, color: Colors.grey[300]),
-                        const SizedBox(width: 8),
-                        const Text('simon@tenbusch.de'),
-                      ],
+                  const SizedBox(width: 12),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      icon: const FaIcon(
+                        FontAwesomeIcons.linkedin,
+                        color: Colors.black,
+                      ),
+                      onPressed:
+                          () => launchUrl(
+                            Uri.parse(
+                              'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
+                            ),
+                          ),
                     ),
-                    const SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.phone, size: 16, color: Colors.grey[300]),
-                        const SizedBox(width: 8),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text('NZ: +64 27 321 00 61'),
-                            SizedBox(height: 4),
-                            Text('DE: +49 1578 646 1 989'),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-
-                const SizedBox(height: 20),
-
-                Center(
-                  child: ElevatedButton.icon(
-                    icon: const Icon(Icons.download),
-                    label: Text(
-                      isGerman ? 'Kontakt speichern' : 'Save Contact',
-                    ),
-                    onPressed: () async {
-                      final data = await rootBundle.load(
-                        'lib/assets/contact.vcf',
-                      );
-                      final bytes = data.buffer.asUint8List();
-                      final blob = html.Blob([bytes], 'text/vcard');
-                      final url = html.Url.createObjectUrlFromBlob(blob);
-                      final anchor =
-                          html.AnchorElement(href: url)
-                            ..setAttribute('download', 'SimonTenbusch.vcf')
-                            ..click();
-                      html.Url.revokeObjectUrl(url);
-                    },
                   ),
-                ),
-
-                const SizedBox(height: 32),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                        icon: const Icon(Icons.mail, color: Colors.black),
-                        onPressed:
-                            () => launchUrl(
-                              Uri.parse('mailto:simon@tenbusch.de'),
-                            ),
+                  const SizedBox(width: 12),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      icon: const FaIcon(
+                        FontAwesomeIcons.github,
+                        color: Colors.black,
                       ),
+                      onPressed:
+                          () => launchUrl(
+                            Uri.parse('https://github.com/tenbuschs'),
+                          ),
                     ),
-                    const SizedBox(width: 12),
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                        icon: const FaIcon(
-                          FontAwesomeIcons.linkedin,
-                          color: Colors.black,
-                        ),
-                        onPressed:
-                            () => launchUrl(
-                              Uri.parse(
-                                'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
-                              ),
-                            ),
+                  ),
+                  const SizedBox(width: 12),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      icon: const FaIcon(
+                        FontAwesomeIcons.youtube,
+                        color: Colors.black,
                       ),
+                      onPressed:
+                          () => launchUrl(Uri.parse('https://youtube.com/')),
                     ),
-                    const SizedBox(width: 12),
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                        icon: const FaIcon(
-                          FontAwesomeIcons.github,
-                          color: Colors.black,
-                        ),
-                        onPressed:
-                            () => launchUrl(
-                              Uri.parse('https://github.com/tenbuschs'),
-                            ),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                        icon: const FaIcon(
-                          FontAwesomeIcons.youtube,
-                          color: Colors.black,
-                        ),
-                        onPressed:
-                            () => launchUrl(Uri.parse('https://youtube.com/')),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-      )
-        ]
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -219,6 +222,13 @@ class _NavTileState extends State<_NavTile> {
     if (widget.title == 'Experience' || widget.title == 'Berufserfahrung') {
       Navigator.pushNamed(context, '/experience');
     }
+    if (widget.title == AppLocalizations.of(context)!.volunteering) {
+      Navigator.pushNamed(context, '/volunteering');
+    }
+    if (widget.title == 'Portfolio') {
+      Navigator.pushNamed(context, '/portfolio');
+    }
+
     // Add more navigation logic for other tiles if needed
   }
 

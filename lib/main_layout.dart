@@ -20,11 +20,14 @@ class MainLayout extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
-        actions: [
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+        toolbarHeight: 0, // Hide default toolbar if not needed
+        bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(120), // Adjust as needed
+    child:  Wrap(
+    alignment: WrapAlignment.center,
+    spacing: 16,
+    runSpacing: 8,
+    children: [
                 TextButton(
                   onPressed:
                       () => Navigator.pushReplacementNamed(context, '/home'),
@@ -53,7 +56,30 @@ class MainLayout extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                //SizedBox(width: 300,),
+                TextButton(
+                  onPressed:
+                      () => Navigator.pushReplacementNamed(
+                    context,
+                    '/volunteering',
+                  ),
+                  child: Text(
+                    AppLocalizations.of(context)!.volunteering,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+      TextButton(
+        onPressed:
+            () => Navigator.pushReplacementNamed(
+          context,
+          '/portfolio',
+        ),
+        child: Text(
+          "Portfolio",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+
+                const SizedBox(width: 32),
                 IconButton(
                   icon: Icon(Icons.language, color: Colors.grey[300]),
                   onPressed: toggleLocale,
@@ -61,7 +87,7 @@ class MainLayout extends StatelessWidget {
               ],
             ),
           ),
-        ],
+
       ),
       body: Center(
         child: ConstrainedBox(
