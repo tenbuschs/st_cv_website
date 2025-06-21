@@ -181,17 +181,35 @@ class Timeline extends StatelessWidget {
 
 String formatPeriod(String startDate, String? endDate, BuildContext context) {
   final locale = Localizations.localeOf(context).toString();
-  final start = DateFormat.yMMM(locale).format(DateTime.parse(startDate));
-  final end =
-      endDate == null
-          ? AppLocalizations.of(context)!.currentlyWorking
-          : DateFormat.yMMM(locale).format(DateTime.parse(endDate));
-  return '$start – $end';
+  final startDt = DateTime.parse(startDate);
+  final endDt = endDate == null ? DateTime.now() : DateTime.parse(endDate);
+
+  final start = DateFormat.yMMM(locale).format(startDt);
+  final endStr = endDate == null
+      ? AppLocalizations.of(context)!.currentlyWorking
+      : DateFormat.yMMM(locale).format(endDt);
+
+  int totalMonths = (endDt.year - startDt.year) * 12 + (endDt.month - startDt.month);
+  if (endDt.day < startDt.day) totalMonths--;
+
+  final years = totalMonths ~/ 12;
+  final months = totalMonths % 12;
+
+  String duration = '';
+  if (years > 0) {
+    duration += '$years year${years > 1 ? 's' : ''}';
+  }
+  if (months > 0) {
+    if (duration.isNotEmpty) duration += ' ';
+    duration += '$months month${months > 1 ? 's' : ''}';
+  }
+  if (duration.isEmpty) duration = '<1 month';
+
+  return '$start – $endStr ($duration)';
 }
-
-
+// Function to return an icon based on the event category
 Icon _categoryIcon(String category) {
-  // This function can be expanded to return different icons based on the category
+  // This function returns different icons based on the category
   switch (category) {
     case 'job':
       return const Icon(
@@ -214,13 +232,13 @@ Icon _categoryIcon(String category) {
     case 'uni':
       return const Icon(
         Icons.school,
-        color: Color(0xFF2D6045),
+        color: Color(0xFF4A6A8A), //Color(0xFF354F6B), // Slate Blue
         size: 30,
       );
     case 'volunteer':
       return const Icon(
         Icons.volunteer_activism,
-        color: Color(0xFF2D6045),
+        color: Color(0xFFC57B57), // Rusty Orange
         size: 30,
       );
     case 'internship':

@@ -66,6 +66,10 @@ class _MyAppState extends State<MyApp> {
           focusColor: Color(0xFF2D6045),
           floatingLabelStyle: TextStyle(color: Color(0xFF2D6045)),
         ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: const Color(0xFF2D6045),
+          foregroundColor: Colors.white,
+        )
       ),
       locale: _locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
