@@ -143,6 +143,36 @@ abstract class AppLocalizations {
   /// **'Current'**
   String get currentlyWorking;
 
+  /// No description provided for @referenceRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Reference (contact information on request):'**
+  String get referenceRequest;
+
+  /// No description provided for @year.
+  ///
+  /// In en, this message translates to:
+  /// **'year'**
+  String get year;
+
+  /// No description provided for @years.
+  ///
+  /// In en, this message translates to:
+  /// **'years'**
+  String get years;
+
+  /// No description provided for @month.
+  ///
+  /// In en, this message translates to:
+  /// **'month'**
+  String get month;
+
+  /// No description provided for @months.
+  ///
+  /// In en, this message translates to:
+  /// **'months'**
+  String get months;
+
   /// No description provided for @sdcTitle.
   ///
   /// In en, this message translates to:
@@ -440,7 +470,7 @@ abstract class AppLocalizations {
   /// No description provided for @kroneLink.
   ///
   /// In en, this message translates to:
-  /// **'https://www.krone-agriculture.com/en/'**
+  /// **'Company Website: https://www.krone-agriculture.com/en/'**
   String get kroneLink;
 
   /// No description provided for @marshTitle.

@@ -8,7 +8,11 @@
   "education": "Ausbildung",
   "volunteering": "Nebenmissionen & Fleißbienchen",
   "currentlyWorking": "Heute",
-
+  "referenceRequest": "Referenz (Kontaktinformationen auf Anfrage):",
+  "year": "Jahr",
+  "years": "Jahre",
+  "month": "Monat",
+  "months": "Monate",
 
   "sdcTitle": "Event und Facilities Support",
   "sdcCompany": "Selwyn District Council",
@@ -64,7 +68,7 @@
   "kroneHighlight2":"Weiterentwicklung der Überladeautomatik AutoFill am BiG X",
   "kroneHighlight3":"Mitentwicklung eines neuen ISOBUS User Interface",
   "kroneHighlight4": "Mitwirken bei vertraulichen Vorentwicklungsprojekten",
-  "kroneLink": "https://www.krone-agriculture.com/de/",
+  "kroneLink": "Unternehmenswebsite: https://www.krone-agriculture.com/de/",
 
   "marshTitle": "Machinery Operator",
   "marshCompany": "Marsh Contracting Ltd.",

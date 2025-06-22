@@ -8,6 +8,12 @@
   "education": "Education",
   "volunteering": "Side Quests & Certificates",
   "currentlyWorking": "Current",
+  "referenceRequest": "Reference (contact information on request):",
+  "year": "year",
+  "years": "years",
+  "month": "month",
+  "months": "months",
+
 
 
   "sdcTitle": "Event and Facilities Support",
@@ -64,7 +70,7 @@
   "kroneHighlight2":  "Further development of the AutoFill overloading automation on the BiG X",
   "kroneHighlight3":  "Development of a new ISOBUS user interface",
   "kroneHighlight4": "Working on confidential pre-development projects",
-  "kroneLink": "https://www.krone-agriculture.com/en/",
+  "kroneLink": "Company Website: https://www.krone-agriculture.com/en/",
 
   "marshTitle": "Machinery Operator",
   "marshCompany": "Marsh Contracting Ltd.",

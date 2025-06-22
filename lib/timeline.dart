@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'event_lists.dart';
 import 'package:intl/intl.dart';
 import 'l10n/app_localizations.dart';
+import 'dart:async';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 
 class Timeline extends StatelessWidget {
   final Map<String, List<CvEvent>> groupedEvents;
@@ -10,8 +13,6 @@ class Timeline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, GlobalKey> eventKeys = {};
-
     return SliverList(
       delegate: SliverChildBuilderDelegate((context, index) {
         final entry = groupedEvents.entries.elementAt(index);
@@ -30,6 +31,46 @@ class Timeline extends StatelessWidget {
                   children: [
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 4),
+                      width: 16,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[700],
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 4,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                    ),
+                    if (!isLast)
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                        height:
+                            90.0 *
+                            entry.value.length, // Make this dynamic if needed
+                        width: 3,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.grey[700]!, Colors.grey[500]!],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+              /*Container(
+                width: 60,
+                alignment: Alignment.topCenter,
+                child: Column(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(vertical: 4),
                       width: 12,
                       height: 12,
                       decoration: const BoxDecoration(
@@ -39,13 +80,13 @@ class Timeline extends StatelessWidget {
                     ),
                     if (!isLast)
                       Container(
-                        height: 80.0 * entry.value.length,
+                        height: 90.0 * entry.value.length,
                         width: 2,
                         color: Colors.grey[700],
                       ),
                   ],
                 ),
-              ),
+              ),*/
               // Expandable event tiles
               ExpandableEventTile(entry: entry),
             ],
@@ -69,20 +110,34 @@ String formatPeriod(String startDate, String? endDate, BuildContext context) {
 
   int totalMonths =
       (endDt.year - startDt.year) * 12 + (endDt.month - startDt.month);
-  if (endDt.day < startDt.day) totalMonths--;
+
+  if (endDt.day >= 15) totalMonths++;
 
   final years = totalMonths ~/ 12;
   final months = totalMonths % 12;
 
   String duration = '';
+  String yearsStr = AppLocalizations.of(context)!.years;
+  String yearStr = AppLocalizations.of(context)!.year;
+  String monthsStr = AppLocalizations.of(context)!.months;
+  String monthStr = AppLocalizations.of(context)!.month;
+
   if (years > 0) {
-    duration += '$years year${years > 1 ? 's' : ''}';
+    if (years > 1) {
+      duration += '$years $yearsStr';
+    } else {
+      duration += '$years $yearStr';
+    }
   }
   if (months > 0) {
     if (duration.isNotEmpty) duration += ' ';
-    duration += '$months month${months > 1 ? 's' : ''}';
+    if (months > 1) {
+      duration += '$months $monthsStr';
+    } else {
+      duration += '$months $monthStr';
+    }
   }
-  if (duration.isEmpty) duration = '<1 month';
+  if (duration.isEmpty) duration = '<1 $monthStr';
 
   return '$start – $endStr ($duration)';
 }
@@ -96,11 +151,11 @@ Icon _categoryIcon(String category) {
     case 'part-time':
       return const Icon(Icons.work, color: Color(0xFF2D6045), size: 30);
     case 'seasonal':
-      return const Icon(Icons.av_timer, color: Color(0xFF2D6045), size: 30);
+      return const Icon(Icons.work, color: Color(0xFF2D6045), size: 30);
     case 'uni':
       return const Icon(
         Icons.school,
-        color: Color(0xFF4A6A8A), //Color(0xFF354F6B), // Slate Blue
+        color: Color(0xFF4A6A8A), // Slate Blue
         size: 30,
       );
     case 'volunteer':
@@ -110,18 +165,11 @@ Icon _categoryIcon(String category) {
         size: 30,
       );
     case 'internship':
-      return const Icon(
-        Icons.business_center,
-        color: Color(0xFF2D6045),
-        size: 30,
-      );
+      return const Icon(Icons.work, color: Color(0xFF2D6045), size: 30);
     default:
       return const Icon(Icons.work, color: Color(0xFF2D6045), size: 30);
   }
 }
-
-
-
 
 // class for the expandable event tile
 class ExpandableEventTile extends StatelessWidget {
@@ -136,6 +184,11 @@ class ExpandableEventTile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text(
+            entry.key,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 8),
           ...entry.value.map((exp) {
             final key = GlobalKey();
             eventKeys[exp.id] = key;
@@ -169,22 +222,13 @@ class ExpandableEventTile extends StatelessWidget {
                   ),
                   if (exp.highlights.isNotEmpty)
                     _bulletSection('Highlights:', exp.highlights),
-                  if (exp.references.isNotEmpty)
-                    _bulletSection('Reference on request:', exp.references),
                   if (exp.imageAssets.isNotEmpty)
-                    SizedBox(
-                      height: 160,
-                      child: PageView.builder(
-                        itemCount: exp.imageAssets.length,
-                        itemBuilder:
-                            (context, index) => Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16.0,
-                                vertical: 15.0,
-                              ),
-                              child: Image.asset(exp.imageAssets[index]),
-                            ),
-                      ),
+                    _ImageCarousel(images: exp.imageAssets),
+                  if (exp.links.isNotEmpty) _bulletSection("Links:", exp.links),
+                  if (exp.references.isNotEmpty)
+                    _bulletSection(
+                      AppLocalizations.of(context)!.referenceRequest,
+                      exp.references,
                     ),
                 ],
               ),
@@ -196,23 +240,216 @@ class ExpandableEventTile extends StatelessWidget {
   }
 
   Widget _bulletSection(String title, List<String> items) {
+    final isLinks = title == "Links:";
     return Padding(
       padding: const EdgeInsets.only(bottom: 16.0, left: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-          ...items.map(
-            (item) => Row(
+          Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+          ...items.map((item) {
+            if (isLinks) {
+              return Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Linkify(
+                    text: item,
+                    style: TextStyle(fontSize: 16),
+                    linkStyle: const TextStyle(color: Colors.blue),
+                    onOpen: (link) async {
+                      final uri = Uri.parse(link.url);
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(
+                          uri,
+                          mode: LaunchMode.externalApplication,
+                        );
+                      }
+                    },
+                  ),
+                ],
+              );
+            }
+            return Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text('• ', style: TextStyle(fontSize: 16)),
                 Expanded(child: Text(item)),
               ],
-            ),
-          ),
+            );
+          }),
         ],
       ),
+    );
+  }
+}
+
+class _ImageCarousel extends StatefulWidget {
+  final List<String> images;
+
+  const _ImageCarousel({required this.images});
+
+  @override
+  State<_ImageCarousel> createState() => _ImageCarouselState();
+}
+
+class _ImageCarouselState extends State<_ImageCarousel> {
+  late final PageController _controller;
+  late final Timer _timer;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = PageController();
+
+    if (widget.images.length > 1) {
+      _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+        if (_controller.hasClients) {
+          _currentPage = (_currentPage + 1) % widget.images.length;
+          _controller.animateToPage(
+            _currentPage,
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeInOut,
+          );
+        }
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    if (widget.images.length > 1) _timer.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 320,
+          child: PageView.builder(
+            controller: _controller,
+            itemCount: widget.images.length,
+            onPageChanged: (index) => setState(() => _currentPage = index),
+            itemBuilder: (context, index) {
+              final image = widget.images[index];
+              return GestureDetector(
+                onTap: () => _showImageDialog(context, widget.images, index),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 32.0,
+                    vertical: 16.0,
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(image, fit: BoxFit.cover),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+        if (widget.images.length > 1)
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(widget.images.length, (index) {
+                return Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  width: _currentPage == index ? 12 : 8,
+                  height: _currentPage == index ? 12 : 8,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color:
+                        _currentPage == index ? Colors.white : Colors.grey[600],
+                  ),
+                );
+              }),
+            ),
+          ),
+        SizedBox(height: 16),
+      ],
+    );
+  }
+
+  void _showImageDialog(
+    BuildContext context,
+    List<String> images,
+    int initialIndex,
+  ) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        int currentIndex = initialIndex;
+
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return Dialog(
+              backgroundColor: Colors.black87,
+              insetPadding: const EdgeInsets.all(16),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  // Image
+                  InteractiveViewer(child: Image.asset(images[currentIndex])),
+
+                  // Left arrow
+                  if (images.length > 1)
+                    Positioned(
+                      left: 8,
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            currentIndex =
+                                (currentIndex - 1 + images.length) %
+                                images.length;
+                          });
+                        },
+                      ),
+                    ),
+
+                  // Right arrow
+                  if (images.length > 1)
+                    Positioned(
+                      right: 8,
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            currentIndex = (currentIndex + 1) % images.length;
+                          });
+                        },
+                      ),
+                    ),
+
+                  // Close button
+                  Positioned(
+                    top: 8,
+                    right: 8,
+                    child: IconButton(
+                      icon: const Icon(Icons.close, color: Colors.white),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }

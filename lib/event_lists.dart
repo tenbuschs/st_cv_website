@@ -147,9 +147,9 @@ List<CvEvent> getExperiences(BuildContext context) {
       imageAssets: [
         'lib/assets/latvia_01.jpg',
         'lib/assets/latvia_02.jpg',
-        'lib/assets/latvia_03.jpg',
+        'lib/assets/latvia_03.heic',
         'lib/assets/latvia_04.jpg',
-        'lib/assets/latvia_05.jpg',
+        'lib/assets/latvia_05.heic',
       ],
       highlights: [
         AppLocalizations.of(context)!.latviaHighlight1,
@@ -196,7 +196,7 @@ List<CvEvent> getExperiences(BuildContext context) {
       longitude: 176.458520,
       company: AppLocalizations.of(context)!.marshCompany,
       startDate: '2018-02-01',
-      endDate: '2018-04-30',
+      endDate: '2018-05-05',
       description: AppLocalizations.of(context)!.marshDescription,
       category: 'seasonal',
       imageAssets: [],

@@ -33,6 +33,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get currentlyWorking => 'Current';
 
   @override
+  String get referenceRequest => 'Reference (contact information on request):';
+
+  @override
+  String get year => 'year';
+
+  @override
+  String get years => 'years';
+
+  @override
+  String get month => 'month';
+
+  @override
+  String get months => 'months';
+
+  @override
   String get sdcTitle => 'Event and Facilities Support';
 
   @override
@@ -180,7 +195,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kroneHighlight4 => 'Working on confidential pre-development projects';
 
   @override
-  String get kroneLink => 'https://www.krone-agriculture.com/en/';
+  String get kroneLink => 'Company Website: https://www.krone-agriculture.com/en/';
 
   @override
   String get marshTitle => 'Machinery Operator';
