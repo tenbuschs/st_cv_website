@@ -54,39 +54,12 @@ class Timeline extends StatelessWidget {
                             entry.value.length, // Make this dynamic if needed
                         width: 3,
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Colors.grey[700]!, Colors.grey[500]!],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                          ),
-                        ),
-                      ),
+                          color: Colors.grey[700],
+                                            ),
+                      )
                   ],
                 ),
               ),
-              /*Container(
-                width: 60,
-                alignment: Alignment.topCenter,
-                child: Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 4),
-                      width: 12,
-                      height: 12,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    if (!isLast)
-                      Container(
-                        height: 90.0 * entry.value.length,
-                        width: 2,
-                        color: Colors.grey[700],
-                      ),
-                  ],
-                ),
-              ),*/
               // Expandable event tiles
               ExpandableEventTile(entry: entry),
             ],
@@ -255,19 +228,21 @@ class ExpandableEventTile extends StatelessWidget {
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Linkify(
-                    text: item,
-                    style: TextStyle(fontSize: 16),
-                    linkStyle: const TextStyle(color: Colors.blue),
-                    onOpen: (link) async {
-                      final uri = Uri.parse(link.url);
-                      if (await canLaunchUrl(uri)) {
-                        await launchUrl(
-                          uri,
-                          mode: LaunchMode.externalApplication,
-                        );
-                      }
-                    },
+                  Flexible(
+                    child: Linkify(
+                      text: item,
+                      style: TextStyle(fontSize: 16),
+                      linkStyle: const TextStyle(color: Colors.blue),
+                      onOpen: (link) async {
+                        final uri = Uri.parse(link.url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(
+                            uri,
+                            mode: LaunchMode.externalApplication,
+                          );
+                        }
+                      },
+                    ),
                   ),
                 ],
               );

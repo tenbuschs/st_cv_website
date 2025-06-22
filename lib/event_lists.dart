@@ -457,10 +457,10 @@ List<CvEvent> getVolunteering(BuildContext context) {
       imageAssets: [],
       highlights: ['tbd'],
       links: [
-        'https://www.lincoln.ac.nz/life-at-lincoln/starting-at-lincoln/kaiwhakarite-tauira-student-buddy-programme/#:~:text=Student%20buddies%20are%20current%20students%20ready%20to%20help,guidance%20and%20help%20you%20to%20feel%20more%20comfortable.'
+        'https://www.lincoln.ac.nz/life-at-lincoln/starting-at-lincoln/kaiwhakarite-tauira-student-buddy-programme/'
       ],
       references: [
-        'Jayne Smith, Student Buddy Coordinator, Lincoln University'
+        AppLocalizations.of(context)!.buddyReference,
       ],
     ),
     CvEvent(

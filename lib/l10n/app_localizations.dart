@@ -803,6 +803,12 @@ abstract class AppLocalizations {
   /// **'Assisting new students in their transition to university life, providing guidance and support.'**
   String get buddyDescription;
 
+  /// No description provided for @buddyReference.
+  ///
+  /// In en, this message translates to:
+  /// **'Jayne Smith, Student Buddy Coordinator'**
+  String get buddyReference;
+
   /// No description provided for @courseRepTitle.
   ///
   /// In en, this message translates to:

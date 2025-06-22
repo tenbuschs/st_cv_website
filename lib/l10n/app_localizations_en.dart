@@ -363,6 +363,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get buddyDescription => 'Assisting new students in their transition to university life, providing guidance and support.';
 
   @override
+  String get buddyReference => 'Jayne Smith, Student Buddy Coordinator';
+
+  @override
   String get courseRepTitle => 'Course Representative';
 
   @override
