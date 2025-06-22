@@ -3,6 +3,7 @@ import 'main_layout.dart';
 import 'timeline.dart';
 import 'event_lists.dart';
 import 'event_map.dart';
+import 'l10n/app_localizations.dart';
 
 class EducationPage extends StatelessWidget {
   final VoidCallback toggleLocale;
@@ -17,6 +18,8 @@ class EducationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainLayout(
+      mainText: AppLocalizations.of(context)!.education,
+      lowerText: "Simon Tenbusch",
       toggleLocale: toggleLocale,
       locale: locale,
       silvers: [

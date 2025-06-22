@@ -3,12 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'l10n/app_localizations.dart';
 
 class MainLayout extends StatelessWidget {
+  final String mainText;
+  final String lowerText;
   final List<Widget> silvers;
   final VoidCallback toggleLocale;
   final Locale locale;
 
   const MainLayout({
     super.key,
+    required this.mainText,
+    required this.lowerText,
     required this.silvers,
     required this.toggleLocale,
     required this.locale,
@@ -145,8 +149,8 @@ class MainLayout extends StatelessWidget {
                     children: [
                       // Header
                       HeaderWithAvatar(
-                        mainText: AppLocalizations.of(context)!.greeting,
-                        lowerText: AppLocalizations.of(context)!.profession,
+                        mainText: mainText,
+                        lowerText: lowerText,
                       ),
                       const SizedBox(height: 32),
                     ],

@@ -18,6 +18,8 @@ class HomePage extends StatelessWidget {
     final isGerman = locale.languageCode == 'de';
 
     return MainLayout(
+      mainText: AppLocalizations.of(context)!.greeting,
+      lowerText: AppLocalizations.of(context)!.profession,
       toggleLocale: toggleLocale,
       locale: locale,
       silvers: [

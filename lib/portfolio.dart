@@ -15,6 +15,14 @@ class PortfolioPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainLayout(toggleLocale: toggleLocale, locale: locale, silvers: []);
+    return MainLayout(
+        mainText: "Portfolio",
+        lowerText: "Simon Tenbusch",
+        toggleLocale: toggleLocale,
+        locale: locale,
+        silvers: [
+
+        ]
+    );
   }
 }

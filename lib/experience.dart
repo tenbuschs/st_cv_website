@@ -3,6 +3,7 @@ import 'event_lists.dart';
 import 'main_layout.dart';
 import 'timeline.dart';
 import 'event_map.dart';
+import 'l10n/app_localizations.dart';
 
 class ExperiencePage extends StatefulWidget {
   final VoidCallback toggleLocale;
@@ -22,6 +23,8 @@ class _ExperiencePageState extends State<ExperiencePage> {
   @override
   Widget build(BuildContext context) {
     return MainLayout(
+      mainText: AppLocalizations.of(context)!.experience,
+      lowerText: "Simon Tenbusch",
       toggleLocale: widget.toggleLocale,
       locale: widget.locale,
       silvers: [
