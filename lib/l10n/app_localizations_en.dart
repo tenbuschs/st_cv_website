@@ -21,6 +21,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginFailed => 'Login failed. Check username and password.';
 
   @override
+  String get aboutMe => 'I am passionate about arable farming and agricultural technology, especially everything that could be summarised under Precision Farming and Smart Farming. Enjoy exploring my website!';
+
+  @override
   String get experience => 'Experience';
 
   @override

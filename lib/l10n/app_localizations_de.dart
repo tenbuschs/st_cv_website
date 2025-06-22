@@ -21,6 +21,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get loginFailed => 'Login fehlgeschlagen. Bitte versuchen Sie es erneut.';
 
   @override
+  String get aboutMe => 'Meine Leidenschaft gilt dem Ackerbau und der Agrartechnik, insbesondere allem, was man unter Precision Farming und Smart Farming zusammenfassen kann. Viel Spaß beim Stöbern auf meiner Website!';
+
+  @override
   String get experience => 'Berufserfahrung';
 
   @override

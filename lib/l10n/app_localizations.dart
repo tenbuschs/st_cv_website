@@ -119,6 +119,12 @@ abstract class AppLocalizations {
   /// **'Login failed. Check username and password.'**
   String get loginFailed;
 
+  /// No description provided for @aboutMe.
+  ///
+  /// In en, this message translates to:
+  /// **'I am passionate about arable farming and agricultural technology, especially everything that could be summarised under Precision Farming and Smart Farming. Enjoy exploring my website!'**
+  String get aboutMe;
+
   /// No description provided for @experience.
   ///
   /// In en, this message translates to:

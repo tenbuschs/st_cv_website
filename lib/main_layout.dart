@@ -52,6 +52,24 @@ class MainLayout extends StatelessWidget {
               ),
               TextButton(
                 onPressed:
+                    () =>
+                    Navigator.pushReplacementNamed(context, '/experience'),
+                child: Text(
+                  AppLocalizations.of(context)!.experience,
+                  style: TextStyle(
+                    color:
+                    currentRoute == '/experience'
+                        ? Color(0xFF2D6045)
+                        : Colors.white,
+                    fontWeight:
+                    currentRoute == '/experience'
+                        ? FontWeight.bold
+                        : FontWeight.normal,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed:
                     () => Navigator.pushReplacementNamed(context, '/education'),
                 child: Text(
                   AppLocalizations.of(context)!.education,
@@ -62,24 +80,6 @@ class MainLayout extends StatelessWidget {
                             : Colors.white,
                     fontWeight:
                         currentRoute == '/education'
-                            ? FontWeight.bold
-                            : FontWeight.normal,
-                  ),
-                ),
-              ),
-              TextButton(
-                onPressed:
-                    () =>
-                        Navigator.pushReplacementNamed(context, '/experience'),
-                child: Text(
-                  AppLocalizations.of(context)!.experience,
-                  style: TextStyle(
-                    color:
-                        currentRoute == '/experience'
-                            ? Color(0xFF2D6045)
-                            : Colors.white,
-                    fontWeight:
-                        currentRoute == '/experience'
                             ? FontWeight.bold
                             : FontWeight.normal,
                   ),

@@ -29,24 +29,24 @@ class HomePage extends StatelessWidget {
             children: [
               // About Me
               Text(
-                isGerman
-                    ? 'Ich bin ein leidenschaftlicher Spezialist für Präzisionslandwirtschaft mit Erfahrung in Datenanalyse, R und GIS.'
-                    : 'I am passionate about Precision Agriculture with experience in arable farming, software development, and field research.',
+                AppLocalizations.of(context)!.aboutMe,
                 style: GoogleFonts.inter(fontSize: 16),
               ),
               const SizedBox(height: 32),
 
               // Navigation Tiles
               _NavTile(
-                title: isGerman ? 'Ausbildung' : 'Education',
-                imagePath: 'lib/assets/education.jpeg',
-              ),
-              const SizedBox(height: 16),
-              _NavTile(
-                title: isGerman ? 'Berufserfahrung' : 'Experience',
+                title: AppLocalizations.of(context)!.experience,
                 imagePath: 'lib/assets/experience.jpg',
               ),
               const SizedBox(height: 16),
+
+              _NavTile(
+                title: AppLocalizations.of(context)!.education,
+                imagePath: 'lib/assets/education.jpeg',
+              ),
+              const SizedBox(height: 16),
+
               _NavTile(
                 title: AppLocalizations.of(context)!.volunteering,
                 imagePath: 'lib/assets/volunteering.jpg',
