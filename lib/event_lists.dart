@@ -7,8 +7,8 @@ List<CvEvent> getExperiences(BuildContext context) {
       id: 'sdc',
       title: AppLocalizations.of(context)!.sdcTitle,
       location: AppLocalizations.of(context)!.sdcLocation,
-      latitude: 52.356022,  //TBD
-      longitude: 7.472193,  //TBD
+      latitude: -43.591933,
+      longitude: 172.384283,
       company: AppLocalizations.of(context)!.sdcCompany,
       startDate: '2025-06-15',
       endDate: null,
@@ -17,16 +17,22 @@ List<CvEvent> getExperiences(BuildContext context) {
       imageAssets: [
       ],
       highlights: [
+        AppLocalizations.of(context)!.sdcHighlight1,
+        AppLocalizations.of(context)!.sdcHighlight2,
       ],
-      links: [],
-      references: [],
+      links: [
+        "https://www.selwyn.govt.nz/"
+      ],
+      references: [
+        AppLocalizations.of(context)!.sdcReference
+      ],
     ),
     CvEvent(
       id: 'ra',
       title: AppLocalizations.of(context)!.raTitle,
       location: AppLocalizations.of(context)!.locationLincoln,
-      latitude: 52.356022,  //TBD
-      longitude: 7.472193,  //TBD
+      latitude: -43.645936,
+      longitude: 172.464524,
       company: AppLocalizations.of(context)!.luName,
       startDate: '2025-01-15',
       endDate: null,
@@ -35,6 +41,120 @@ List<CvEvent> getExperiences(BuildContext context) {
       imageAssets: [
       ],
       highlights: [
+        AppLocalizations.of(context)!.raHighlight1,
+        AppLocalizations.of(context)!.raHighlight2,
+        AppLocalizations.of(context)!.raHighlight3,
+      ],
+      links: [
+        "https://www.lincoln.ac.nz/life-at-lincoln/accommodation/living-on-campus/"
+      ],
+      references: [
+        AppLocalizations.of(context)!.raReference1,
+        AppLocalizations.of(context)!.raReference2,
+      ],
+    ),
+    CvEvent(
+      id: 'msf_harvest',
+      title: AppLocalizations.of(context)!.msfHarvestTitle,
+      location: AppLocalizations.of(context)!.msfLocation,
+      latitude: -32.767139,
+      longitude: 119.449047,
+      company: AppLocalizations.of(context)!.msfCompany,
+      startDate: '2024-10-10',
+      endDate: '2025-01-15',
+      description: AppLocalizations.of(context)!.msfHarvestDescription,
+      category: 'seasonal',
+      imageAssets: [
+        'lib/assets/msf_harvest_01.jpg',
+        'lib/assets/msf_harvest_02.jpg',
+        'lib/assets/msf_harvest_03.jpg',
+        'lib/assets/msf_harvest_04.jpg',
+      ],
+      highlights: [
+        AppLocalizations.of(context)!.msfHarvestHighlight1,
+        AppLocalizations.of(context)!.msfHarvestHighlight2,
+        AppLocalizations.of(context)!.msfHarvestHighlight3,
+        AppLocalizations.of(context)!.msfHarvestHighlight4,
+      ],
+      links: [],
+      references: [
+        AppLocalizations.of(context)!.msfReference1,
+        AppLocalizations.of(context)!.msfReference2,
+      ],
+    ),
+    CvEvent(
+      id: 'msf_seeding',
+      title: AppLocalizations.of(context)!.msfSeedingTitle,
+      location: AppLocalizations.of(context)!.msfLocation,
+      latitude: -32.767139,
+      longitude: 119.449047,
+      company: AppLocalizations.of(context)!.msfCompany,
+      startDate: '2024-05-01',
+      endDate: '2024-06-15',
+      description: AppLocalizations.of(context)!.msfSeedingDescription,
+      category: 'seasonal',
+      imageAssets: [
+        'lib/assets/msf_seeding_01.jpg',
+        'lib/assets/msf_seeding_02.jpg',
+        'lib/assets/msf_seeding_03.jpg',
+        'lib/assets/msf_seeding_04.jpg',
+      ],
+      highlights: [
+        AppLocalizations.of(context)!.msfSeedingHighlight1,
+        AppLocalizations.of(context)!.msfSeedingHighlight2,
+        AppLocalizations.of(context)!.msfSeedingHighlight3,
+      ],
+      links: [],
+      references: [
+        AppLocalizations.of(context)!.msfReference1,
+        AppLocalizations.of(context)!.msfReference2,
+      ],
+    ),
+    CvEvent(
+      id: 'dillon',
+      title: AppLocalizations.of(context)!.dillonTitle,
+      location: AppLocalizations.of(context)!.dillonLocation,
+      latitude: -45.934391,
+      longitude: 168.670269,
+      company: AppLocalizations.of(context)!.dillonCompany,
+      startDate: '2024-02-15',
+      endDate: '2024-04-30',
+      description: AppLocalizations.of(context)!.dillonDescription,
+      category: 'seasonal',
+      imageAssets: [
+        'lib/assets/dillon_01.jpg',
+        'lib/assets/dillon_02.jpg',
+        'lib/assets/dillon_03.jpg',
+        'lib/assets/dillon_04.jpg',
+      ],
+      highlights: [],
+      links: [],
+      references: [
+        AppLocalizations.of(context)!.dillonReference,
+      ],
+    ),
+    CvEvent(
+      id: 'latvia',
+      title: AppLocalizations.of(context)!.latviaTitle,
+      location: AppLocalizations.of(context)!.latviaLocation,
+      latitude: 56.808549,
+      longitude: 22.525651,
+      company: AppLocalizations.of(context)!.latviaCompany,
+      startDate: '2022-07-01',
+      endDate: '2022-09-05',
+      description: AppLocalizations.of(context)!.latviaDescription,
+      category: 'seasonal',
+      imageAssets: [
+        'lib/assets/latvia_01.jpg',
+        'lib/assets/latvia_02.jpg',
+        'lib/assets/latvia_03.jpg',
+        'lib/assets/latvia_04.jpg',
+        'lib/assets/latvia_05.jpg',
+      ],
+      highlights: [
+        AppLocalizations.of(context)!.latviaHighlight1,
+        AppLocalizations.of(context)!.latviaHighlight2,
+        AppLocalizations.of(context)!.latviaHighlight3,
       ],
       links: [],
       references: [],
@@ -52,6 +172,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       category: 'job',
       imageAssets: [
         'lib/assets/krone_01.jpg',
+        'lib/assets/krone_02.jpg',
+        'lib/assets/krone_03.jpg',
+        'lib/assets/krone_04.jpg',
+        'lib/assets/krone_05.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.kroneHighlight1,
@@ -59,23 +183,9 @@ List<CvEvent> getExperiences(BuildContext context) {
         AppLocalizations.of(context)!.kroneHighlight3,
         AppLocalizations.of(context)!.kroneHighlight4,
       ],
-      links: [],
-      references: [],
-    ),
-    CvEvent(
-      id: 'saudhof',
-      title: AppLocalizations.of(context)!.saudhofTitle,
-      location: AppLocalizations.of(context)!.saudhofLocation,
-      latitude: 51.663973,
-      longitude: 11.739965,
-      company: AppLocalizations.of(context)!.saudhofCompany,
-      startDate: '2016-07-01',
-      endDate: '2016-08-31',
-      description: AppLocalizations.of(context)!.saudhofDescription,
-      category: 'seasonal',
-      imageAssets: ['lib/assets/saudhof_01.jpg', 'lib/assets/saudhof_02.jpg'],
-      highlights: ['tbd'],
-      links: [],
+      links: [
+        AppLocalizations.of(context)!.kroneLink,
+      ],
       references: [],
     ),
     CvEvent(
@@ -90,9 +200,18 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.marshDescription,
       category: 'seasonal',
       imageAssets: [],
-      highlights: [],
-      links: [],
-      references: [],
+      highlights: [
+        AppLocalizations.of(context)!.marshHighlight1,
+        AppLocalizations.of(context)!.marshHighlight2,
+        AppLocalizations.of(context)!.marshHighlight3,
+        AppLocalizations.of(context)!.marshHighlight4,
+      ],
+      links: [
+        "https://marshcontracting.co.nz/"
+      ],
+      references: [
+        AppLocalizations.of(context)!.marshReference,
+      ],
     ),
     CvEvent(
       id: 'schuetz',
@@ -105,57 +224,41 @@ List<CvEvent> getExperiences(BuildContext context) {
       endDate: '2021-08-31',
       description: AppLocalizations.of(context)!.schuetzDescription,
       category: 'seasonal',
-      imageAssets: ['lib/assets/schuetz_01.jpg'],
-      highlights: ['tbd'],
-      links: [],
+      imageAssets: [
+        'lib/assets/schuetz_01.jpg'
+      ],
+      highlights: [
+        AppLocalizations.of(context)!.schuetzHighlight1,
+        AppLocalizations.of(context)!.schuetzHighlight2,
+        AppLocalizations.of(context)!.schuetzHighlight3,
+        AppLocalizations.of(context)!.schuetzHighlight4,
+      ],
+      links: [
+        "https://www.landmaschinen-schuetz.de/de/lohnunternehmen" //doesn't work!!
+      ],
       references: [],
     ),
     CvEvent(
-      id: 'msf',
-      title: AppLocalizations.of(context)!.msfTitle,
-      location: AppLocalizations.of(context)!.msfLocation,
-      latitude: -32.767139,
-      longitude: 119.449047,
-      company: AppLocalizations.of(context)!.msfCompany,
-      startDate: '2024-05-01',
-      endDate: '2025-01-15',
-      description: AppLocalizations.of(context)!.msfDescription,
+      id: 'saudhof',
+      title: AppLocalizations.of(context)!.saudhofTitle,
+      location: AppLocalizations.of(context)!.saudhofLocation,
+      latitude: 51.663973,
+      longitude: 11.739965,
+      company: AppLocalizations.of(context)!.saudhofCompany,
+      startDate: '2016-07-01',
+      endDate: '2016-08-31',
+      description: AppLocalizations.of(context)!.saudhofDescription,
       category: 'seasonal',
-      imageAssets: [],
-      highlights: [],
-      links: [],
-      references: [],
-    ),
-    CvEvent(
-      id: 'dillon',
-      title: AppLocalizations.of(context)!.dillonTitle,
-      location: AppLocalizations.of(context)!.dillonLocation,
-      latitude: -45.934391,
-      longitude: 168.670269,
-      company: AppLocalizations.of(context)!.dillonCompany,
-      startDate: '2024-02-15',
-      endDate: '2024-04-30',
-      description: AppLocalizations.of(context)!.dillonDescription,
-      category: 'seasonal',
-      imageAssets: [],
-      highlights: [],
-      links: [],
-      references: [],
-    ),
-    CvEvent(
-      id: 'latvia',
-      title: AppLocalizations.of(context)!.latviaTitle,
-      location: AppLocalizations.of(context)!.latviaLocation,
-      latitude: 56.808549,
-      longitude: 22.525651,
-      company: AppLocalizations.of(context)!.latviaCompany,
-      startDate: '2022-07-01',
-      endDate: '2022-09-05',
-      description: AppLocalizations.of(context)!.latviaDescription,
-      category: 'seasonal',
-      imageAssets: [],
-      highlights: [],
-      links: [],
+      imageAssets: ['lib/assets/saudhof_01.jpg', 'lib/assets/saudhof_02.jpg'],
+      highlights: [
+        AppLocalizations.of(context)!.saudhofHighlight1,
+        AppLocalizations.of(context)!.saudhofHighlight2,
+        AppLocalizations.of(context)!.saudhofHighlight3,
+        AppLocalizations.of(context)!.saudhofHighlight4,
+      ],
+      links: [
+        "https://www.bauernhof-nelben.de/"
+      ],
       references: [],
     ),
     CvEvent(
@@ -170,9 +273,19 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.dalhausDescription,
       category: 'part-time',
       imageAssets: [],
-      highlights: [],
-      links: [],
-      references: [],
+      highlights: [
+        AppLocalizations.of(context)!.dalhausHighlight1,
+        AppLocalizations.of(context)!.dalhausHighlight2,
+        AppLocalizations.of(context)!.dalhausHighlight3,
+        AppLocalizations.of(context)!.dalhausHighlight4,
+      ],
+      links: [
+        AppLocalizations.of(context)!.dalhausLink,
+      ],
+      references: [
+        AppLocalizations.of(context)!.dalhausReference1,
+        AppLocalizations.of(context)!.dalhausReference2,
+      ],
     ),
     CvEvent(
       id: 'suden',
@@ -186,7 +299,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.sudenDescription,
       category: 'seasonal',
       imageAssets: [],
-      highlights: [],
+      highlights: [
+        AppLocalizations.of(context)!.sudenHighlight1,
+        AppLocalizations.of(context)!.sudenHighlight2,
+        AppLocalizations.of(context)!.sudenHighlight3,
+      ],
       links: [],
       references: [],
     ),
@@ -199,8 +316,8 @@ List<CvEvent> getEducations(BuildContext context) {
       id: 'master',
       title: AppLocalizations.of(context)!.masterTitle,
       location: AppLocalizations.of(context)!.locationLincoln,
-      latitude: 51.930423,   //tbd
-      longitude: 11.804522,   //tbd
+      latitude: -43.643574,
+      longitude: 172.467476,
       company:  AppLocalizations.of(context)!.luName,
       startDate: '2024-07-15',
       endDate: null,
@@ -215,8 +332,8 @@ List<CvEvent> getEducations(BuildContext context) {
       id: 'bwa',
       title: AppLocalizations.of(context)!.bwaTitle,
       location: AppLocalizations.of(context)!.locationOsna,
-      latitude: 51.930423,   //tbd
-      longitude: 11.804522,  //tbd
+      latitude: 52.303393,
+      longitude: 8.037987,
       company: AppLocalizations.of(context)!.hsosName,
       startDate: '2021-09-01',
       endDate: '2024-01-29',
@@ -231,8 +348,8 @@ List<CvEvent> getEducations(BuildContext context) {
       id: 'ets',
       title: AppLocalizations.of(context)!.etsTitle,
       location: AppLocalizations.of(context)!.locationLingen,
-      latitude: 51.930423,      //tbd
-      longitude: 11.804522,     //tbd
+      latitude: 52.518639,
+      longitude: 7.322342,
       company: AppLocalizations.of(context)!.hsosName,
       startDate: '2018-08-01',
       endDate: '2021-07-31',
@@ -247,8 +364,8 @@ List<CvEvent> getEducations(BuildContext context) {
       id: 'school',
       title: AppLocalizations.of(context)!.schoolTitle,
       location: AppLocalizations.of(context)!.locationGladbeck,
-      latitude: 51.930423,     //tbd
-      longitude: 11.804522,    //tbd
+      latitude: 51.575931,
+      longitude: 6.987037,
       company: AppLocalizations.of(context)!.schoolName,
       startDate: '2005-08-01',
       endDate: '2017-07-31',
@@ -270,16 +387,20 @@ List<CvEvent> getVolunteering(BuildContext context) {
       id: 'thw_lingen',
       title: AppLocalizations.of(context)!.thwTitle,
       location: AppLocalizations.of(context)!.locationLingen,
-      latitude: 51.930423,     //tbd
-      longitude: 11.804522,     //tbd
+      latitude: 52.512489,
+      longitude: 7.287195,
       company: AppLocalizations.of(context)!.thwCompany,
-      startDate: '2021-09-01',
-      //tbd
-      endDate: '2024-01-29',
-      //tbd
+      startDate: '2020-08-01',
+      endDate: '2022-03-31',
       description: AppLocalizations.of(context)!.thwDescription,
       category: 'volunteer',
-      imageAssets: [],
+      imageAssets: [
+        'lib/assets/thw_01.jpg',
+        'lib/assets/thw_02.jpg',
+        'lib/assets/thw_03.jpg',
+        'lib/assets/thw_04.jpg',
+        'lib/assets/thw_05.jpg',
+      ],
       highlights: ['tbd'],
       links: ['https://www.thw.de/EN/homepage/homepage_node.html'],
       references: [],
@@ -288,18 +409,20 @@ List<CvEvent> getVolunteering(BuildContext context) {
       id: 'thw_osna',
       title: AppLocalizations.of(context)!.thwTitle,
       location: AppLocalizations.of(context)!.locationOsna,
-      latitude: 51.930423,
-      //tbd
-      longitude: 11.804522,
-      //tbd
+      latitude: 52.260646,
+      longitude: 8.085970,
       company: AppLocalizations.of(context)!.thwCompany,
-      startDate: '2021-09-01',
-      //tbd
+      startDate: '2022-03-01',
       endDate: null,
-      //tbd
       description: AppLocalizations.of(context)!.thwDescription,
       category: 'volunteer',
-      imageAssets: [],
+      imageAssets: [
+        'lib/assets/thw_01.jpg',
+        'lib/assets/thw_02.jpg',
+        'lib/assets/thw_03.jpg',
+        'lib/assets/thw_04.jpg',
+        'lib/assets/thw_05.jpg',
+      ],
       highlights: ['tbd'],
       links: ['https://www.thw.de/EN/homepage/homepage_node.html'],
       references: [],
@@ -308,15 +431,11 @@ List<CvEvent> getVolunteering(BuildContext context) {
       id: 'faculty_council',
       title: AppLocalizations.of(context)!.facultyCouncilTitle,
       location: AppLocalizations.of(context)!.locationOsna,
-      latitude: 51.930423,
-      //tbd
-      longitude: 11.804522,
-      //tbd
+      latitude: 52.303226,
+      longitude: 8.039833,
       company: AppLocalizations.of(context)!.hsosName,
       startDate: '2022-01-01',
-      //tbd
-      endDate: '2023-12-31',
-      //tbd
+      endDate: '2022-12-31',
       description: AppLocalizations.of(context)!.facultyCouncilDescription,
       category: 'volunteer',
       imageAssets: [],
@@ -328,8 +447,8 @@ List<CvEvent> getVolunteering(BuildContext context) {
       id: 'buddy',
       title: AppLocalizations.of(context)!.buddyTitle,
       location: AppLocalizations.of(context)!.locationLincoln,
-      latitude: 51.930423,      //tbd
-      longitude: 11.804522,      //tbd
+      latitude: -43.643574,
+      longitude: 172.467476,
       company: AppLocalizations.of(context)!.luName,
       startDate: '2024-10-01',
       endDate: null,
@@ -348,15 +467,11 @@ List<CvEvent> getVolunteering(BuildContext context) {
       id: 'course_rep',
       title: AppLocalizations.of(context)!.courseRepTitle,
       location: AppLocalizations.of(context)!.locationLincoln,
-      latitude: 51.930423,
-      //tbd
-      longitude: 11.804522,
-      //tbd
+      latitude: -43.644261,
+      longitude: 172.469227,
       company: AppLocalizations.of(context)!.luName,
       startDate: '2025-02-18',
-      //tbd
       endDate: null,
-      //tbd
       description: AppLocalizations.of(context)!.courseRepDescription,
       category: 'volunteer',
       imageAssets: [],

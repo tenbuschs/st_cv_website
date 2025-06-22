@@ -9,7 +9,54 @@
   "volunteering": "Nebenmissionen & Fleißbienchen",
   "currentlyWorking": "Heute",
 
-  "kroneTitle": "Ingenieur in der Elektronikentwicklung",
+
+  "sdcTitle": "Event und Facilities Support",
+  "sdcCompany": "Selwyn District Council",
+  "sdcLocation": "Rolleston, Neuseeland",
+  "sdcDescription": "Nebentätigkeit zur Unterstützung bei der Organisation und Durchführung von Veranstaltungen und Einrichtungen der Gemeinde. Die Haupttätigkeiten sind Operationen (Auf- und Abbau, Materialtransport) und Kundenbetreuung (Begrüßung, Bedienung, Bearbeitung sämtlicher Anfragen).",
+  "sdcHighlight1": "Erfahrungen im Umgang mit verschiedensten Menschen",
+  "sdcHighlight2": "Einblicke in die Realisierung großer Veranstaltungen",
+  "sdcReference": "Maria Flower, Senior Advisor für Gemeindeveranstaltungen (und Finanzierung)",
+
+  "raTitle": "Residential Assistant",
+  "raDescription": "Erste Anlaufstelle für Studenten , die in den Wohnheimen leben. Unterstützung bei der Organisation von Veranstaltungen und Aktivitäten. Förderung einer positiven Wohnatmosphäre. Sicherstellung der Einhaltung der Richtlinien zum Wohlbefinden der Studierenden.",
+  "raHighlight1": "Verbesserung meiner Kompetenzen im Bereich Seelsorge und Stressbewältigung",
+  "raHighlight2": "Digitalisierung und Verbesserung von Prozessen durch meine neue Excel-Tabelle",
+  "raHighlight3": "Konfrontation mit emotionalen Extremsituationen",
+  "raReference1": "Belinda Hawley, Accommodation Manager",
+  "raReference2": "Rachel Close, Operative Leitung",
+
+  "msfCompany": "Mount Sheridan Farms",
+  "msfLocation": "Varley, WA, Australien",
+  "msfReference1": "Allan Sutherland, Senior Farm Besitzer und Manager",
+  "msfReference2": "Ace Sutherland, Junior Farm Manager",
+  "msfHarvestTitle": "Überladewagenfahrer",
+  "msfHarvestDescription": "Arbeit als Überladewagenfahrer, vorwiegend mit JCB 8330 und NYREX Titan II. Einschließlich sämtlicher Wartung und Pflege des Gespannes. \nDer Betrieb bewirtschaftet rund 14.500 ha Ackerbau mit Controlled Traffic Farming und Direktsaat. Angebaut werden vorwiegend Weizen, Gerste, Raps und Lupinen.",
+  "msfHarvestHighlight1": "Einblicke in die großskalierte Ernte-Logistik",
+  "msfHarvestHighlight2": "Führungsverantwortung für andere Überladewagenfahrer",
+  "msfHarvestHighlight3": "Verbesserte Nutzung des Lenksystems für Überladewagen",
+  "msfHarvestHighlight4": "Bekämpfen von Busch- und Flächenbränden",
+  "msfSeedingTitle": "Air Seeder Fahrer",
+  "msfSeedingDescription": "Aussaat von Getreide und Raps mit einer 18 Meter breiten pneumatischen Direktsaatmaschine und einem John Deere 9560 R. Einschließlich aller Wartungs- und Reparaturarbeiten sowie der Saatgut- und Düngerlogistik. \nDer Betrieb bewirtschaftet rund 14.500 ha Ackerbau mit Controlled Traffic Farming und Direktsaat. Angebaut werden vorwiegend Weizen, Gerste, Raps und Lupinen.",
+  "msfSeedingHighlight1": "Einblicke in die wasser- und ressourcensparende Bewirtschaftung durch Direktsaat",
+  "msfSeedingHighlight2": "Optimierung der Arbeitsqualität durch präzisere Kalibrierung",
+  "msfSeedingHighlight3": "Einsatz einer geteilten Bearbeitungskarte in Green Star",
+
+  "dillonTitle": "Landwirtschaftlicher Mitarbeiter",
+  "dillonCompany": "Dillon Harvesting Ltd.",
+  "dillonLocation": "Riversdale, Neuseeland",
+  "dillonDescription": "Erledigung sämtlicher Aufgaben auf dem Hof. Vor allem Traktorfahren (Erntelogistik, Bodenbearbeitung, Aussaat), aber auch Wartungs- und Pflegearbeiten, Ein-, Um- und Auslagerung von Getreide sowie Tätigkeiten in der Tierhaltung. \nDer Betrieb bewirtschaftet knapp 1000 ha mit überwiegend Ackerbau (Weizen, Gerste, Triticale, Raps) und etwas Lamm- und Rindermast. Ein großer Schwerpunkt ist das Mahlen und Mischen von Getreide und die Lieferung an benachbarte Tierhalter.",
+  "dillonReference": "Kenny Jackson, Vorarbeiter",
+
+  "latviaTitle": "Maschinenführer",
+  "latviaCompany": "SIA Rapsulauks",
+  "latviaLocation": "Satiki, Lettland",
+  "latviaDescription": "10-wöchiger Sommerjob zur Ernte und Aussaat auf einem deutschsprachigem Betrieb. Unterstützen der Erntelogistik in einem Agri -Truck, Streuen von Schneckenkorn, Dünger streuen, Bodenbearbeitung mittels Scheibenegge und Grubber. \nDer Ackerbaubetrieb bewirtschaftet rund 5000 ha (Weizen, Gerste und Raps). Außerdem verfügt der Betrieb über große Lagerkapazitäten und eine eigene Saatgutaufbereitung.",
+  "latviaHighlight1": "Enges Zeitfenster für Ernte und Aussaat aufgrund der nördlichen Lage",
+  "latviaHighlight2": "Einrichtung der Teilbreitenschaltung für den Düngerstreuer",
+  "latviaHighlight3": "Vollständig eigenständige Düngung von fast 4000 ha (inkl. Kalibrierungen, Düngerlogistik, Flächenplanung)",
+
+  "kroneTitle": "Mechatronikingenieur in der Elektronikentwicklung",
   "kroneCompany": "Maschinenfabrik Bernard KRONE GmbH & Co. KG",
   "kroneLocation": "Spelle, Deutschland",
   "kroneDescription": "Duales Studium und anschließend Tätigkeit als Werkstudent.",
@@ -17,6 +64,55 @@
   "kroneHighlight2":"Weiterentwicklung der Überladeautomatik AutoFill am BiG X",
   "kroneHighlight3":"Mitentwicklung eines neuen ISOBUS User Interface",
   "kroneHighlight4": "Mitwirken bei vertraulichen Vorentwicklungsprojekten",
+  "kroneLink": "https://www.krone-agriculture.com/de/",
+
+  "marshTitle": "Machinery Operator",
+  "marshCompany": "Marsh Contracting Ltd.",
+  "marshLocation": "Te Puke, Neuseeland",
+  "marshDescription": "In der Herbstsaison fuhr ich für ein Lohnunternehmen und half bei sämtlichen Aufgaben. Das Unternehmen ist auf die Ernte von Grünfutter und Mais spezialisiert. In diesem Zusammenhang konzentrierte sich meine Arbeit auf das Mähen, Schwaden, Pressen und Wickeln, aber ich habe auch Nachsaaten und Transporte durchgeführt.",
+  "marshHighlight1": "Mähen mit einer Schmetterlingskombination",
+  "marshHighlight2": "Sammeln von Erfahrungen im steilen Gelände",
+  "marshHighlight3": "",
+  "marshHighlight4": "",
+  "marshReference": "Tammy Marsh, Inhaberin und Geschäftsführerin",
+
+  "schuetzTitle": "Maschinenführer",
+  "schuetzCompany": "Schütz Landmaschinen OHG",
+  "schuetzLocation": "Calbe (Saale), Deutschland",
+  "schuetzDescription": "Bedienung von Mähdreschern und anderen landwirtschaftlichen Maschinen, mit Fokus auf praktische Anwendungen der Agrartechnik.",
+  "schuetzHighlight1": "Bedienung von Claas Lexion Mähdreschern in verschiedenen Bedingungen",
+  "schuetzHighlight2": "Tiefgreifende Wartung und Reparatur von Landmaschinen",
+  "schuetzHighlight3": "",
+  "schuetzHighlight4": "",
+
+  "saudhofTitle": "Erntehelfer",
+  "saudhofCompany": "Matthias Saudhof",
+  "saudhofLocation": "Nelben, Deutschland",
+  "saudhofDescription": "Unterstützung bei landwirtschaftlichen Arbeiten als Erntehelfer",
+  "saudhofHighlight1": "",
+  "saudhofHighlight2": "",
+  "saudhofHighlight3": "",
+  "saudhofHighlight4": "",
+
+  "dalhausTitle": "Aushilfe",
+  "dalhausCompany": "Ludger Dalhaus",
+  "dalhausDescription": "Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.",
+  "dalhausHighlight1": "",
+  "dalhausHighlight2": "",
+  "dalhausHighlight3": "",
+  "dalhausHighlight4": "",
+  "dalhausReference1": "Ludger Dalhaus, Landwirt",
+  "dalhausReference2": "Tobias Dalhaus, promovierter Landwirt und Dozent für Agrarökonomie",
+  "dalhausLink": "https://www.bauer-dalhaus.de/",
+
+  "sudenTitle": "Praktikum als Land- und Baumaschinenmechaniker",
+  "sudenCompany": "Suden Baumaschinen GmbH",
+  "sudenDescription": "Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln.",
+  "sudenHighlight1": "",
+  "sudenHighlight2": "",
+  "sudenHighlight3": "",
+
+
 
   "etsTitle": "B.Eng. Enginnering Technischer Systeme, Fachrichtung Mechatronik",
   "etsDescription": "Duales Studium",
@@ -40,46 +136,6 @@
   "courseRepTitle": "Course Representative",
   "courseRepDescription": "Bindeglied zwischen Studierenden und Fakultät, Sammlung von Feedback und Vertretung studentischer Anliegen in kursbezogenen Angelegenheiten.",
 
-  "saudhofTitle": "Erntehelfer",
-  "saudhofCompany": "Matthias Saudhof",
-  "saudhofLocation": "Nelben, Deutschland",
-  "saudhofDescription": "Unterstützung bei landwirtschaftlichen Arbeiten als Erntehelfer, mit Fokus auf praktische Anwendungen der Agrartechnik.",
-
-  "marshTitle": "Machinery Operator",
-  "marshCompany": "Marsh Contracting Ltd.",
-  "marshLocation": "Te Puke, Neuseeland",
-  "marshDescription": "Arbeit als Treckerfahrer im Bereich Grünlandwirtschaft in Neuseeland, mit dem Ziel, internationale Erfahrungen in landwirtschaftlichen Praktiken zu sammeln.",
-
-  "schuetzTitle": "Maschinenführer",
-  "schuetzCompany": "Schütz Landmaschinen OHG",
-  "schuetzLocation": "Calbe (Saale), Deutschland",
-  "schuetzDescription": "Bedienung von Mähdreschern und anderen landwirtschaftlichen Maschinen, mit Fokus auf praktische Anwendungen der Agrartechnik.",
-
-  "dillonTitle": "Machinery Operator",
-  "dillonCompany": "Dillon Harvesting Ltd.",
-  "dillonLocation": "Riversdale, Neuseeland",
-  "dillonDescription": "Arbeiten als Treckerfahrer in den Bereichen Ernte, Bodenbearbeitung und Aussat",
-
-  "msfTitle": "Machinery Operator",
-  "msfCompany": "Mount Sheridan Farms",
-  "msfLocation": "Varley, WA, Australien",
-  "msfDescription": "Aussaat und Ernte von Weizen, Gerste, Raps und anderen Feldfrüchten in Australien, mit dem Ziel, Erfahrungen in großflächigen landwirtschaftlichen Betrieben zu sammeln.",
-
-  "latviaTitle": "Maschinenführer",
-  "latviaCompany": "SIA Rapsulauks",
-  "latviaLocation": "Satiki, Lettland",
-  "latviaDescription": "Arbeit auf einem deutschsprachigen Betrieb in Lettland, mit Fokus auf praktische Anwendungen der Präzisionslandwirtschaftstechnologien.",
-
-  "dalhausTitle": "Aushilfe",
-  "dalhausCompany": "Ludger Dalhaus",
-  "dalhausDescription": "Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.",
-
-  "sudenTitle": "Praktikum als Land- und Baumaschinenmechaniker",
-  "sudenCompany": "Suden Baumaschinen GmbH",
-  "sudenDescription": "Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln.",
-
-  "raTitle": "Residential Assistant",
-  "raDescription": "Erster Ansprechpartner für Studierende in Wohnheimen, Unterstützung bei der Organisation von Veranstaltungen und Aktivitäten, Förderung einer positiven Wohnatmosphäre.",
 
   "locationDorsten": "Dorsten, Deutschland",
   "locationLingen": "Lingen (Ems), Deutschland",
@@ -91,12 +147,5 @@
   "hsosName": "Hochschule Osnabrück",
   "schoolTitle": "Schulbildung bis zur Allgemeinen Hochschulreife",
   "schoolName": "Hermannschule (Grundschule) und Ratsgymnasium",
-  "schoolDescription": " G12 blabla ",
-
-  "sdcTitle": "Event and Facilities Support",
-  "sdcCompany": "Selwyn District Council",
-  "sdcLocation": "Rolleston, Neuseeland",
-  "sdcDescription": "Unterstützung bei der Organisation von Veranstaltungen und der Verwaltung von Einrichtungen, Förderung der Gemeinschaftsaktivitäten im Selwyn District."
-
-
+  "schoolDescription": " G12 blabla "
 }
