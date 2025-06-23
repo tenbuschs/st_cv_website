@@ -170,8 +170,8 @@ List<CvEvent> getExperiences(BuildContext context) {
       latitude: 52.303393,
       longitude: 8.037987,
       company: AppLocalizations.of(context)!.hsosName,
-      startDate: '2021-09-01',
-      endDate: '2024-01-29',
+      startDate: '2022-02-01',
+      endDate: '2023-06-30',
       description: AppLocalizations.of(context)!.hiwiDescription,
       category: 'job',
       imageAssets: [],
@@ -520,6 +520,8 @@ List<CvEvent> getVolunteering(BuildContext context) {
   ];
 }
 
+
+/*
 Map<String, List<CvEvent>> groupByQuarter(List<CvEvent> exps) {
   final Map<String, List<CvEvent>> grouped = {};
   for (final exp in exps) {
@@ -529,13 +531,26 @@ Map<String, List<CvEvent>> groupByQuarter(List<CvEvent> exps) {
   }
   final sortedKeys = grouped.keys.toList()..sort((a, b) => b.compareTo(a));
   return {for (var k in sortedKeys) k: grouped[k]!};
-}
-
+}*/
+/*
 Map<String, List<CvEvent>> groupByYear(List<CvEvent> exps) {
   final Map<String, List<CvEvent>> grouped = {};
   for (final exp in exps) {
     final start = DateTime.parse(exp.startDate);
     final key = '${start.year}';
+    grouped.putIfAbsent(key, () => []).add(exp);
+  }
+  final sortedKeys = grouped.keys.toList()..sort((a, b) => b.compareTo(a));
+  return {for (var k in sortedKeys) k: grouped[k]!};
+}*/
+
+Map<String, List<CvEvent>> groupByYear(List<CvEvent> exps) {
+  final Map<String, List<CvEvent>> grouped = {};
+  for (final exp in exps) {
+    final year = exp.endDate != null
+        ? DateTime.parse(exp.endDate!).year
+        : DateTime.now().year;
+    final key = '$year';
     grouped.putIfAbsent(key, () => []).add(exp);
   }
   final sortedKeys = grouped.keys.toList()..sort((a, b) => b.compareTo(a));
