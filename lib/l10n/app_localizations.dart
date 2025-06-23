@@ -377,6 +377,24 @@ abstract class AppLocalizations {
   /// **'Carrying out all tasks on the farm. Mainly driving tractors (harvest logistics, soil cultivation, sowing), but also maintenance and servicing work, grain storage, and activities in livestock farming. \nThe farm manages almost 1000 ha with mainly arable farming (wheat, barley, triticale, rape) and some lamb and beef finishing. A large focus is on the milling and mixing of grain and delivery to neighbouring livestock farmers.'**
   String get dillonDescription;
 
+  /// No description provided for @dillonHighlight1.
+  ///
+  /// In en, this message translates to:
+  /// **'Alternative storage methods in grain hoses'**
+  String get dillonHighlight1;
+
+  /// No description provided for @dillonHighlight2.
+  ///
+  /// In en, this message translates to:
+  /// **'Insights into post-harvest burning'**
+  String get dillonHighlight2;
+
+  /// No description provided for @dillonHighlight3.
+  ///
+  /// In en, this message translates to:
+  /// **'Learnings on the importance of team spirit and leadership qualities'**
+  String get dillonHighlight3;
+
   /// No description provided for @dillonReference.
   ///
   /// In en, this message translates to:
@@ -424,6 +442,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Completely independent fertiliser application on almost 4000 ha (incl. calibrations, fertiliser logistics, field planning)'**
   String get latviaHighlight3;
+
+  /// No description provided for @hiwiTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scientific Assistant'**
+  String get hiwiTitle;
+
+  /// No description provided for @hiwiDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Support with experiments in various scientific projects. Mainly collecting data in the field (biomass samples, soil samples, weed identification, etc.) as a basis for decision support systems based on drone images.'**
+  String get hiwiDescription;
+
+  /// No description provided for @hiwiHighlight1.
+  ///
+  /// In en, this message translates to:
+  /// **'Handling state-of-the-art measurement technology'**
+  String get hiwiHighlight1;
+
+  /// No description provided for @hiwiHighlight2.
+  ///
+  /// In en, this message translates to:
+  /// **'Familiarisation with various experimental setups'**
+  String get hiwiHighlight2;
+
+  /// No description provided for @hiwiHighlight3.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer events between science and practice'**
+  String get hiwiHighlight3;
+
+  /// No description provided for @hiwiHighlight4.
+  ///
+  /// In en, this message translates to:
+  /// **'Knowledge for the identification of weeds'**
+  String get hiwiHighlight4;
 
   /// No description provided for @kroneTitle.
   ///
@@ -512,20 +566,20 @@ abstract class AppLocalizations {
   /// No description provided for @marshHighlight2.
   ///
   /// In en, this message translates to:
-  /// **'Gathering experience in steep terrain'**
+  /// **'Gaining experience of driving on steep terrain'**
   String get marshHighlight2;
 
   /// No description provided for @marshHighlight3.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Learning round baling'**
   String get marshHighlight3;
 
-  /// No description provided for @marshHighlight4.
+  /// No description provided for @marshLink.
   ///
   /// In en, this message translates to:
-  /// **''**
-  String get marshHighlight4;
+  /// **'Company Website: https://www.marshcontracting.co.nz/'**
+  String get marshLink;
 
   /// No description provided for @marshReference.
   ///
@@ -554,32 +608,38 @@ abstract class AppLocalizations {
   /// No description provided for @schuetzDescription.
   ///
   /// In en, this message translates to:
-  /// **'Operating combines and other agricultural'**
+  /// **'Operating combine harvesters (Claas Lexion 480 to 600) for several seasons in various conditions. Also baling (Krone BiG Pack) and transport activities.'**
   String get schuetzDescription;
 
   /// No description provided for @schuetzHighlight1.
   ///
   /// In en, this message translates to:
-  /// **'Operating Claas Lexion combines in various conditions'**
+  /// **'Corn threshing in snow and frost'**
   String get schuetzHighlight1;
 
   /// No description provided for @schuetzHighlight2.
   ///
   /// In en, this message translates to:
-  /// **'Intense maintenance and repair of agricultural machinery'**
+  /// **'In-depth maintenance and repair of agricultural machinery, esp. combine harvesters'**
   String get schuetzHighlight2;
 
   /// No description provided for @schuetzHighlight3.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Only chaser bin driver for 6 combine harvesters in rapeseed'**
   String get schuetzHighlight3;
 
   /// No description provided for @schuetzHighlight4.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Night shift maize chopping'**
   String get schuetzHighlight4;
+
+  /// No description provided for @schuetzHighlight5.
+  ///
+  /// In en, this message translates to:
+  /// **'200 km road journey of a combine harvester at 20 km/h'**
+  String get schuetzHighlight5;
 
   /// No description provided for @saudhofTitle.
   ///
@@ -602,31 +662,31 @@ abstract class AppLocalizations {
   /// No description provided for @saudhofDescription.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Summer holiday job to assist with all agricultural work. This includes harvest logistics, soil cultivation, bale logistics, lucerne harvest. \nThe farm is an organic arable farm with just under 700 ha. Wheat, barley, spelt, grain maize, maize silage, lupins, sunflowers, sugar beet, lucerne, potatoes and pumpkins are cultivated. '**
   String get saudhofDescription;
 
   /// No description provided for @saudhofHighlight1.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'First points of contact with large-scale organic farming'**
   String get saudhofHighlight1;
 
   /// No description provided for @saudhofHighlight2.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Intensive insights into mechanical weed control'**
   String get saudhofHighlight2;
 
   /// No description provided for @saudhofHighlight3.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'First points of contact with GNSS guidance systems and Auto Turn'**
   String get saudhofHighlight3;
 
   /// No description provided for @saudhofHighlight4.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Getting to know new crops'**
   String get saudhofHighlight4;
 
   /// No description provided for @dalhausTitle.
@@ -644,49 +704,49 @@ abstract class AppLocalizations {
   /// No description provided for @dalhausDescription.
   ///
   /// In en, this message translates to:
-  /// **'Assisting in various farm operations, gaining practical experience in agricultural practices.'**
+  /// **'Part-time job during school times, support with all agricultural work including pig fattening, special crop cultivation and direct sales. \nThe farm cultivates almost 70 hectares and grows cereals (wheat, barley, corn) and special crops (strawberries, raspberries, asparagus). In addition, 1000 pigs are fattened. '**
   String get dalhausDescription;
 
   /// No description provided for @dalhausHighlight1.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Selling in the farm shop and at farmers\' markets'**
   String get dalhausHighlight1;
 
   /// No description provided for @dalhausHighlight2.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Insights into fruit and vegetable growing'**
   String get dalhausHighlight2;
 
   /// No description provided for @dalhausHighlight3.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Independently completing all tasks throughout the agricultural year'**
   String get dalhausHighlight3;
 
   /// No description provided for @dalhausHighlight4.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Versatile maintenance and repairs as well as construction activities on the farm'**
   String get dalhausHighlight4;
 
   /// No description provided for @dalhausReference1.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Ludger Dalhaus, Senior Farmer'**
   String get dalhausReference1;
 
   /// No description provided for @dalhausReference2.
   ///
   /// In en, this message translates to:
-  /// **'Tobias Dalhaus, Farmer'**
+  /// **'Dr. Tobias Dalhaus, Junior Farmer and lecturer in agricultural economics'**
   String get dalhausReference2;
 
   /// No description provided for @dalhausLink.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Farm Website: https://www.bauer-dalhaus.de/'**
   String get dalhausLink;
 
   /// No description provided for @sudenTitle.
@@ -704,38 +764,74 @@ abstract class AppLocalizations {
   /// No description provided for @sudenDescription.
   ///
   /// In en, this message translates to:
-  /// **'Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.'**
+  /// **'School internship focussing on agricultural and construction machinery repairs. The construction company, which specialises in civil engineering and earthworks, has an extensive workshop for its own repairs.'**
   String get sudenDescription;
 
   /// No description provided for @sudenHighlight1.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Insights into large construction machines'**
   String get sudenHighlight1;
 
   /// No description provided for @sudenHighlight2.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Complete disassembly of a wheel loader to repair the articulated steering'**
   String get sudenHighlight2;
 
   /// No description provided for @sudenHighlight3.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'Replacing a diesel engine in an excavator'**
   String get sudenHighlight3;
 
-  /// No description provided for @etsTitle.
+  /// No description provided for @sudenLink.
   ///
   /// In en, this message translates to:
-  /// **'B.Eng. Engineering of Technical Systems (Mechatronics)'**
-  String get etsTitle;
+  /// **'Company Website: https://www.suden.de/leistungen/lkw-und-baumaschinentechnik/'**
+  String get sudenLink;
 
-  /// No description provided for @etsDescription.
+  /// No description provided for @masterTitle.
   ///
   /// In en, this message translates to:
-  /// **'Dual Studies'**
-  String get etsDescription;
+  /// **'M.Sc. Precision Agriculture'**
+  String get masterTitle;
+
+  /// No description provided for @masterDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Master\'s degree programme with a focus on precision agriculture technologies and practices. This programme serves the promising crossover between agriculture and (software) technologies.'**
+  String get masterDescription;
+
+  /// No description provided for @masterHighlight1.
+  ///
+  /// In en, this message translates to:
+  /// **'Creation of a Fresh Water Farm Plan as part of the Soil Science course'**
+  String get masterHighlight1;
+
+  /// No description provided for @masterHighlight2.
+  ///
+  /// In en, this message translates to:
+  /// **'Field trips to FAR Research sites'**
+  String get masterHighlight2;
+
+  /// No description provided for @masterHighlight3.
+  ///
+  /// In en, this message translates to:
+  /// **'In-depth GIS course with practical projects'**
+  String get masterHighlight3;
+
+  /// No description provided for @masterHighlight4.
+  ///
+  /// In en, this message translates to:
+  /// **'Guest lecturers with extensive practical experience in the field of precision farming'**
+  String get masterHighlight4;
+
+  /// No description provided for @masterLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Course Website: https://www.lincoln.ac.nz/study/study-programmes/programme-search/master-of-precision-agriculture/'**
+  String get masterLink;
 
   /// No description provided for @bwaTitle.
   ///
@@ -746,50 +842,110 @@ abstract class AppLocalizations {
   /// No description provided for @bwaDescription.
   ///
   /// In en, this message translates to:
-  /// **'Bla bla bla'**
+  /// **'Second Bachelor\'s degree programme with the aim of learning the basics of agriculture and economics in a structured way. The specialisation is agricultural and biosystems engineering.'**
   String get bwaDescription;
 
-  /// No description provided for @masterTitle.
+  /// No description provided for @bwaHighlight1.
   ///
   /// In en, this message translates to:
-  /// **'M.Sc.Precision Agriculture'**
-  String get masterTitle;
+  /// **'Tutoring in various courses for fellow students'**
+  String get bwaHighlight1;
 
-  /// No description provided for @masterDescription.
+  /// No description provided for @bwaHighlight2.
   ///
   /// In en, this message translates to:
-  /// **'Master\'s program focusing on precision agriculture technologies and practices.'**
-  String get masterDescription;
+  /// **'Versatile excursions and guest lecturers with a high level of practical relevance'**
+  String get bwaHighlight2;
 
-  /// No description provided for @thwTitle.
+  /// No description provided for @bwaHighlight3.
   ///
   /// In en, this message translates to:
-  /// **'Volunteer at German Federal Agency for Technical Relief'**
-  String get thwTitle;
+  /// **'Bachelor\'s thesis in cooperation with KRONE in the interface area between agriculture and agricultural engineering'**
+  String get bwaHighlight3;
 
-  /// No description provided for @thwCompany.
+  /// No description provided for @bwaHighlight4.
   ///
   /// In en, this message translates to:
-  /// **'German Federal Agency for Technical Relief'**
-  String get thwCompany;
+  /// **'Final grade of 1.59'**
+  String get bwaHighlight4;
 
-  /// No description provided for @thwDescription.
+  /// No description provided for @bwaLink.
   ///
   /// In en, this message translates to:
-  /// **'Volunteer work with the German Federal Agency for Technical Relief, providing assistance in various emergency situations.'**
-  String get thwDescription;
+  /// **'Course Website: https://www.hs-osnabrueck.de/en/study/study-offerings/bachelor/agri-food-engineering-and-business-beng/'**
+  String get bwaLink;
 
-  /// No description provided for @facultyCouncilTitle.
+  /// No description provided for @etsTitle.
   ///
   /// In en, this message translates to:
-  /// **'Student Representative in Faculty Council'**
-  String get facultyCouncilTitle;
+  /// **'B.Eng. Engineering of Technical Systems (Mechatronics)'**
+  String get etsTitle;
 
-  /// No description provided for @facultyCouncilDescription.
+  /// No description provided for @etsDescription.
   ///
   /// In en, this message translates to:
-  /// **'Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.'**
-  String get facultyCouncilDescription;
+  /// **'Dual study programme to become a mechatronics engineer. This means switching between university and company (KRONE) every 10 weeks. This means that theoretical content from the degree programme can be applied directly in practice.'**
+  String get etsDescription;
+
+  /// No description provided for @etsHighlight1.
+  ///
+  /// In en, this message translates to:
+  /// **'Versatile fundamentals in mechanics, electronics and IT'**
+  String get etsHighlight1;
+
+  /// No description provided for @etsHighlight2.
+  ///
+  /// In en, this message translates to:
+  /// **'Major company-related project to improve spare parts logistics'**
+  String get etsHighlight2;
+
+  /// No description provided for @etsHighlight3.
+  ///
+  /// In en, this message translates to:
+  /// **'Bachelor\'s thesis in the field of validation of a mechatronic system in a forage harvester'**
+  String get etsHighlight3;
+
+  /// No description provided for @etsHighlight4.
+  ///
+  /// In en, this message translates to:
+  /// **'Final grade of 1.82'**
+  String get etsHighlight4;
+
+  /// No description provided for @etsLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Course Website: https://www.hs-osnabrueck.de/en/study/study-offerings/bachelor/ets-mechatronics-beng-dual-campus-lingen-ems/'**
+  String get etsLink;
+
+  /// No description provided for @schoolTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'School Education up to General Higher Qualification for University Entrance'**
+  String get schoolTitle;
+
+  /// No description provided for @schoolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Hermannschule (Primary School) and Ratsgymnasium (High School)'**
+  String get schoolName;
+
+  /// No description provided for @schoolDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'School education up to the university entrance qualification including primary school (4 years) and high school (8 years).'**
+  String get schoolDescription;
+
+  /// No description provided for @courseRepTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Course Representative'**
+  String get courseRepTitle;
+
+  /// No description provided for @courseRepDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Acting as a liaison between students and faculty, collecting feedback and representing student concerns in course-related matters. Regular participation in meetings with the Dean.'**
+  String get courseRepDescription;
 
   /// No description provided for @buddyTitle.
   ///
@@ -809,17 +965,71 @@ abstract class AppLocalizations {
   /// **'Jayne Smith, Student Buddy Coordinator'**
   String get buddyReference;
 
-  /// No description provided for @courseRepTitle.
+  /// No description provided for @facultyCouncilTitle.
   ///
   /// In en, this message translates to:
-  /// **'Course Representative'**
-  String get courseRepTitle;
+  /// **'Student Representative in Faculty Council'**
+  String get facultyCouncilTitle;
 
-  /// No description provided for @courseRepDescription.
+  /// No description provided for @facultyCouncilDescription.
   ///
   /// In en, this message translates to:
-  /// **'Acting as a liaison between students and faculty, gathering feedback and representing student concerns in course-related matters.'**
-  String get courseRepDescription;
+  /// **'Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.'**
+  String get facultyCouncilDescription;
+
+  /// No description provided for @thwTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Volunteer at German Federal Agency for Technical Relief'**
+  String get thwTitle;
+
+  /// No description provided for @thwCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'German Federal Agency for Technical Relief'**
+  String get thwCompany;
+
+  /// No description provided for @thwDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Volunteer at the German Federal Agency for Technical Relief (THW). Initially in the Lingen branch (2020-2022) and then in the Osnabrück branch (2022-2024). Training and support in various emergency situations of civil defence and disaster control.'**
+  String get thwDescription;
+
+  /// No description provided for @thwHighlight1.
+  ///
+  /// In en, this message translates to:
+  /// **'Unique insights into civil defence and disaster control'**
+  String get thwHighlight1;
+
+  /// No description provided for @thwHighlight2.
+  ///
+  /// In en, this message translates to:
+  /// **'Extensive training (rock, wood and metalworking, electrical engineering, pump technology, etc.)'**
+  String get thwHighlight2;
+
+  /// No description provided for @thwHighlight3.
+  ///
+  /// In en, this message translates to:
+  /// **'Working as an examiner to test new volunteers'**
+  String get thwHighlight3;
+
+  /// No description provided for @thwHighlight4.
+  ///
+  /// In en, this message translates to:
+  /// **' Emergency response to the flood in the Ahr valley in 2020'**
+  String get thwHighlight4;
+
+  /// No description provided for @thwHighlight5.
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency response to the Emsland flood in 2023'**
+  String get thwHighlight5;
+
+  /// No description provided for @thwLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Website: https://www.thw.de/EN/homepage/homepage_node.html'**
+  String get thwLink;
 
   /// No description provided for @locationDorsten.
   ///
@@ -851,6 +1061,12 @@ abstract class AppLocalizations {
   /// **'Gladbeck, Germany'**
   String get locationGladbeck;
 
+  /// No description provided for @locationThw.
+  ///
+  /// In en, this message translates to:
+  /// **'Lingen (Ems) and Osnabrück, Germany'**
+  String get locationThw;
+
   /// No description provided for @luName.
   ///
   /// In en, this message translates to:
@@ -862,24 +1078,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'University of Applied Sciences Osnabrück'**
   String get hsosName;
-
-  /// No description provided for @schoolTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'School Education up to General Higher Qualification for University Entrance'**
-  String get schoolTitle;
-
-  /// No description provided for @schoolName.
-  ///
-  /// In en, this message translates to:
-  /// **'Hermannschule (Primary School) and Ratsgymnasium (High School)'**
-  String get schoolName;
-
-  /// No description provided for @schoolDescription.
-  ///
-  /// In en, this message translates to:
-  /// **' G12 blabla '**
-  String get schoolDescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

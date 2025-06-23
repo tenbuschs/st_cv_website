@@ -150,6 +150,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dillonDescription => 'Carrying out all tasks on the farm. Mainly driving tractors (harvest logistics, soil cultivation, sowing), but also maintenance and servicing work, grain storage, and activities in livestock farming. \nThe farm manages almost 1000 ha with mainly arable farming (wheat, barley, triticale, rape) and some lamb and beef finishing. A large focus is on the milling and mixing of grain and delivery to neighbouring livestock farmers.';
 
   @override
+  String get dillonHighlight1 => 'Alternative storage methods in grain hoses';
+
+  @override
+  String get dillonHighlight2 => 'Insights into post-harvest burning';
+
+  @override
+  String get dillonHighlight3 => 'Learnings on the importance of team spirit and leadership qualities';
+
+  @override
   String get dillonReference => 'Kenny Jackson, 2nd in Charge';
 
   @override
@@ -172,6 +181,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get latviaHighlight3 => 'Completely independent fertiliser application on almost 4000 ha (incl. calibrations, fertiliser logistics, field planning)';
+
+  @override
+  String get hiwiTitle => 'Scientific Assistant';
+
+  @override
+  String get hiwiDescription => 'Support with experiments in various scientific projects. Mainly collecting data in the field (biomass samples, soil samples, weed identification, etc.) as a basis for decision support systems based on drone images.';
+
+  @override
+  String get hiwiHighlight1 => 'Handling state-of-the-art measurement technology';
+
+  @override
+  String get hiwiHighlight2 => 'Familiarisation with various experimental setups';
+
+  @override
+  String get hiwiHighlight3 => 'Transfer events between science and practice';
+
+  @override
+  String get hiwiHighlight4 => 'Knowledge for the identification of weeds';
 
   @override
   String get kroneTitle => 'Mechatronics Engineer in R&D Electronics';
@@ -216,13 +243,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get marshHighlight1 => 'Mowing with butterfly mower';
 
   @override
-  String get marshHighlight2 => 'Gathering experience in steep terrain';
+  String get marshHighlight2 => 'Gaining experience of driving on steep terrain';
 
   @override
-  String get marshHighlight3 => '';
+  String get marshHighlight3 => 'Learning round baling';
 
   @override
-  String get marshHighlight4 => '';
+  String get marshLink => 'Company Website: https://www.marshcontracting.co.nz/';
 
   @override
   String get marshReference => 'Tammy Marsh, Owner and Manager';
@@ -237,19 +264,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get schuetzLocation => 'Calbe (Saale), Germany';
 
   @override
-  String get schuetzDescription => 'Operating combines and other agricultural';
+  String get schuetzDescription => 'Operating combine harvesters (Claas Lexion 480 to 600) for several seasons in various conditions. Also baling (Krone BiG Pack) and transport activities.';
 
   @override
-  String get schuetzHighlight1 => 'Operating Claas Lexion combines in various conditions';
+  String get schuetzHighlight1 => 'Corn threshing in snow and frost';
 
   @override
-  String get schuetzHighlight2 => 'Intense maintenance and repair of agricultural machinery';
+  String get schuetzHighlight2 => 'In-depth maintenance and repair of agricultural machinery, esp. combine harvesters';
 
   @override
-  String get schuetzHighlight3 => '';
+  String get schuetzHighlight3 => 'Only chaser bin driver for 6 combine harvesters in rapeseed';
 
   @override
-  String get schuetzHighlight4 => '';
+  String get schuetzHighlight4 => 'Night shift maize chopping';
+
+  @override
+  String get schuetzHighlight5 => '200 km road journey of a combine harvester at 20 km/h';
 
   @override
   String get saudhofTitle => 'Machinery Operator';
@@ -261,19 +291,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get saudhofLocation => 'Nelben, Germany';
 
   @override
-  String get saudhofDescription => '';
+  String get saudhofDescription => 'Summer holiday job to assist with all agricultural work. This includes harvest logistics, soil cultivation, bale logistics, lucerne harvest. \nThe farm is an organic arable farm with just under 700 ha. Wheat, barley, spelt, grain maize, maize silage, lupins, sunflowers, sugar beet, lucerne, potatoes and pumpkins are cultivated. ';
 
   @override
-  String get saudhofHighlight1 => '';
+  String get saudhofHighlight1 => 'First points of contact with large-scale organic farming';
 
   @override
-  String get saudhofHighlight2 => '';
+  String get saudhofHighlight2 => 'Intensive insights into mechanical weed control';
 
   @override
-  String get saudhofHighlight3 => '';
+  String get saudhofHighlight3 => 'First points of contact with GNSS guidance systems and Auto Turn';
 
   @override
-  String get saudhofHighlight4 => '';
+  String get saudhofHighlight4 => 'Getting to know new crops';
 
   @override
   String get dalhausTitle => 'Farm Hand';
@@ -282,28 +312,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dalhausCompany => 'Ludger Dalhaus';
 
   @override
-  String get dalhausDescription => 'Assisting in various farm operations, gaining practical experience in agricultural practices.';
+  String get dalhausDescription => 'Part-time job during school times, support with all agricultural work including pig fattening, special crop cultivation and direct sales. \nThe farm cultivates almost 70 hectares and grows cereals (wheat, barley, corn) and special crops (strawberries, raspberries, asparagus). In addition, 1000 pigs are fattened. ';
 
   @override
-  String get dalhausHighlight1 => '';
+  String get dalhausHighlight1 => 'Selling in the farm shop and at farmers\' markets';
 
   @override
-  String get dalhausHighlight2 => '';
+  String get dalhausHighlight2 => 'Insights into fruit and vegetable growing';
 
   @override
-  String get dalhausHighlight3 => '';
+  String get dalhausHighlight3 => 'Independently completing all tasks throughout the agricultural year';
 
   @override
-  String get dalhausHighlight4 => '';
+  String get dalhausHighlight4 => 'Versatile maintenance and repairs as well as construction activities on the farm';
 
   @override
-  String get dalhausReference1 => '';
+  String get dalhausReference1 => 'Ludger Dalhaus, Senior Farmer';
 
   @override
-  String get dalhausReference2 => 'Tobias Dalhaus, Farmer';
+  String get dalhausReference2 => 'Dr. Tobias Dalhaus, Junior Farmer and lecturer in agricultural economics';
 
   @override
-  String get dalhausLink => '';
+  String get dalhausLink => 'Farm Website: https://www.bauer-dalhaus.de/';
 
   @override
   String get sudenTitle => 'Internship as an Agricultural and Construction Machinery Mechanic ';
@@ -312,49 +342,97 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sudenCompany => 'Suden Baumaschinen GmbH';
 
   @override
-  String get sudenDescription => 'Internship focusing on the maintenance and repair of agricultural and construction machinery, gaining hands-on experience in mechanical engineering.';
+  String get sudenDescription => 'School internship focussing on agricultural and construction machinery repairs. The construction company, which specialises in civil engineering and earthworks, has an extensive workshop for its own repairs.';
 
   @override
-  String get sudenHighlight1 => '';
+  String get sudenHighlight1 => 'Insights into large construction machines';
 
   @override
-  String get sudenHighlight2 => '';
+  String get sudenHighlight2 => 'Complete disassembly of a wheel loader to repair the articulated steering';
 
   @override
-  String get sudenHighlight3 => '';
+  String get sudenHighlight3 => 'Replacing a diesel engine in an excavator';
 
   @override
-  String get etsTitle => 'B.Eng. Engineering of Technical Systems (Mechatronics)';
+  String get sudenLink => 'Company Website: https://www.suden.de/leistungen/lkw-und-baumaschinentechnik/';
 
   @override
-  String get etsDescription => 'Dual Studies';
+  String get masterTitle => 'M.Sc. Precision Agriculture';
+
+  @override
+  String get masterDescription => 'Master\'s degree programme with a focus on precision agriculture technologies and practices. This programme serves the promising crossover between agriculture and (software) technologies.';
+
+  @override
+  String get masterHighlight1 => 'Creation of a Fresh Water Farm Plan as part of the Soil Science course';
+
+  @override
+  String get masterHighlight2 => 'Field trips to FAR Research sites';
+
+  @override
+  String get masterHighlight3 => 'In-depth GIS course with practical projects';
+
+  @override
+  String get masterHighlight4 => 'Guest lecturers with extensive practical experience in the field of precision farming';
+
+  @override
+  String get masterLink => 'Course Website: https://www.lincoln.ac.nz/study/study-programmes/programme-search/master-of-precision-agriculture/';
 
   @override
   String get bwaTitle => 'B.Eng. Agri-Food Engineering and Business';
 
   @override
-  String get bwaDescription => 'Bla bla bla';
+  String get bwaDescription => 'Second Bachelor\'s degree programme with the aim of learning the basics of agriculture and economics in a structured way. The specialisation is agricultural and biosystems engineering.';
 
   @override
-  String get masterTitle => 'M.Sc.Precision Agriculture';
+  String get bwaHighlight1 => 'Tutoring in various courses for fellow students';
 
   @override
-  String get masterDescription => 'Master\'s program focusing on precision agriculture technologies and practices.';
+  String get bwaHighlight2 => 'Versatile excursions and guest lecturers with a high level of practical relevance';
 
   @override
-  String get thwTitle => 'Volunteer at German Federal Agency for Technical Relief';
+  String get bwaHighlight3 => 'Bachelor\'s thesis in cooperation with KRONE in the interface area between agriculture and agricultural engineering';
 
   @override
-  String get thwCompany => 'German Federal Agency for Technical Relief';
+  String get bwaHighlight4 => 'Final grade of 1.59';
 
   @override
-  String get thwDescription => 'Volunteer work with the German Federal Agency for Technical Relief, providing assistance in various emergency situations.';
+  String get bwaLink => 'Course Website: https://www.hs-osnabrueck.de/en/study/study-offerings/bachelor/agri-food-engineering-and-business-beng/';
 
   @override
-  String get facultyCouncilTitle => 'Student Representative in Faculty Council';
+  String get etsTitle => 'B.Eng. Engineering of Technical Systems (Mechatronics)';
 
   @override
-  String get facultyCouncilDescription => 'Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.';
+  String get etsDescription => 'Dual study programme to become a mechatronics engineer. This means switching between university and company (KRONE) every 10 weeks. This means that theoretical content from the degree programme can be applied directly in practice.';
+
+  @override
+  String get etsHighlight1 => 'Versatile fundamentals in mechanics, electronics and IT';
+
+  @override
+  String get etsHighlight2 => 'Major company-related project to improve spare parts logistics';
+
+  @override
+  String get etsHighlight3 => 'Bachelor\'s thesis in the field of validation of a mechatronic system in a forage harvester';
+
+  @override
+  String get etsHighlight4 => 'Final grade of 1.82';
+
+  @override
+  String get etsLink => 'Course Website: https://www.hs-osnabrueck.de/en/study/study-offerings/bachelor/ets-mechatronics-beng-dual-campus-lingen-ems/';
+
+  @override
+  String get schoolTitle => 'School Education up to General Higher Qualification for University Entrance';
+
+  @override
+  String get schoolName => 'Hermannschule (Primary School) and Ratsgymnasium (High School)';
+
+  @override
+  String get schoolDescription => 'School education up to the university entrance qualification including primary school (4 years) and high school (8 years).';
+
+  @override
+  String get courseRepTitle => 'Course Representative';
+
+  @override
+  String get courseRepDescription => 'Acting as a liaison between students and faculty, collecting feedback and representing student concerns in course-related matters. Regular participation in meetings with the Dean.';
 
   @override
   String get buddyTitle => 'Student Buddy';
@@ -366,10 +444,37 @@ class AppLocalizationsEn extends AppLocalizations {
   String get buddyReference => 'Jayne Smith, Student Buddy Coordinator';
 
   @override
-  String get courseRepTitle => 'Course Representative';
+  String get facultyCouncilTitle => 'Student Representative in Faculty Council';
 
   @override
-  String get courseRepDescription => 'Acting as a liaison between students and faculty, gathering feedback and representing student concerns in course-related matters.';
+  String get facultyCouncilDescription => 'Representing student interests in the faculty council, participating in decision-making processes regarding academic policies and programs.';
+
+  @override
+  String get thwTitle => 'Volunteer at German Federal Agency for Technical Relief';
+
+  @override
+  String get thwCompany => 'German Federal Agency for Technical Relief';
+
+  @override
+  String get thwDescription => 'Volunteer at the German Federal Agency for Technical Relief (THW). Initially in the Lingen branch (2020-2022) and then in the Osnabrück branch (2022-2024). Training and support in various emergency situations of civil defence and disaster control.';
+
+  @override
+  String get thwHighlight1 => 'Unique insights into civil defence and disaster control';
+
+  @override
+  String get thwHighlight2 => 'Extensive training (rock, wood and metalworking, electrical engineering, pump technology, etc.)';
+
+  @override
+  String get thwHighlight3 => 'Working as an examiner to test new volunteers';
+
+  @override
+  String get thwHighlight4 => ' Emergency response to the flood in the Ahr valley in 2020';
+
+  @override
+  String get thwHighlight5 => 'Emergency response to the Emsland flood in 2023';
+
+  @override
+  String get thwLink => 'Website: https://www.thw.de/EN/homepage/homepage_node.html';
 
   @override
   String get locationDorsten => 'Dorsten, Germany';
@@ -387,17 +492,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get locationGladbeck => 'Gladbeck, Germany';
 
   @override
+  String get locationThw => 'Lingen (Ems) and Osnabrück, Germany';
+
+  @override
   String get luName => 'Lincoln University';
 
   @override
   String get hsosName => 'University of Applied Sciences Osnabrück';
-
-  @override
-  String get schoolTitle => 'School Education up to General Higher Qualification for University Entrance';
-
-  @override
-  String get schoolName => 'Hermannschule (Primary School) and Ratsgymnasium (High School)';
-
-  @override
-  String get schoolDescription => ' G12 blabla ';
 }

@@ -150,6 +150,15 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dillonDescription => 'Erledigung sämtlicher Aufgaben auf dem Hof. Vor allem Traktorfahren (Erntelogistik, Bodenbearbeitung, Aussaat), aber auch Wartungs- und Pflegearbeiten, Ein-, Um- und Auslagerung von Getreide sowie Tätigkeiten in der Tierhaltung. \nDer Betrieb bewirtschaftet knapp 1000 ha mit überwiegend Ackerbau (Weizen, Gerste, Triticale, Raps) und etwas Lamm- und Rindermast. Ein großer Schwerpunkt ist das Mahlen und Mischen von Getreide und die Lieferung an benachbarte Tierhalter.';
 
   @override
+  String get dillonHighlight1 => 'Alternative Getreidelagerung in Kunststoffschläuchen';
+
+  @override
+  String get dillonHighlight2 => 'Einblicke in das Verfahren der Brandrodung nach der Ernte';
+
+  @override
+  String get dillonHighlight3 => 'Erkenntnisse über die Bedeutung von Teamgeist und Führungsqualitäten';
+
+  @override
   String get dillonReference => 'Kenny Jackson, Vorarbeiter';
 
   @override
@@ -172,6 +181,24 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get latviaHighlight3 => 'Vollständig eigenständige Düngung von fast 4000 ha (inkl. Kalibrierungen, Düngerlogistik, Flächenplanung)';
+
+  @override
+  String get hiwiTitle => 'Wissenschaftlicher Mitarbeiter';
+
+  @override
+  String get hiwiDescription => 'Unterstützung bei Versuchen in verschiedenen wissenschaftlichen Projekten. Vorwiegend Sammeln von Daten im Feld (Biomasseproben, Bodenproben, Beikrautbestimmung, etc.) als Grundlage für Entscheidungsunterstützungssysteme basierend auf Drohnenbildern.';
+
+  @override
+  String get hiwiHighlight1 => 'Umgang mit State-of-the-Art Messtechnik';
+
+  @override
+  String get hiwiHighlight2 => 'Kennenlernen verschiedener Versuchsaufbauten';
+
+  @override
+  String get hiwiHighlight3 => 'Transferveranstaltungen zwischen Wissenschaft und Praxis';
+
+  @override
+  String get hiwiHighlight4 => 'Wissen zur Bestimmung von Beikräutern';
 
   @override
   String get kroneTitle => 'Mechatronikingenieur in der Elektronikentwicklung';
@@ -210,19 +237,19 @@ class AppLocalizationsDe extends AppLocalizations {
   String get marshLocation => 'Te Puke, Neuseeland';
 
   @override
-  String get marshDescription => 'In der Herbstsaison fuhr ich für ein Lohnunternehmen und half bei sämtlichen Aufgaben. Das Unternehmen ist auf die Ernte von Grünfutter und Mais spezialisiert. In diesem Zusammenhang konzentrierte sich meine Arbeit auf das Mähen, Schwaden, Pressen und Wickeln, aber ich habe auch Nachsaaten und Transporte durchgeführt.';
+  String get marshDescription => 'Fahren für das Lohnunternehmen in der Herbstsaison und helfen bei sämtlichen Aufgaben. Das Unternehmen ist auf die Ernte von Grünfutter und Mais spezialisiert. Fokus auf das Mähen, Schwaden, Pressen und Wickeln, aber auch Nachsaaten und Transporte.';
 
   @override
   String get marshHighlight1 => 'Mähen mit einer Schmetterlingskombination';
 
   @override
-  String get marshHighlight2 => 'Sammeln von Erfahrungen im steilen Gelände';
+  String get marshHighlight2 => 'Sammeln von Fahrerfahrungen im steilen Gelände';
 
   @override
-  String get marshHighlight3 => '';
+  String get marshHighlight3 => 'Erlernen des Rundballenpressens';
 
   @override
-  String get marshHighlight4 => '';
+  String get marshLink => 'Unternehmenswebsite: https://www.marshcontracting.co.nz/';
 
   @override
   String get marshReference => 'Tammy Marsh, Inhaberin und Geschäftsführerin';
@@ -237,19 +264,22 @@ class AppLocalizationsDe extends AppLocalizations {
   String get schuetzLocation => 'Calbe (Saale), Deutschland';
 
   @override
-  String get schuetzDescription => 'Bedienung von Mähdreschern und anderen landwirtschaftlichen Maschinen, mit Fokus auf praktische Anwendungen der Agrartechnik.';
+  String get schuetzDescription => 'Bedienung von Mähdreschern (Claas Lexion 480 bis 600) für mehrere Saisons. Außerdem Ballenpressen (Krone BiG Pack) und Transporttätigkeiten.';
 
   @override
-  String get schuetzHighlight1 => 'Bedienung von Claas Lexion Mähdreschern in verschiedenen Bedingungen';
+  String get schuetzHighlight1 => 'Maisdreschen in Schnee und Frost';
 
   @override
-  String get schuetzHighlight2 => 'Tiefgreifende Wartung und Reparatur von Landmaschinen';
+  String get schuetzHighlight2 => 'Tiefgreifende Wartung und Reparatur von Landmaschinen, insb. Mähdreschern';
 
   @override
-  String get schuetzHighlight3 => '';
+  String get schuetzHighlight3 => 'Überladewagenfahrer für 6 Mähdrescher im Raps';
 
   @override
-  String get schuetzHighlight4 => '';
+  String get schuetzHighlight4 => 'Nachtschicht Maishäckseln';
+
+  @override
+  String get schuetzHighlight5 => '200 km Straßenfahrt eines Mähdreschers mit 20 km/h';
 
   @override
   String get saudhofTitle => 'Erntehelfer';
@@ -261,19 +291,19 @@ class AppLocalizationsDe extends AppLocalizations {
   String get saudhofLocation => 'Nelben, Deutschland';
 
   @override
-  String get saudhofDescription => 'Unterstützung bei landwirtschaftlichen Arbeiten als Erntehelfer';
+  String get saudhofDescription => 'Sommerferienjob zur Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten. Dazu zählen Erntelogistik, Bodenbearbeitung, Ballenlogistik, Luzerneernte. \nDer Betrieb ist ein ökologisch wirtschaftender Ackerbaubetrieb mit knapp 700 ha. Angebaut werden Weizen, Gerste, Dinkel, Körnermais, Maissilage, Lupinen, Sonnenblumen, Zuckerrüben, Luzerne, Kartoffeln und Kürbisse.';
 
   @override
-  String get saudhofHighlight1 => '';
+  String get saudhofHighlight1 => 'Erste Berührungspunkte mit großflächigem ökologischem Landbau';
 
   @override
-  String get saudhofHighlight2 => '';
+  String get saudhofHighlight2 => 'Intensive Einblicke in mechanische Beikrautregulierung';
 
   @override
-  String get saudhofHighlight3 => '';
+  String get saudhofHighlight3 => 'Erste Berührungspunkte mit GNSS-Lenksystemen und Auto Turn';
 
   @override
-  String get saudhofHighlight4 => '';
+  String get saudhofHighlight4 => 'Kennenlernen neuer Ackerkulturen';
 
   @override
   String get dalhausTitle => 'Aushilfe';
@@ -282,28 +312,28 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dalhausCompany => 'Ludger Dalhaus';
 
   @override
-  String get dalhausDescription => 'Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.';
+  String get dalhausDescription => 'Nebentätigkeit zu Schulzeiten, Unterstützung bei sämtlichen landwirtschaftlichen Arbeiten inklusive Schweinemast, Sonderkulturanbau und Direktvermarktung.\nDer Hof bewirtschaftet knapp 70 ha und baut Getreide (Weizen, Gerste, Körnermais) und Sonderkulturen (Erdbeeren, Himbeeren, Spargel) an. Außerdem werden 1000 Schweine gemästet.';
 
   @override
-  String get dalhausHighlight1 => '';
+  String get dalhausHighlight1 => 'Verkauf im Hofladen und auf Wochenmärkten';
 
   @override
-  String get dalhausHighlight2 => '';
+  String get dalhausHighlight2 => 'Einblicke in den Obst- und Gemüseanbau';
 
   @override
-  String get dalhausHighlight3 => '';
+  String get dalhausHighlight3 => 'Eigenständiges erledigen sämtlicher Aufgaben über das gesamte landwirtschaftliche Jahr';
 
   @override
-  String get dalhausHighlight4 => '';
+  String get dalhausHighlight4 => 'Vielseitige Wartungen und Reparaturen sowie Bautätigkeiten am Hof';
 
   @override
   String get dalhausReference1 => 'Ludger Dalhaus, Landwirt';
 
   @override
-  String get dalhausReference2 => 'Tobias Dalhaus, promovierter Landwirt und Dozent für Agrarökonomie';
+  String get dalhausReference2 => 'Dr. Tobias Dalhaus, promovierter Landwirt und Dozent für Agrarökonomie';
 
   @override
-  String get dalhausLink => 'https://www.bauer-dalhaus.de/';
+  String get dalhausLink => 'Website: https://www.bauer-dalhaus.de/';
 
   @override
   String get sudenTitle => 'Praktikum als Land- und Baumaschinenmechaniker';
@@ -312,49 +342,97 @@ class AppLocalizationsDe extends AppLocalizations {
   String get sudenCompany => 'Suden Baumaschinen GmbH';
 
   @override
-  String get sudenDescription => 'Schulprapraktikum mit Fokus auf land- und baumaschinentechnische Arbeiten, mit dem Ziel, praktische Erfahrungen in der Mechanik zu sammeln.';
+  String get sudenDescription => 'Schulpraktikum mit Fokus auf land- und baumaschinentechnische Reparaturen. Das Bauunternehmen mit fokus auf Tiefbau und Erdarbeiten verfügt über eine umfangreiche Werkstatt für eigene Reparaturen.';
 
   @override
-  String get sudenHighlight1 => '';
+  String get sudenHighlight1 => 'Einblicke in große Baumaschinen';
 
   @override
-  String get sudenHighlight2 => '';
+  String get sudenHighlight2 => 'Komplettzerlegung eines Radladers zwecks Reparatur der Knicklenkung';
 
   @override
-  String get sudenHighlight3 => '';
+  String get sudenHighlight3 => 'Austausch eines Dieselmotors in einem Bagger';
 
   @override
-  String get etsTitle => 'B.Eng. Enginnering Technischer Systeme, Fachrichtung Mechatronik';
+  String get sudenLink => 'Website: https://www.suden.de/leistungen/lkw-und-baumaschinentechnik/';
 
   @override
-  String get etsDescription => 'Duales Studium';
+  String get masterTitle => 'M.Sc. Precision Agriculture';
+
+  @override
+  String get masterDescription => 'Masterstudiengang mit Fokus auf Präzisionslandwirtschaftstechnologien und -praktiken. Dieser bedient die zukunftsträchtige Schnittstelle zwischen Landwirtschaft und (Software-)Technologien.';
+
+  @override
+  String get masterHighlight1 => 'Erstellung eines Fresh Water Farm Plans im Rahmen des Kurses Bodenkunde';
+
+  @override
+  String get masterHighlight2 => 'Exkursionen zu FAR Research Flächen';
+
+  @override
+  String get masterHighlight3 => 'Tiefgreifender GIS Kurs mit praxisnahen Projekten';
+
+  @override
+  String get masterHighlight4 => 'Gastdozenten mit hoher Praxiserfahrung im Bereich Precision Farming';
+
+  @override
+  String get masterLink => 'Website: https://www.lincoln.ac.nz/study/study-programmes/programme-search/master-of-precision-agriculture/';
 
   @override
   String get bwaTitle => 'B.Eng. Wirtschaftsingenieurwesen Agrar / Lebensmittel';
 
   @override
-  String get bwaDescription => 'Deutsches Bla bla bla';
+  String get bwaDescription => 'Zweiter Bachelor-Studiengang mit dem Ziel, die Grundlagen der Agrarwissenschaften und Ökonomie strukturiert zu erlernen. Die Spezialisierung ist Agrar- und Biosystemtechnik.';
 
   @override
-  String get masterTitle => 'M.Sc.in Precision Agriculture';
+  String get bwaHighlight1 => 'Tutoring in verschiedenen Kursen für Mitstudierende';
 
   @override
-  String get masterDescription => 'Masterstudiengang mit Fokus auf Präzisionslandwirtschaftstechnologien und -praktiken.';
+  String get bwaHighlight2 => 'Vielseitige Exkursionen und Gastdozenten mit hohem Praxisbezug';
 
   @override
-  String get thwTitle => 'Helfer beim Technischen Hilfswerk';
+  String get bwaHighlight3 => 'Bachelorarbeit in Kooperation mit KRONE im Schnittstellenbereich zwischen Landwirtschaft und Landtechnik';
 
   @override
-  String get thwCompany => 'Technisches Hilfswerk (THW)';
+  String get bwaHighlight4 => 'Abschlussnote von 1,59';
 
   @override
-  String get thwDescription => 'Freiwilliger Helfer bei der Bundesanstalt THW. Ausbildung und Unterstützung in verschiedenen Notfallsituationen des Zivil- und Katastrophenschutzes.';
+  String get bwaLink => 'Website: https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/wirtschaftsingenieurwesen-agrarlebensmittel-beng/';
 
   @override
-  String get facultyCouncilTitle => 'Studentische Vertretung im Fakultätsrat';
+  String get etsTitle => 'B.Eng. Enginnering Technischer Systeme, Fachrichtung Mechatronik';
 
   @override
-  String get facultyCouncilDescription => 'Vertretung der studentischen Interessen im Fakultätsrat, Mitwirkung an Entscheidungsprozessen bezüglich akademischer Richtlinien und Programme.';
+  String get etsDescription => 'Duales Studium zum Mechatronikingenieur. Dies bedeutet, dass alle 10 Wochen zwischen Universität und Unternehmen (KRONE) gewechselt wird. So können theoretische Inhalte aus dem Studium direkt in der Praxis angewendet werden.';
+
+  @override
+  String get etsHighlight1 => 'Vielseitige Grundlagen in Mechanik, Elektronik und Informatik';
+
+  @override
+  String get etsHighlight2 => 'Unternehmensbezogenes Großprojekt zur Verbesserung der Ersatzteillogistik';
+
+  @override
+  String get etsHighlight3 => 'Bachelorarbeit im Bereich Validierung eines mechatronischen Systems im Feldhäcksler';
+
+  @override
+  String get etsHighlight4 => 'Abschlussnote von 1.82';
+
+  @override
+  String get etsLink => 'Website: https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/ets-mechatronik-beng-dual-standort-lingen-ems/';
+
+  @override
+  String get schoolTitle => 'Schulbildung bis zur Allgemeinen Hochschulreife';
+
+  @override
+  String get schoolName => 'Hermannschule (Grundschule) und Ratsgymnasium';
+
+  @override
+  String get schoolDescription => 'Schulbildung bis zum Abitur inklusive Grundschule (4 Jahre) und Gymnasium (8 Jahre). ';
+
+  @override
+  String get courseRepTitle => 'Course Representative';
+
+  @override
+  String get courseRepDescription => 'Bindeglied zwischen Studierenden und Fakultät, Sammlung von Feedback und Vertretung studentischer Anliegen in kursbezogenen Angelegenheiten. Regelmäßige Teilnahme an Treffen mit dem Dekan.';
 
   @override
   String get buddyTitle => 'Student Buddy';
@@ -366,10 +444,37 @@ class AppLocalizationsDe extends AppLocalizations {
   String get buddyReference => 'Jayne Smith, Koordinatorin Student Buddy Programm';
 
   @override
-  String get courseRepTitle => 'Course Representative';
+  String get facultyCouncilTitle => 'Studentische Vertretung im Fakultätsrat';
 
   @override
-  String get courseRepDescription => 'Bindeglied zwischen Studierenden und Fakultät, Sammlung von Feedback und Vertretung studentischer Anliegen in kursbezogenen Angelegenheiten.';
+  String get facultyCouncilDescription => 'Vertretung der studentischen Interessen im Fakultätsrat, Mitwirkung an Entscheidungsprozessen bezüglich akademischer Richtlinien und Programme.';
+
+  @override
+  String get thwTitle => 'Helfer beim Technischen Hilfswerk';
+
+  @override
+  String get thwCompany => 'Technisches Hilfswerk (THW)';
+
+  @override
+  String get thwDescription => 'Freiwilliger Helfer bei der Bundesanstalt THW. Zunächst im Ortsverband Lingen (2020-2022) und anschließend im Ortsverband Osnabrück (2022-2024). Ausbildung und Unterstützung in verschiedenen Notfallsituationen des Zivil- und Katastrophenschutzes.';
+
+  @override
+  String get thwHighlight1 => 'Einzigartige Einblicke in Zivil- und Katastrophenschutz';
+
+  @override
+  String get thwHighlight2 => 'Umfangreiche Ausbildung (Gesteins- Holz- und Metallbearbeitung, Elektrotechnik, Pumptechnik, etc.)';
+
+  @override
+  String get thwHighlight3 => 'Tätigkeit als Prüfer für die Prüfung neuer Helfender';
+
+  @override
+  String get thwHighlight4 => 'Einsatz bei der Flut im Ahrtal 2020';
+
+  @override
+  String get thwHighlight5 => 'Einsatz bei der Emslandflut 2023';
+
+  @override
+  String get thwLink => 'Website: https://www.thw.de/DE/Startseite/startseite_node.html';
 
   @override
   String get locationDorsten => 'Dorsten, Deutschland';
@@ -387,17 +492,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get locationGladbeck => 'Gladbeck, Deutschland';
 
   @override
+  String get locationThw => 'Lingen (Ems) und Osnabrück, Deutschland';
+
+  @override
   String get luName => 'Lincoln University';
 
   @override
   String get hsosName => 'Hochschule Osnabrück';
-
-  @override
-  String get schoolTitle => 'Schulbildung bis zur Allgemeinen Hochschulreife';
-
-  @override
-  String get schoolName => 'Hermannschule (Grundschule) und Ratsgymnasium';
-
-  @override
-  String get schoolDescription => ' G12 blabla ';
 }
