@@ -179,6 +179,12 @@ abstract class AppLocalizations {
   /// **'months'**
   String get months;
 
+  /// No description provided for @viewProject.
+  ///
+  /// In en, this message translates to:
+  /// **'View Project'**
+  String get viewProject;
+
   /// No description provided for @sdcTitle.
   ///
   /// In en, this message translates to:
@@ -1082,7 +1088,7 @@ abstract class AppLocalizations {
   /// No description provided for @youtubeTitle.
   ///
   /// In en, this message translates to:
-  /// **'\'YouTube Channel: Flying Simmi\''**
+  /// **'YouTube Channel: Flying Simmi'**
   String get youtubeTitle;
 
   /// No description provided for @youtubeDescription.

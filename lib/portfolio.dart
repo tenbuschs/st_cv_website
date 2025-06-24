@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main_layout.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'l10n/app_localizations.dart';
+import 'image_carousel.dart';
 
 class PortfolioPage extends StatelessWidget {
   final VoidCallback toggleLocale;
@@ -25,32 +26,6 @@ class PortfolioPage extends StatelessWidget {
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // YouTube Channel
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.youtubeTitle,
-                  description: AppLocalizations.of(context)!.youtubeDescription,//"Test",//AppLocalizations.of(context)!.youtubeDescription,                    '',
-                  tags: [
-                    AppLocalizations.of(context)!.youtubeTag1,
-                    AppLocalizations.of(context)!.youtubeTag2,
-                    AppLocalizations.of(context)!.youtubeTag3,
-                    AppLocalizations.of(context)!.youtubeTag4,
-                  ],
-                  imagePath: "lib/assets/youtube.jpg",
-                  link: 'https://www.youtube.com/@flyingsimmi',
-                ),
-
-                // Farm Management Simulator
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.fmsTitle,
-                  description: AppLocalizations.of(context)!.fmsDescription,
-                  tags: [
-                    AppLocalizations.of(context)!.fmsTag1,
-                    AppLocalizations.of(context)!.fmsTag2,
-                    AppLocalizations.of(context)!.fmsTag3,
-                  ],
-                  imagePath: "lib/assets/fms.jpg",
-                  link: "https://simontenbusch1158809.pythonanywhere.com/",
-                ),
 
                 // GIS Work
                 PortfolioCard(
@@ -62,7 +37,11 @@ class PortfolioPage extends StatelessWidget {
                     AppLocalizations.of(context)!.gisTag3,
                     AppLocalizations.of(context)!.gisTag4,
                   ],
-                  imagePath: "",
+                  images: [
+                    "lib/assets/gis_01.jpg",
+                    "lib/assets/gis_02.jpg",
+                    "lib/assets/gis_03.jpg",
+                  ],
                   link: null,
                 ),
 
@@ -75,10 +54,42 @@ class PortfolioPage extends StatelessWidget {
                     AppLocalizations.of(context)!.fwfpTag2,
                     AppLocalizations.of(context)!.fwfpTag3,
                     AppLocalizations.of(context)!.fwfpTag4,
-                    ],
-                  imagePath: "",
+                  ],
+                  images: [
+                    "lib/assets/fwfp_01.jpg",
+                    "lib/assets/fwfp_02.jpg",
+                    "lib/assets/fwfp_03.jpg"
+                  ],
                   link: null,
                 ),
+
+                // Farm Management Simulator
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.fmsTitle,
+                  description: AppLocalizations.of(context)!.fmsDescription,
+                  tags: [
+                    AppLocalizations.of(context)!.fmsTag1,
+                    AppLocalizations.of(context)!.fmsTag2,
+                    AppLocalizations.of(context)!.fmsTag3,
+                  ],
+                  images: ["lib/assets/fms.jpg"],
+                  link: "https://simontenbusch1158809.pythonanywhere.com/",
+                ),
+
+                // YouTube Channel
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.youtubeTitle,
+                  description: AppLocalizations.of(context)!.youtubeDescription,//"Test",//AppLocalizations.of(context)!.youtubeDescription,                    '',
+                  tags: [
+                    AppLocalizations.of(context)!.youtubeTag1,
+                    AppLocalizations.of(context)!.youtubeTag2,
+                    AppLocalizations.of(context)!.youtubeTag3,
+                    AppLocalizations.of(context)!.youtubeTag4,
+                  ],
+                  images: ["lib/assets/youtube.jpg"],
+                  link: 'https://www.youtube.com/@flyingsimmi',
+                ),
+
               ],
             ),
 
@@ -93,7 +104,7 @@ class PortfolioCard extends StatelessWidget {
   final String title;
   final String description;
   final List<String> tags;
-  final String imagePath;
+  final List<String> images;
   final String? link;
 
   const PortfolioCard({
@@ -101,7 +112,7 @@ class PortfolioCard extends StatelessWidget {
     required this.title,
     required this.description,
     required this.tags,
-    required this.imagePath,
+    required this.images,
     this.link,
   });
 
@@ -124,23 +135,11 @@ class PortfolioCard extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            if (imagePath != "") ...[
-              FractionallySizedBox(
-                widthFactor: 0.7,
-                alignment: Alignment.center,
-                child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child:            Image.asset(
-                  imagePath,
-                  // width: double.infinity,
-                 // height: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              ),
-              const SizedBox(height: 12),
-            ],
-
+            if (images.isNotEmpty)
+              ...[
+                ImageCarousel(images: images),
+                const SizedBox(height: 12),
+              ],
             Text(description),
             const SizedBox(height: 32),
             Row(
@@ -165,7 +164,7 @@ class PortfolioCard extends StatelessWidget {
                       launchUrl(Uri.parse(link!));
                     },
                     icon: const Icon(Icons.open_in_new),
-                    label: const Text('View Project'),
+                    label: Text(AppLocalizations.of(context)!.viewProject),
                   ),
               ],
             ),

@@ -14,7 +14,7 @@
   "years": "years",
   "month": "month",
   "months": "months",
-
+  "viewProject": "View Project",
 
   "sdcTitle": "Event and Facilities Support",
   "sdcCompany": "Selwyn District Council",
@@ -192,7 +192,7 @@
   "hsosName": "University of Applied Sciences Osnabrück",
 
 
-  "youtubeTitle": "'YouTube Channel: Flying Simmi'",
+  "youtubeTitle": "YouTube Channel: Flying Simmi",
   "youtubeDescription": "I have produced and published several YouTube videos. I used my quadrocopter drone for this. The project is currently paused.",
   "youtubeTag1": "YouTube",
   "youtubeTag2": "Communication",

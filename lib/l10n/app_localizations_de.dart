@@ -51,6 +51,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get months => 'Monate';
 
   @override
+  String get viewProject => 'Projekt ansehen';
+
+  @override
   String get sdcTitle => 'Event und Facilities Support';
 
   @override

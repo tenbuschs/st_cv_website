@@ -51,6 +51,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get months => 'months';
 
   @override
+  String get viewProject => 'View Project';
+
+  @override
   String get sdcTitle => 'Event and Facilities Support';
 
   @override
@@ -501,7 +504,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get hsosName => 'University of Applied Sciences Osnabrück';
 
   @override
-  String get youtubeTitle => '\'YouTube Channel: Flying Simmi\'';
+  String get youtubeTitle => 'YouTube Channel: Flying Simmi';
 
   @override
   String get youtubeDescription => 'I have produced and published several YouTube videos. I used my quadrocopter drone for this. The project is currently paused.';
