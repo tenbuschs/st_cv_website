@@ -67,9 +67,10 @@ class HomePage extends StatelessWidget {
                   ),
                   icon: const Icon(Icons.download),
                   onPressed: () async {
-                    const url = 'https://example.com/MaxMustermannCV.pdf';
-                    if (await canLaunchUrl(Uri.parse(url))) {
-                      await launchUrl(Uri.parse(url));
+                    String pdfPath ="web_assets/CV_Simon-Tenbusch_2026.pdf";
+                    final Uri uri = Uri.parse(pdfPath);
+                    if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+                      throw 'Could not launch $pdfPath';
                     }
                   },
                 ),
