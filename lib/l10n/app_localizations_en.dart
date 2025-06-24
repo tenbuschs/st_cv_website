@@ -30,7 +30,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get education => 'Education';
 
   @override
-  String get volunteering => 'Side Quests & Certificates';
+  String get volunteering => 'Side Quests';
 
   @override
   String get currentlyWorking => 'Current';

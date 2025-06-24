@@ -140,7 +140,7 @@ abstract class AppLocalizations {
   /// No description provided for @volunteering.
   ///
   /// In en, this message translates to:
-  /// **'Side Quests & Certificates'**
+  /// **'Side Quests'**
   String get volunteering;
 
   /// No description provided for @currentlyWorking.
