@@ -37,24 +37,24 @@ class HomePage extends StatelessWidget {
               // Navigation Tiles
               _NavTile(
                 title: AppLocalizations.of(context)!.experience,
-                imagePath: 'lib/assets/experience.jpg',
+                imagePath: 'assets/experience.jpg',
               ),
               const SizedBox(height: 16),
 
               _NavTile(
                 title: AppLocalizations.of(context)!.education,
-                imagePath: 'lib/assets/education.jpeg',
+                imagePath: 'assets/education.jpeg',
               ),
               const SizedBox(height: 16),
 
               _NavTile(
                 title: AppLocalizations.of(context)!.volunteering,
-                imagePath: 'lib/assets/volunteering.jpg',
+                imagePath: 'assets/volunteering.jpg',
               ),
               const SizedBox(height: 16),
               _NavTile(
                 title: 'Portfolio',
-                imagePath: 'lib/assets/portfolio.jpg',
+                imagePath: 'assets/portfolio.jpg',
               ),
 
               const SizedBox(height: 32),
@@ -123,7 +123,7 @@ class HomePage extends StatelessWidget {
                   label: Text(isGerman ? 'Kontakt speichern' : 'Save Contact'),
                   onPressed: () async {
                     final data = await rootBundle.load(
-                      'lib/assets/contact.vcf',
+                      'assets/contact.vcf',
                     );
                     final bytes = data.buffer.asUint8List();
                     final blob = html.Blob([bytes], 'text/vcard');

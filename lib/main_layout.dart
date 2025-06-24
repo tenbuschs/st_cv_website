@@ -193,7 +193,7 @@ class HeaderWithAvatar extends StatelessWidget {
           onTap: () => Navigator.pushReplacementNamed(context, '/home'),
           child: CircleAvatar(
             radius: 72,
-            backgroundImage: AssetImage('lib/assets/profile.jpg'),
+            backgroundImage: AssetImage('assets/profile.jpg'),
             backgroundColor: const Color(0xFF2D6045),
           ),
         ),

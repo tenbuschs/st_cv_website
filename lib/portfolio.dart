@@ -3,6 +3,7 @@ import 'main_layout.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'l10n/app_localizations.dart';
 import 'image_carousel.dart';
+import 'dart:async';
 
 class PortfolioPage extends StatelessWidget {
   final VoidCallback toggleLocale;
@@ -24,81 +25,80 @@ class PortfolioPage extends StatelessWidget {
       silvers: [
         SliverToBoxAdapter(
           child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // GIS Work
+              PortfolioCard(
+                title: AppLocalizations.of(context)!.gisTitle,
+                description: AppLocalizations.of(context)!.gisDescription,
+                tags: [
+                  AppLocalizations.of(context)!.gisTag1,
+                  AppLocalizations.of(context)!.gisTag2,
+                  AppLocalizations.of(context)!.gisTag3,
+                  AppLocalizations.of(context)!.gisTag4,
+                ],
+                images: [
+                  "assets/gis_01.jpg",
+                  "assets/gis_02.jpg",
+                  "assets/gis_03.jpg",
+                ],
+                link: "pdf",
+              ),
 
-                // GIS Work
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.gisTitle,
-                  description: AppLocalizations.of(context)!.gisDescription,
-                  tags: [
-                    AppLocalizations.of(context)!.gisTag1,
-                    AppLocalizations.of(context)!.gisTag2,
-                    AppLocalizations.of(context)!.gisTag3,
-                    AppLocalizations.of(context)!.gisTag4,
-                  ],
-                  images: [
-                    "lib/assets/gis_01.jpg",
-                    "lib/assets/gis_02.jpg",
-                    "lib/assets/gis_03.jpg",
-                  ],
-                  link: null,
-                ),
+              // Freshwater Farm Plan
+              PortfolioCard(
+                title: AppLocalizations.of(context)!.fwfpTitle,
+                description: AppLocalizations.of(context)!.fwfpDescription,
+                tags: [
+                  AppLocalizations.of(context)!.fwfpTag1,
+                  AppLocalizations.of(context)!.fwfpTag2,
+                  AppLocalizations.of(context)!.fwfpTag3,
+                  AppLocalizations.of(context)!.fwfpTag4,
+                ],
+                images: [
+                  "assets/fwfp_01.jpg",
+                  "assets/fwfp_02.jpg",
+                  "assets/fwfp_03.jpg",
+                ],
+                link: null,
+              ),
 
-                // Freshwater Farm Plan
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.fwfpTitle,
-                  description: AppLocalizations.of(context)!.fwfpDescription,
-                  tags: [
-                    AppLocalizations.of(context)!.fwfpTag1,
-                    AppLocalizations.of(context)!.fwfpTag2,
-                    AppLocalizations.of(context)!.fwfpTag3,
-                    AppLocalizations.of(context)!.fwfpTag4,
-                  ],
-                  images: [
-                    "lib/assets/fwfp_01.jpg",
-                    "lib/assets/fwfp_02.jpg",
-                    "lib/assets/fwfp_03.jpg"
-                  ],
-                  link: null,
-                ),
+              // Farm Management Simulator
+              PortfolioCard(
+                title: AppLocalizations.of(context)!.fmsTitle,
+                description: AppLocalizations.of(context)!.fmsDescription,
+                tags: [
+                  AppLocalizations.of(context)!.fmsTag1,
+                  AppLocalizations.of(context)!.fmsTag2,
+                  AppLocalizations.of(context)!.fmsTag3,
+                ],
+                images: ["assets/fms.jpg"],
+                link: "https://simontenbusch1158809.pythonanywhere.com/",
+              ),
 
-                // Farm Management Simulator
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.fmsTitle,
-                  description: AppLocalizations.of(context)!.fmsDescription,
-                  tags: [
-                    AppLocalizations.of(context)!.fmsTag1,
-                    AppLocalizations.of(context)!.fmsTag2,
-                    AppLocalizations.of(context)!.fmsTag3,
-                  ],
-                  images: ["lib/assets/fms.jpg"],
-                  link: "https://simontenbusch1158809.pythonanywhere.com/",
-                ),
-
-                // YouTube Channel
-                PortfolioCard(
-                  title: AppLocalizations.of(context)!.youtubeTitle,
-                  description: AppLocalizations.of(context)!.youtubeDescription,//"Test",//AppLocalizations.of(context)!.youtubeDescription,                    '',
-                  tags: [
-                    AppLocalizations.of(context)!.youtubeTag1,
-                    AppLocalizations.of(context)!.youtubeTag2,
-                    AppLocalizations.of(context)!.youtubeTag3,
-                    AppLocalizations.of(context)!.youtubeTag4,
-                  ],
-                  images: ["lib/assets/youtube.jpg"],
-                  link: 'https://www.youtube.com/@flyingsimmi',
-                ),
-
-              ],
-            ),
-
+              // YouTube Channel
+              PortfolioCard(
+                title: AppLocalizations.of(context)!.youtubeTitle,
+                description:
+                    AppLocalizations.of(
+                      context,
+                    )!.youtubeDescription, //"Test",//AppLocalizations.of(context)!.youtubeDescription,                    '',
+                tags: [
+                  AppLocalizations.of(context)!.youtubeTag1,
+                  AppLocalizations.of(context)!.youtubeTag2,
+                  AppLocalizations.of(context)!.youtubeTag3,
+                  AppLocalizations.of(context)!.youtubeTag4,
+                ],
+                images: ["assets/youtube.jpg"],
+                link: 'https://www.youtube.com/@flyingsimmi',
+              ),
+            ],
+          ),
         ),
       ],
     );
   }
 }
-
 
 class PortfolioCard extends StatelessWidget {
   final String title;
@@ -135,11 +135,10 @@ class PortfolioCard extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            if (images.isNotEmpty)
-              ...[
-                ImageCarousel(images: images),
-                const SizedBox(height: 12),
-              ],
+            if (images.isNotEmpty) ...[
+              ImageCarousel(images: images),
+              const SizedBox(height: 12),
+            ],
             Text(description),
             const SizedBox(height: 32),
             Row(
@@ -148,17 +147,24 @@ class PortfolioCard extends StatelessWidget {
                   child: Wrap(
                     spacing: 8,
                     runSpacing: 4,
-                    children: tags
-                        .map(
-                          (tag) => Chip(
-                        label: Text(tag),
-                        backgroundColor: Color(0xFF2D6045),
-                      ),
-                    )
-                        .toList(),
+                    children:
+                        tags
+                            .map(
+                              (tag) => Chip(
+                                label: Text(tag),
+                                backgroundColor: Color(0xFF2D6045),
+                              ),
+                            )
+                            .toList(),
                   ),
                 ),
-                if (link != null)
+                if (link!=null && link == "pdf")
+                  TextButton.icon(
+                    onPressed: () => openPDF('web_assets/gis_report.pdf'),
+                    icon: const Icon(Icons.picture_as_pdf),
+                    label: Text(AppLocalizations.of(context)!.viewProject),
+                  ),
+                if (link!=null && link != "pdf")
                   TextButton.icon(
                     onPressed: () {
                       launchUrl(Uri.parse(link!));
@@ -166,11 +172,20 @@ class PortfolioCard extends StatelessWidget {
                     icon: const Icon(Icons.open_in_new),
                     label: Text(AppLocalizations.of(context)!.viewProject),
                   ),
+
               ],
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+Future<void> openPDF(String pdfPath) async {
+  final Uri uri = Uri.parse(pdfPath);
+
+  if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+    throw 'Could not launch $pdfPath';
   }
 }

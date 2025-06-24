@@ -65,10 +65,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.msfHarvestDescription,
       category: 'seasonal',
       imageAssets: [
-        'lib/assets/msf_harvest_01.jpg',
-        'lib/assets/msf_harvest_02.jpg',
-        'lib/assets/msf_harvest_03.jpg',
-        'lib/assets/msf_harvest_04.jpg',
+        'assets/msf_harvest_01.jpg',
+        'assets/msf_harvest_02.jpg',
+        'assets/msf_harvest_03.jpg',
+        'assets/msf_harvest_04.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.msfHarvestHighlight1,
@@ -94,10 +94,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.msfSeedingDescription,
       category: 'seasonal',
       imageAssets: [
-        'lib/assets/msf_seeding_01.jpg',
-        'lib/assets/msf_seeding_02.jpg',
-        'lib/assets/msf_seeding_03.jpg',
-        'lib/assets/msf_seeding_04.jpg',
+        'assets/msf_seeding_01.jpg',
+        'assets/msf_seeding_02.jpg',
+        'assets/msf_seeding_03.jpg',
+        'assets/msf_seeding_04.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.msfSeedingHighlight1,
@@ -122,10 +122,10 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.dillonDescription,
       category: 'seasonal',
       imageAssets: [
-        'lib/assets/dillon_01.jpg',
-        'lib/assets/dillon_02.jpg',
-        'lib/assets/dillon_03.jpg',
-        'lib/assets/dillon_04.jpg',
+        'assets/dillon_01.jpg',
+        'assets/dillon_02.jpg',
+        'assets/dillon_03.jpg',
+        'assets/dillon_04.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.dillonHighlight1,
@@ -149,11 +149,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.latviaDescription,
       category: 'seasonal',
       imageAssets: [
-        'lib/assets/latvia_01.jpg',
-        'lib/assets/latvia_02.jpg',
-        'lib/assets/latvia_03.jpg',
-        'lib/assets/latvia_04.jpg',
-        'lib/assets/latvia_05.jpg',
+        'assets/latvia_01.jpg',
+        'assets/latvia_02.jpg',
+        'assets/latvia_03.jpg',
+        'assets/latvia_04.jpg',
+        'assets/latvia_05.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.latviaHighlight1,
@@ -198,11 +198,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.kroneDescription,
       category: 'job',
       imageAssets: [
-        'lib/assets/krone_01.jpg',
-        'lib/assets/krone_02.jpg',
-        'lib/assets/krone_03.jpg',
-        'lib/assets/krone_04.jpg',
-        'lib/assets/krone_05.jpg',
+        'assets/krone_01.jpg',
+        'assets/krone_02.jpg',
+        'assets/krone_03.jpg',
+        'assets/krone_04.jpg',
+        'assets/krone_05.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.kroneHighlight1,
@@ -251,7 +251,7 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.schuetzDescription,
       category: 'seasonal',
       imageAssets: [
-        'lib/assets/schuetz_01.jpg'
+        'assets/schuetz_01.jpg'
       ],
       highlights: [
         AppLocalizations.of(context)!.schuetzHighlight1,
@@ -276,7 +276,8 @@ List<CvEvent> getExperiences(BuildContext context) {
       endDate: '2016-08-31',
       description: AppLocalizations.of(context)!.saudhofDescription,
       category: 'seasonal',
-      imageAssets: ['lib/assets/saudhof_01.jpg', 'lib/assets/saudhof_02.jpg'],
+      imageAssets: ['assets/saudhof_01.jpg',
+        'assets/saudhof_02.jpg'],
       highlights: [
         AppLocalizations.of(context)!.saudhofHighlight1,
         AppLocalizations.of(context)!.saudhofHighlight2,
@@ -499,11 +500,11 @@ List<CvEvent> getVolunteering(BuildContext context) {
       description: AppLocalizations.of(context)!.thwDescription,
       category: 'volunteer',
       imageAssets: [
-        'lib/assets/thw_01.jpg',
-        'lib/assets/thw_02.jpg',
-        'lib/assets/thw_03.jpg',
-        'lib/assets/thw_04.jpg',
-        'lib/assets/thw_05.jpg',
+        'assets/thw_01.jpg',
+        'assets/thw_02.jpg',
+        'assets/thw_03.jpg',
+        'assets/thw_04.jpg',
+        'assets/thw_05.jpg',
       ],
       highlights: [
         AppLocalizations.of(context)!.thwHighlight1,
