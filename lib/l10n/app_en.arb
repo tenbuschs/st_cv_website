@@ -189,5 +189,33 @@
   "locationThw": "Lingen (Ems) and Osnabrück, Germany",
 
   "luName": "Lincoln University",
-  "hsosName": "University of Applied Sciences Osnabrück"
+  "hsosName": "University of Applied Sciences Osnabrück",
+
+
+  "youtubeTitle": "'YouTube Channel: Flying Simmi'",
+  "youtubeDescription": "I have produced and published several YouTube videos. I used my quadrocopter drone for this. The project is currently paused.",
+  "youtubeTag1": "YouTube",
+  "youtubeTag2": "Communication",
+  "youtubeTag3": "Videograhy",
+  "youtubeTag4": "Drone",
+
+  "fmsTitle": "Farm Management Simulator (Uni project)",
+  "fmsDescription": "A web-based simulation for the management of dairy cows in pasture farming. Animals consume grass and grass grows over time. The user can allocate herds to different paddocks and simulate the development over time.",
+  "fmsTag1": "Web development",
+  "fmsTag2": "FMS ",
+  "fmsTag3": "Dairy farming",
+
+  "fwfpTitle": "Fresh Water Farm Plan (Uni project)",
+  "fwfpDescription": "A project as part of the Soil Science course in which a Fresh Water Farm Plan was created for a farm in the Marlborough region. The project involved both the collection of data on the farm and the analysis of risks and mitigation techniques.",
+  "fwfpTag1": "Fresh Water Farm Plan",
+  "fwfpTag2": "Soil Survey",
+  "fwfpTag3": "Data Management",
+  "fwfpTag4": " Policies ",
+
+  "gisTitle": "Suitable areas for maize cultivation in New Zealand (GIS Uni project)",
+  "gisDescription": "A project as part of the course on geographical information systems. Part of the project was the definition of criteria, the finding of suitable data and the subsequent analysis in ArcGIS Pro.",
+  "gisTag1": "GIS",
+  "gisTag2": "ArcGIS",
+  "gisTag3": "Cartography",
+  "gisTag4": "Data analysis"
 }

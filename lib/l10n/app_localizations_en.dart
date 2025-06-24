@@ -499,4 +499,73 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hsosName => 'University of Applied Sciences Osnabrück';
+
+  @override
+  String get youtubeTitle => '\'YouTube Channel: Flying Simmi\'';
+
+  @override
+  String get youtubeDescription => 'I have produced and published several YouTube videos. I used my quadrocopter drone for this. The project is currently paused.';
+
+  @override
+  String get youtubeTag1 => 'YouTube';
+
+  @override
+  String get youtubeTag2 => 'Communication';
+
+  @override
+  String get youtubeTag3 => 'Videograhy';
+
+  @override
+  String get youtubeTag4 => 'Drone';
+
+  @override
+  String get fmsTitle => 'Farm Management Simulator (Uni project)';
+
+  @override
+  String get fmsDescription => 'A web-based simulation for the management of dairy cows in pasture farming. Animals consume grass and grass grows over time. The user can allocate herds to different paddocks and simulate the development over time.';
+
+  @override
+  String get fmsTag1 => 'Web development';
+
+  @override
+  String get fmsTag2 => 'FMS ';
+
+  @override
+  String get fmsTag3 => 'Dairy farming';
+
+  @override
+  String get fwfpTitle => 'Fresh Water Farm Plan (Uni project)';
+
+  @override
+  String get fwfpDescription => 'A project as part of the Soil Science course in which a Fresh Water Farm Plan was created for a farm in the Marlborough region. The project involved both the collection of data on the farm and the analysis of risks and mitigation techniques.';
+
+  @override
+  String get fwfpTag1 => 'Fresh Water Farm Plan';
+
+  @override
+  String get fwfpTag2 => 'Soil Survey';
+
+  @override
+  String get fwfpTag3 => 'Data Management';
+
+  @override
+  String get fwfpTag4 => ' Policies ';
+
+  @override
+  String get gisTitle => 'Suitable areas for maize cultivation in New Zealand (GIS Uni project)';
+
+  @override
+  String get gisDescription => 'A project as part of the course on geographical information systems. Part of the project was the definition of criteria, the finding of suitable data and the subsequent analysis in ArcGIS Pro.';
+
+  @override
+  String get gisTag1 => 'GIS';
+
+  @override
+  String get gisTag2 => 'ArcGIS';
+
+  @override
+  String get gisTag3 => 'Cartography';
+
+  @override
+  String get gisTag4 => 'Data analysis';
 }

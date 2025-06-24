@@ -1078,6 +1078,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'University of Applied Sciences Osnabrück'**
   String get hsosName;
+
+  /// No description provided for @youtubeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'\'YouTube Channel: Flying Simmi\''**
+  String get youtubeTitle;
+
+  /// No description provided for @youtubeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'I have produced and published several YouTube videos. I used my quadrocopter drone for this. The project is currently paused.'**
+  String get youtubeDescription;
+
+  /// No description provided for @youtubeTag1.
+  ///
+  /// In en, this message translates to:
+  /// **'YouTube'**
+  String get youtubeTag1;
+
+  /// No description provided for @youtubeTag2.
+  ///
+  /// In en, this message translates to:
+  /// **'Communication'**
+  String get youtubeTag2;
+
+  /// No description provided for @youtubeTag3.
+  ///
+  /// In en, this message translates to:
+  /// **'Videograhy'**
+  String get youtubeTag3;
+
+  /// No description provided for @youtubeTag4.
+  ///
+  /// In en, this message translates to:
+  /// **'Drone'**
+  String get youtubeTag4;
+
+  /// No description provided for @fmsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm Management Simulator (Uni project)'**
+  String get fmsTitle;
+
+  /// No description provided for @fmsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A web-based simulation for the management of dairy cows in pasture farming. Animals consume grass and grass grows over time. The user can allocate herds to different paddocks and simulate the development over time.'**
+  String get fmsDescription;
+
+  /// No description provided for @fmsTag1.
+  ///
+  /// In en, this message translates to:
+  /// **'Web development'**
+  String get fmsTag1;
+
+  /// No description provided for @fmsTag2.
+  ///
+  /// In en, this message translates to:
+  /// **'FMS '**
+  String get fmsTag2;
+
+  /// No description provided for @fmsTag3.
+  ///
+  /// In en, this message translates to:
+  /// **'Dairy farming'**
+  String get fmsTag3;
+
+  /// No description provided for @fwfpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh Water Farm Plan (Uni project)'**
+  String get fwfpTitle;
+
+  /// No description provided for @fwfpDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A project as part of the Soil Science course in which a Fresh Water Farm Plan was created for a farm in the Marlborough region. The project involved both the collection of data on the farm and the analysis of risks and mitigation techniques.'**
+  String get fwfpDescription;
+
+  /// No description provided for @fwfpTag1.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh Water Farm Plan'**
+  String get fwfpTag1;
+
+  /// No description provided for @fwfpTag2.
+  ///
+  /// In en, this message translates to:
+  /// **'Soil Survey'**
+  String get fwfpTag2;
+
+  /// No description provided for @fwfpTag3.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Management'**
+  String get fwfpTag3;
+
+  /// No description provided for @fwfpTag4.
+  ///
+  /// In en, this message translates to:
+  /// **' Policies '**
+  String get fwfpTag4;
+
+  /// No description provided for @gisTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Suitable areas for maize cultivation in New Zealand (GIS Uni project)'**
+  String get gisTitle;
+
+  /// No description provided for @gisDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A project as part of the course on geographical information systems. Part of the project was the definition of criteria, the finding of suitable data and the subsequent analysis in ArcGIS Pro.'**
+  String get gisDescription;
+
+  /// No description provided for @gisTag1.
+  ///
+  /// In en, this message translates to:
+  /// **'GIS'**
+  String get gisTag1;
+
+  /// No description provided for @gisTag2.
+  ///
+  /// In en, this message translates to:
+  /// **'ArcGIS'**
+  String get gisTag2;
+
+  /// No description provided for @gisTag3.
+  ///
+  /// In en, this message translates to:
+  /// **'Cartography'**
+  String get gisTag3;
+
+  /// No description provided for @gisTag4.
+  ///
+  /// In en, this message translates to:
+  /// **'Data analysis'**
+  String get gisTag4;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -499,4 +499,73 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get hsosName => 'Hochschule Osnabrück';
+
+  @override
+  String get youtubeTitle => 'YouTube-Kanal: Flying Simmi';
+
+  @override
+  String get youtubeDescription => 'Ich habe einige YouTube Videos produziert und veröffentlicht. Dazu habe ich meine Quadrokopter Drohne verwendet. Aktuell ist das Projekt pausiert.';
+
+  @override
+  String get youtubeTag1 => 'YouTube';
+
+  @override
+  String get youtubeTag2 => 'Kommunikation';
+
+  @override
+  String get youtubeTag3 => 'Videographie';
+
+  @override
+  String get youtubeTag4 => 'Drohne';
+
+  @override
+  String get fmsTitle => 'Farm Management Simulator (Uni-Projekt)';
+
+  @override
+  String get fmsDescription => 'Eine web-basierte Simulation für das Management von Milchkühen in Weidehaltung. Tiere verbrauchen Gras und Gras wächst mit der Zeit. Der Nutzer kann Herden auf unterschiedliche Weiden zuweisen und den zeitlichen Verlauf simulieren.';
+
+  @override
+  String get fmsTag1 => 'Webentwicklung';
+
+  @override
+  String get fmsTag2 => 'FMS';
+
+  @override
+  String get fmsTag3 => 'Milchviehhaltung';
+
+  @override
+  String get fwfpTitle => 'Fresh Water Farm Plan (Uni-Projekt)';
+
+  @override
+  String get fwfpDescription => 'Ein Projekt im Rahmen des Kurses Bodenkunde, bei dem ein Fresh Water Farm Plan für eine Farm in der Marlborough Region erstellt wurde. Das Projekt umfasste sowohl die Sammlung von Daten auf der Farm, als auch das Erörtern von Risiken und Präventionsmaßnahmen.';
+
+  @override
+  String get fwfpTag1 => 'Fresh Water Farm Plan';
+
+  @override
+  String get fwfpTag2 => 'Bodengutachten';
+
+  @override
+  String get fwfpTag3 => 'Datenmanagement';
+
+  @override
+  String get fwfpTag4 => 'Richtlinien';
+
+  @override
+  String get gisTitle => 'Geeignete Flächen für Maisanbau in Neuseeland (GIS Uni-Projekt)';
+
+  @override
+  String get gisDescription => 'Ein Projekt im Rahmen des Kurses zu geographischen Informationssystemen. Teil des Projektes waren die Definition von Kriterien, das Finden von geeigneten Daten und die anschließende Analyse in ArcGIS Pro.';
+
+  @override
+  String get gisTag1 => 'GIS';
+
+  @override
+  String get gisTag2 => 'ArcGIS';
+
+  @override
+  String get gisTag3 => 'Kartographie';
+
+  @override
+  String get gisTag4 => 'Datenanalyse';
 }

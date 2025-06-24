@@ -190,7 +190,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       onPressed:
-                          () => launchUrl(Uri.parse('https://youtube.com/')),
+                          () => launchUrl(Uri.parse('https://www.youtube.com/@flyingsimmi')),
                     ),
                   ),
                 ],

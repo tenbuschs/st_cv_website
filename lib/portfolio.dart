@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main_layout.dart';
-import 'timeline.dart';
-import 'event_lists.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'l10n/app_localizations.dart';
 
 class PortfolioPage extends StatelessWidget {
   final VoidCallback toggleLocale;
@@ -16,13 +16,162 @@ class PortfolioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainLayout(
-        mainText: "Portfolio",
-        lowerText: "Simon Tenbusch",
-        toggleLocale: toggleLocale,
-        locale: locale,
-        silvers: [
+      mainText: "Portfolio",
+      lowerText: "Simon Tenbusch",
+      toggleLocale: toggleLocale,
+      locale: locale,
+      silvers: [
+        SliverToBoxAdapter(
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // YouTube Channel
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.youtubeTitle,
+                  description: AppLocalizations.of(context)!.youtubeDescription,//"Test",//AppLocalizations.of(context)!.youtubeDescription,                    '',
+                  tags: [
+                    AppLocalizations.of(context)!.youtubeTag1,
+                    AppLocalizations.of(context)!.youtubeTag2,
+                    AppLocalizations.of(context)!.youtubeTag3,
+                    AppLocalizations.of(context)!.youtubeTag4,
+                  ],
+                  imagePath: "lib/assets/youtube.jpg",
+                  link: 'https://www.youtube.com/@flyingsimmi',
+                ),
 
-        ]
+                // Farm Management Simulator
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.fmsTitle,
+                  description: AppLocalizations.of(context)!.fmsDescription,
+                  tags: [
+                    AppLocalizations.of(context)!.fmsTag1,
+                    AppLocalizations.of(context)!.fmsTag2,
+                    AppLocalizations.of(context)!.fmsTag3,
+                  ],
+                  imagePath: "lib/assets/fms.jpg",
+                  link: "https://simontenbusch1158809.pythonanywhere.com/",
+                ),
+
+                // GIS Work
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.gisTitle,
+                  description: AppLocalizations.of(context)!.gisDescription,
+                  tags: [
+                    AppLocalizations.of(context)!.gisTag1,
+                    AppLocalizations.of(context)!.gisTag2,
+                    AppLocalizations.of(context)!.gisTag3,
+                    AppLocalizations.of(context)!.gisTag4,
+                  ],
+                  imagePath: "",
+                  link: null,
+                ),
+
+                // Freshwater Farm Plan
+                PortfolioCard(
+                  title: AppLocalizations.of(context)!.fwfpTitle,
+                  description: AppLocalizations.of(context)!.fwfpDescription,
+                  tags: [
+                    AppLocalizations.of(context)!.fwfpTag1,
+                    AppLocalizations.of(context)!.fwfpTag2,
+                    AppLocalizations.of(context)!.fwfpTag3,
+                    AppLocalizations.of(context)!.fwfpTag4,
+                    ],
+                  imagePath: "",
+                  link: null,
+                ),
+              ],
+            ),
+
+        ),
+      ],
+    );
+  }
+}
+
+
+class PortfolioCard extends StatelessWidget {
+  final String title;
+  final String description;
+  final List<String> tags;
+  final String imagePath;
+  final String? link;
+
+  const PortfolioCard({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.tags,
+    required this.imagePath,
+    this.link,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 24),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 12),
+
+            if (imagePath != "") ...[
+              FractionallySizedBox(
+                widthFactor: 0.7,
+                alignment: Alignment.center,
+                child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child:            Image.asset(
+                  imagePath,
+                  // width: double.infinity,
+                 // height: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              ),
+              const SizedBox(height: 12),
+            ],
+
+            Text(description),
+            const SizedBox(height: 32),
+            Row(
+              children: [
+                Expanded(
+                  child: Wrap(
+                    spacing: 8,
+                    runSpacing: 4,
+                    children: tags
+                        .map(
+                          (tag) => Chip(
+                        label: Text(tag),
+                        backgroundColor: Color(0xFF2D6045),
+                      ),
+                    )
+                        .toList(),
+                  ),
+                ),
+                if (link != null)
+                  TextButton.icon(
+                    onPressed: () {
+                      launchUrl(Uri.parse(link!));
+                    },
+                    icon: const Icon(Icons.open_in_new),
+                    label: const Text('View Project'),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

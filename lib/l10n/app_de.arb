@@ -189,5 +189,32 @@
   "locationThw": "Lingen (Ems) und Osnabrück, Deutschland",
 
   "luName": "Lincoln University",
-  "hsosName": "Hochschule Osnabrück"
+  "hsosName": "Hochschule Osnabrück",
+
+  "youtubeTitle": "YouTube-Kanal: Flying Simmi",
+  "youtubeDescription": "Ich habe einige YouTube Videos produziert und veröffentlicht. Dazu habe ich meine Quadrokopter Drohne verwendet. Aktuell ist das Projekt pausiert.",
+  "youtubeTag1": "YouTube",
+  "youtubeTag2": "Kommunikation",
+  "youtubeTag3": "Videographie",
+  "youtubeTag4": "Drohne",
+
+  "fmsTitle": "Farm Management Simulator (Uni-Projekt)",
+  "fmsDescription": "Eine web-basierte Simulation für das Management von Milchkühen in Weidehaltung. Tiere verbrauchen Gras und Gras wächst mit der Zeit. Der Nutzer kann Herden auf unterschiedliche Weiden zuweisen und den zeitlichen Verlauf simulieren.",
+  "fmsTag1": "Webentwicklung",
+  "fmsTag2": "FMS",
+  "fmsTag3": "Milchviehhaltung",
+
+  "fwfpTitle": "Fresh Water Farm Plan (Uni-Projekt)",
+  "fwfpDescription": "Ein Projekt im Rahmen des Kurses Bodenkunde, bei dem ein Fresh Water Farm Plan für eine Farm in der Marlborough Region erstellt wurde. Das Projekt umfasste sowohl die Sammlung von Daten auf der Farm, als auch das Erörtern von Risiken und Präventionsmaßnahmen.",
+  "fwfpTag1": "Fresh Water Farm Plan",
+  "fwfpTag2": "Bodengutachten",
+  "fwfpTag3": "Datenmanagement",
+  "fwfpTag4": "Richtlinien",
+
+  "gisTitle": "Geeignete Flächen für Maisanbau in Neuseeland (GIS Uni-Projekt)",
+  "gisDescription": "Ein Projekt im Rahmen des Kurses zu geographischen Informationssystemen. Teil des Projektes waren die Definition von Kriterien, das Finden von geeigneten Daten und die anschließende Analyse in ArcGIS Pro.",
+  "gisTag1": "GIS",
+  "gisTag2": "ArcGIS",
+  "gisTag3": "Kartographie",
+  "gisTag4": "Datenanalyse"
 }
