@@ -194,6 +194,15 @@ class HomePage extends StatelessWidget {
                           () => launchUrl(Uri.parse('https://www.youtube.com/@flyingsimmi')),
                     ),
                   ),
+                  const SizedBox(width: 12),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      icon: Image.asset("assets/fiverr.png"),
+                      onPressed:
+                          () => launchUrl(Uri.parse('https://www.fiverr.com/s/kLjN5Eo')),
+                    ),
+                  ),
                 ],
               ),
             ],

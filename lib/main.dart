@@ -11,10 +11,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'l10n/app_localizations.dart';
 import 'volunteering.dart';
 import 'portfolio.dart';
+import 'package:universal_html/html.dart' as html;
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
+  setupSignOutOnTabClose();
   runApp(const MyApp());
 }
 
@@ -132,4 +135,11 @@ class AuthGate extends StatelessWidget {
       },
     );
   }
+}
+
+
+void setupSignOutOnTabClose() {
+  html.window.onBeforeUnload.listen((event) {
+    FirebaseAuth.instance.signOut();
+  });
 }
