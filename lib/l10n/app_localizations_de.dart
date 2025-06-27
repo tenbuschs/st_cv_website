@@ -54,7 +54,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get viewProject => 'Projekt ansehen';
 
   @override
-  String get sdcTitle => 'Event und Facilities Support';
+  String get sdcTitle => 'Casual Event und Facilities Support';
 
   @override
   String get sdcCompany => 'Selwyn District Council';
@@ -168,7 +168,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get latviaTitle => 'Maschinenführer';
 
   @override
-  String get latviaCompany => 'SIA Rapsulauks';
+  String get latviaCompany => 'SIA Rapšulauks';
 
   @override
   String get latviaLocation => 'Satiki, Lettland';

@@ -1,7 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Simon Tenbusch
+N:Tenbusch;Simon;;;
+TITLE:Precision Agriculture Engineer
+TEL;TYPE=CELL:+4915786461989
+TEL;TYPE=CELL:+64273210061
 EMAIL:simon@tenbusch.de
-TEL;TYPE=CELL:+64 27 321 00 61
-TEL;TYPE=CELL:+49 1578 646 1 989
+URL:https://www.linkedin.com/in/simon-tenbusch-a67259198/
+URL:https://welcome.simon-tenbusch.tech/
 END:VCARD

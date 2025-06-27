@@ -54,7 +54,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get viewProject => 'View Project';
 
   @override
-  String get sdcTitle => 'Event and Facilities Support';
+  String get sdcTitle => 'Casual Event and Facilities Support';
 
   @override
   String get sdcCompany => 'Selwyn District Council';
@@ -168,7 +168,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get latviaTitle => 'Machinery Operator';
 
   @override
-  String get latviaCompany => 'SIA Rapsulauks';
+  String get latviaCompany => 'SIA Rapšulauks';
 
   @override
   String get latviaLocation => 'Satiki, Latvia';
@@ -366,10 +366,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get masterDescription => 'Master\'s degree programme with a focus on precision agriculture technologies and practices. This programme serves the promising crossover between agriculture and (software) technologies.';
 
   @override
-  String get masterHighlight1 => 'Creation of a Fresh Water Farm Plan as part of the Soil Science course';
+  String get masterHighlight1 => 'Creation of a Fresh Water Farm Plan as part of the Soil Science class';
 
   @override
-  String get masterHighlight2 => 'Field trips to FAR Research sites';
+  String get masterHighlight2 => 'Field trips to FAR research sites';
 
   @override
   String get masterHighlight3 => 'In-depth GIS course with practical projects';

@@ -188,7 +188,7 @@ abstract class AppLocalizations {
   /// No description provided for @sdcTitle.
   ///
   /// In en, this message translates to:
-  /// **'Event and Facilities Support'**
+  /// **'Casual Event and Facilities Support'**
   String get sdcTitle;
 
   /// No description provided for @sdcCompany.
@@ -416,7 +416,7 @@ abstract class AppLocalizations {
   /// No description provided for @latviaCompany.
   ///
   /// In en, this message translates to:
-  /// **'SIA Rapsulauks'**
+  /// **'SIA Rapšulauks'**
   String get latviaCompany;
 
   /// No description provided for @latviaLocation.
@@ -812,13 +812,13 @@ abstract class AppLocalizations {
   /// No description provided for @masterHighlight1.
   ///
   /// In en, this message translates to:
-  /// **'Creation of a Fresh Water Farm Plan as part of the Soil Science course'**
+  /// **'Creation of a Fresh Water Farm Plan as part of the Soil Science class'**
   String get masterHighlight1;
 
   /// No description provided for @masterHighlight2.
   ///
   /// In en, this message translates to:
-  /// **'Field trips to FAR Research sites'**
+  /// **'Field trips to FAR research sites'**
   String get masterHighlight2;
 
   /// No description provided for @masterHighlight3.
