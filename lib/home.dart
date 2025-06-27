@@ -52,10 +52,7 @@ class HomePage extends StatelessWidget {
                 imagePath: 'assets/volunteering.jpg',
               ),
               const SizedBox(height: 16),
-              _NavTile(
-                title: 'Portfolio',
-                imagePath: 'assets/portfolio.jpg',
-              ),
+              _NavTile(title: 'Portfolio', imagePath: 'assets/portfolio.jpg'),
 
               const SizedBox(height: 32),
 
@@ -67,9 +64,12 @@ class HomePage extends StatelessWidget {
                   ),
                   icon: const Icon(Icons.download),
                   onPressed: () async {
-                    String pdfPath ="web_assets/CV_Simon-Tenbusch_2026.pdf";
+                    String pdfPath = "web_assets/CV_Simon-Tenbusch_2026.pdf";
                     final Uri uri = Uri.parse(pdfPath);
-                    if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+                    if (!await launchUrl(
+                      uri,
+                      mode: LaunchMode.platformDefault,
+                    )) {
                       throw 'Could not launch $pdfPath';
                     }
                   },
@@ -92,7 +92,12 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.email, size: 16, color: Colors.grey[300]),
+                      IconButton(
+                        icon: Icon(Icons.mail, size:16, ),//color: Color.white),
+                        onPressed:
+                            () =>
+                            launchUrl(Uri.parse('mailto:simon@tenbusch.de')),
+                      ),
                       const SizedBox(width: 8),
                       const Text('simon@tenbusch.de'),
                     ],
@@ -101,7 +106,11 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.phone, size: 16, color: Colors.grey[300]),
+                      IconButton(
+                        icon: const Icon(Icons.phone, size:16, ),//color: Colors.grey[300]),
+                        onPressed:
+                            () => launchUrl(Uri.parse('tel:+64273210061')),
+                      ),
                       const SizedBox(width: 8),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,9 +132,7 @@ class HomePage extends StatelessWidget {
                   icon: const Icon(Icons.download),
                   label: Text(isGerman ? 'Kontakt speichern' : 'Save Contact'),
                   onPressed: () async {
-                    final data = await rootBundle.load(
-                      'assets/contact.vcf',
-                    );
+                    final data = await rootBundle.load('assets/contact.vcf');
                     final bytes = data.buffer.asUint8List();
                     final blob = html.Blob([bytes], 'text/vcard');
                     final url = html.Url.createObjectUrlFromBlob(blob);
@@ -143,64 +150,85 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: const Icon(Icons.mail, color: Colors.black),
-                      onPressed:
-                          () =>
-                              launchUrl(Uri.parse('mailto:simon@tenbusch.de')),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: const FaIcon(
-                        FontAwesomeIcons.linkedin,
-                        color: Colors.black,
-                      ),
-                      onPressed:
-                          () => launchUrl(
-                            Uri.parse(
-                              'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
-                            ),
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Tooltip(
+                      message:
+                          'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                          icon: const FaIcon(
+                            FontAwesomeIcons.linkedin,
+                            color: Colors.black,
                           ),
+                          onPressed:
+                              () => launchUrl(
+                                Uri.parse(
+                                  'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
+                                ),
+                              ),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 12),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: const FaIcon(
-                        FontAwesomeIcons.github,
-                        color: Colors.black,
-                      ),
-                      onPressed:
-                          () => launchUrl(
-                            Uri.parse('https://github.com/tenbuschs'),
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Tooltip(
+                      message: "https://github.com/tenbuschs",
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                          icon: const FaIcon(
+                            FontAwesomeIcons.github,
+                            color: Colors.black,
                           ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: const FaIcon(
-                        FontAwesomeIcons.youtube,
-                        color: Colors.black,
+                          onPressed:
+                              () => launchUrl(
+                                Uri.parse('https://github.com/tenbuschs'),
+                              ),
+                        ),
                       ),
-                      onPressed:
-                          () => launchUrl(Uri.parse('https://www.youtube.com/@flyingsimmi')),
                     ),
                   ),
                   const SizedBox(width: 12),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: Image.asset("assets/fiverr.png"),
-                      onPressed:
-                          () => launchUrl(Uri.parse('https://www.fiverr.com/s/kLjN5Eo')),
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Tooltip(
+                      message: "https://www.youtube.com/@flyingsimmi",
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                          icon: const FaIcon(
+                            FontAwesomeIcons.youtube,
+                            color: Colors.black,
+                          ),
+                          onPressed:
+                              () => launchUrl(
+                                Uri.parse(
+                                  'https://www.youtube.com/@flyingsimmi',
+                                ),
+                              ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Tooltip(
+                      message: "https://www.fiverr.com/s/kLjN5Eo",
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                          icon: Image.asset("assets/fiverr.png"),
+                          onPressed:
+                              () => launchUrl(
+                                Uri.parse('https://www.fiverr.com/s/kLjN5Eo'),
+                              ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
