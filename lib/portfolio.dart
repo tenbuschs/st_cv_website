@@ -4,8 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 import 'l10n/app_localizations.dart';
 import 'image_carousel.dart';
 import 'dart:async';
+import 'analytics.dart' as analytics;
 
-class PortfolioPage extends StatelessWidget {
+class PortfolioPage extends StatefulWidget {
   final VoidCallback toggleLocale;
   final Locale locale;
 
@@ -16,12 +17,32 @@ class PortfolioPage extends StatelessWidget {
   });
 
   @override
+  State<PortfolioPage> createState() => _PortfolioPageState();
+}
+
+class _PortfolioPageState extends State<PortfolioPage> {
+  late DateTime _startTime;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTime = DateTime.now();
+    analytics.logPageView("portfolio");
+  }
+
+  @override
+  void dispose() {
+    analytics.logPageViewDuration('portfolio', _startTime);
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MainLayout(
       mainText: "Portfolio",
       lowerText: "Simon Tenbusch",
-      toggleLocale: toggleLocale,
-      locale: locale,
+      toggleLocale: widget.toggleLocale,
+      locale: widget.locale,
       silvers: [
         SliverToBoxAdapter(
           child: Column(
@@ -160,13 +181,17 @@ class PortfolioCard extends StatelessWidget {
                 ),
                 if (link!=null && link == "pdf")
                   TextButton.icon(
-                    onPressed: () => openPDF('web_assets/gis_report.pdf'),
+                    onPressed: (){
+                      analytics.logPortfolioViewProject("gis");
+                      openPDF('web_assets/gis_report.pdf');
+                      },
                     icon: const Icon(Icons.picture_as_pdf),
                     label: Text(AppLocalizations.of(context)!.viewProject),
                   ),
                 if (link!=null && link != "pdf")
                   TextButton.icon(
                     onPressed: () {
+                      analytics.logPortfolioViewProject("web_link");
                       launchUrl(Uri.parse(link!));
                     },
                     icon: const Icon(Icons.open_in_new),

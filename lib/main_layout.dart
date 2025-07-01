@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'l10n/app_localizations.dart';
+import 'analytics.dart' as analytics;
 
 class MainLayout extends StatelessWidget {
   final String mainText;
@@ -32,11 +33,12 @@ class MainLayout extends StatelessWidget {
           child: Wrap(
             alignment: WrapAlignment.center,
             spacing: 16,
-            //runSpacing: screenWidth < 610 ? 8 : 0, // Adds space between rows
             children: [
               TextButton(
-                onPressed:
-                    () => Navigator.pushReplacementNamed(context, '/home'),
+                onPressed: () {
+                  analytics.logNavButtonUsed("home");
+                  Navigator.pushReplacementNamed(context, '/home');
+                },
                 child: Text(
                   'Home',
                   style: TextStyle(
@@ -52,9 +54,10 @@ class MainLayout extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed:
-                    () =>
-                        Navigator.pushReplacementNamed(context, '/experience'),
+                onPressed: () {
+                  analytics.logNavButtonUsed("experience");
+                  Navigator.pushReplacementNamed(context, '/experience');
+                },
                 child: Text(
                   AppLocalizations.of(context)!.experience,
                   style: TextStyle(
@@ -70,8 +73,10 @@ class MainLayout extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed:
-                    () => Navigator.pushReplacementNamed(context, '/education'),
+                onPressed: () {
+                  analytics.logNavButtonUsed("education");
+                  Navigator.pushReplacementNamed(context, '/education');
+                },
                 child: Text(
                   AppLocalizations.of(context)!.education,
                   style: TextStyle(
@@ -87,11 +92,10 @@ class MainLayout extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed:
-                    () => Navigator.pushReplacementNamed(
-                      context,
-                      '/volunteering',
-                    ),
+                onPressed: () {
+                  analytics.logNavButtonUsed("volunteering");
+                  Navigator.pushReplacementNamed(context, '/volunteering');
+                },
                 child: Text(
                   AppLocalizations.of(context)!.volunteering,
                   style: TextStyle(
@@ -107,8 +111,10 @@ class MainLayout extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed:
-                    () => Navigator.pushReplacementNamed(context, '/portfolio'),
+                onPressed: () {
+                  analytics.logNavButtonUsed("portfolio");
+                  Navigator.pushReplacementNamed(context, '/portfolio');
+                },
                 child: Text(
                   "Portfolio",
                   style: TextStyle(
@@ -123,11 +129,13 @@ class MainLayout extends StatelessWidget {
                   ),
                 ),
               ),
-
               const SizedBox(width: 32),
               IconButton(
                 icon: Icon(Icons.language, color: Colors.grey[300]),
-                onPressed: toggleLocale,
+                onPressed: () {
+                  analytics.logNavButtonUsed("language");
+                  toggleLocale();
+                },
               ),
             ],
           ),
@@ -191,7 +199,10 @@ class HeaderWithAvatar extends StatelessWidget {
     return Row(
       children: [
         GestureDetector(
-          onTap: () => Navigator.pushReplacementNamed(context, '/home'),
+          onTap: () {
+            analytics.logNavButtonUsed("home_via_avatar");
+            Navigator.pushReplacementNamed(context, '/home');
+          },
           child: CircleAvatar(
             radius: 72,
             backgroundImage: AssetImage('assets/profile.jpg'),

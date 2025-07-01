@@ -4,6 +4,7 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:flutter_map_marker_popup/flutter_map_marker_popup.dart';
 import 'dart:math' as math;
+import 'analytics.dart' as analytics;
 
 class EventMap extends StatefulWidget {
   final List<CvEvent> events;
@@ -65,8 +66,11 @@ class _EventMapState extends State<EventMap> {
                   initialCenter: _initialCenter,
                   initialZoom: _initialZoom,
                   minZoom: 1,
-                  onTap: (_, __) => _popupController.hideAllPopups(),
+                  onTap: (_, __){
+                    analytics.logMapInteractions("whole_map", "tap_map");
+                    _popupController.hideAllPopups();},
                   onPositionChanged: (pos, _) {
+                    analytics.logMapInteractions("whole_map", "move_map");
                     setState(() {
                       _currentCenter = pos.center;
                       _currentZoom = pos.zoom;
@@ -88,11 +92,13 @@ class _EventMapState extends State<EventMap> {
                       markers: markers,
                       popupDisplayOptions: PopupDisplayOptions(
                         builder: (BuildContext context, Marker marker) {
+
                           final event = widget.events.firstWhere(
                             (e) =>
                                 e.latitude == marker.point.latitude &&
                                 e.longitude == marker.point.longitude,
                           );
+                          analytics.logMapInteractions(event.title, "open_popup");
                           return Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -129,6 +135,7 @@ class _EventMapState extends State<EventMap> {
                     tooltip: 'Center map',
                     child: Icon(Icons.my_location, size: 18),
                     onPressed: () {
+                      analytics.logMapInteractions("center_button", "center_map");
                       _mapController.move(_initialCenter, _initialZoom);
                     },
                   ),

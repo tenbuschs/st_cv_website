@@ -5,6 +5,7 @@ import 'l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'image_carousel.dart';
+import 'analytics.dart' as analytics;
 
 class Timeline extends StatelessWidget {
   final Map<String, List<CvEvent>> groupedEvents;
@@ -169,6 +170,9 @@ class ExpandableEventTile extends StatelessWidget {
               key: key,
               margin: const EdgeInsets.only(bottom: 16),
               child: ExpansionTile(
+                onExpansionChanged: (expanded) {
+                  analytics.logEventTileExpanded(exp.title);
+                },
                 collapsedBackgroundColor: Colors.grey[900],
                 backgroundColor: Colors.grey[850],
                 leading: _categoryIcon(exp.category),

@@ -6,22 +6,44 @@ import 'package:universal_html/html.dart' as html;
 import 'package:flutter/services.dart' show rootBundle;
 import 'main_layout.dart';
 import 'l10n/app_localizations.dart';
+import 'analytics.dart' as analytics;
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   final VoidCallback toggleLocale;
   final Locale locale;
 
-  const HomePage({super.key, required this.toggleLocale, required this.locale});
+  const HomePage({Key? key, required this.toggleLocale, required this.locale})
+    : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late DateTime _startTime;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTime = DateTime.now();
+    analytics.logPageView("home");
+  }
+
+  @override
+  void dispose() {
+    analytics.logPageViewDuration('home', _startTime);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final isGerman = locale.languageCode == 'de';
+    final isGerman = widget.locale.languageCode == 'de';
 
     return MainLayout(
       mainText: AppLocalizations.of(context)!.greeting,
       lowerText: AppLocalizations.of(context)!.profession,
-      toggleLocale: toggleLocale,
-      locale: locale,
+      toggleLocale: widget.toggleLocale,
+      locale: widget.locale,
       silvers: [
         SliverToBoxAdapter(
           child: Column(
@@ -64,6 +86,7 @@ class HomePage extends StatelessWidget {
                   ),
                   icon: const Icon(Icons.download),
                   onPressed: () async {
+                    analytics.logContactButtonUsed("download_cv");
                     String pdfPath = "web_assets/CV_Simon-Tenbusch_2026.pdf";
                     final Uri uri = Uri.parse(pdfPath);
                     if (!await launchUrl(
@@ -94,10 +117,10 @@ class HomePage extends StatelessWidget {
                     children: [
                       IconButton(
                         icon: Icon(Icons.mail, size: 16), //color: Color.white),
-                        onPressed:
-                            () => launchUrl(
-                              Uri.parse('mailto:simon@tenbusch.de'),
-                            ),
+                        onPressed: () {
+                          analytics.logContactButtonUsed("mailto");
+                          launchUrl(Uri.parse('mailto:simon@tenbusch.de'));
+                        },
                       ),
                       const SizedBox(width: 8),
                       const Text('simon@tenbusch.de'),
@@ -112,8 +135,10 @@ class HomePage extends StatelessWidget {
                           Icons.phone,
                           size: 16,
                         ), //color: Colors.grey[300]),
-                        onPressed:
-                            () => launchUrl(Uri.parse('tel:+64273210061')),
+                        onPressed: () {
+                          analytics.logContactButtonUsed("call");
+                          launchUrl(Uri.parse('tel:+64273210061'));
+                        },
                       ),
                       const SizedBox(width: 8),
                       Column(
@@ -136,6 +161,7 @@ class HomePage extends StatelessWidget {
                   icon: const Icon(Icons.download),
                   label: Text(isGerman ? 'Kontakt speichern' : 'Save Contact'),
                   onPressed: () async {
+                    analytics.logContactButtonUsed("download_vcard");
                     final data = await rootBundle.load('assets/contact.vcf');
                     final bytes = data.buffer.asUint8List();
                     final blob = html.Blob([bytes], 'text/vcard');
@@ -166,12 +192,14 @@ class HomePage extends StatelessWidget {
                             FontAwesomeIcons.linkedin,
                             color: Colors.black,
                           ),
-                          onPressed:
-                              () => launchUrl(
-                                Uri.parse(
-                                  'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
-                                ),
+                          onPressed: () {
+                            analytics.logContactButtonUsed("linkedin");
+                            launchUrl(
+                              Uri.parse(
+                                'https://www.linkedin.com/in/simon-tenbusch-a67259198/',
                               ),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -188,10 +216,12 @@ class HomePage extends StatelessWidget {
                             FontAwesomeIcons.github,
                             color: Colors.black,
                           ),
-                          onPressed:
-                              () => launchUrl(
-                                Uri.parse('https://github.com/tenbuschs'),
-                              ),
+                          onPressed: () {
+                            analytics.logContactButtonUsed("github");
+                            launchUrl(
+                              Uri.parse('https://github.com/tenbuschs'),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -208,12 +238,12 @@ class HomePage extends StatelessWidget {
                             FontAwesomeIcons.youtube,
                             color: Colors.black,
                           ),
-                          onPressed:
-                              () => launchUrl(
-                                Uri.parse(
-                                  'https://www.youtube.com/@flyingsimmi',
-                                ),
-                              ),
+                          onPressed: () {
+                            analytics.logContactButtonUsed("youtube");
+                            launchUrl(
+                              Uri.parse('https://www.youtube.com/@flyingsimmi'),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -227,10 +257,12 @@ class HomePage extends StatelessWidget {
                         backgroundColor: Colors.white,
                         child: IconButton(
                           icon: Image.asset("assets/fiverr.png"),
-                          onPressed:
-                              () => launchUrl(
-                                Uri.parse('https://www.fiverr.com/s/kLjN5Eo'),
-                              ),
+                          onPressed: () {
+                            analytics.logContactButtonUsed("fiverr");
+                            launchUrl(
+                              Uri.parse('https://www.youtube.com/@flyingsimmi'),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -260,20 +292,23 @@ class _NavTile extends StatefulWidget {
 class _NavTileState extends State<_NavTile> {
   bool _hovering = false;
 
-  void _handleTap(BuildContext context) {
+  void _handleTap(BuildContext context) async {
     if (widget.title == 'Education' || widget.title == 'Ausbildung') {
+      analytics.logNavTileUsed("education");
       Navigator.pushNamed(context, '/education');
     }
     if (widget.title == 'Experience' || widget.title == 'Berufserfahrung') {
+      analytics.logNavTileUsed("experience");
       Navigator.pushNamed(context, '/experience');
     }
     if (widget.title == AppLocalizations.of(context)!.volunteering) {
+      analytics.logNavTileUsed("volunteering");
       Navigator.pushNamed(context, '/volunteering');
     }
     if (widget.title == 'Portfolio') {
+      analytics.logNavTileUsed("portfolio");
       Navigator.pushNamed(context, '/portfolio');
     }
-
     // Add more navigation logic for other tiles if needed
   }
 

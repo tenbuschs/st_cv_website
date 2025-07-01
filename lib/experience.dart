@@ -4,6 +4,7 @@ import 'main_layout.dart';
 import 'timeline.dart';
 import 'event_map.dart';
 import 'l10n/app_localizations.dart';
+import 'analytics.dart' as analytics;
 
 class ExperiencePage extends StatefulWidget {
   final VoidCallback toggleLocale;
@@ -20,6 +21,21 @@ class ExperiencePage extends StatefulWidget {
 }
 
 class _ExperiencePageState extends State<ExperiencePage> {
+  late DateTime _startTime;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTime = DateTime.now();
+    analytics.logPageView("experience");
+  }
+
+  @override
+  void dispose() {
+    analytics.logPageViewDuration('experience', _startTime);
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MainLayout(
