@@ -93,21 +93,25 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.mail, size:16, ),//color: Color.white),
+                        icon: Icon(Icons.mail, size: 16), //color: Color.white),
                         onPressed:
-                            () =>
-                            launchUrl(Uri.parse('mailto:simon@tenbusch.de')),
+                            () => launchUrl(
+                              Uri.parse('mailto:simon@tenbusch.de'),
+                            ),
                       ),
                       const SizedBox(width: 8),
                       const Text('simon@tenbusch.de'),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  // const SizedBox(height: 8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                        icon: const Icon(Icons.phone, size:16, ),//color: Colors.grey[300]),
+                        icon: const Icon(
+                          Icons.phone,
+                          size: 16,
+                        ), //color: Colors.grey[300]),
                         onPressed:
                             () => launchUrl(Uri.parse('tel:+64273210061')),
                       ),
@@ -125,7 +129,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
 
               Center(
                 child: ElevatedButton.icon(
@@ -233,6 +237,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 24),
             ],
           ),
         ),

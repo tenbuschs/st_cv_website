@@ -12,7 +12,10 @@ import 'l10n/app_localizations.dart';
 import 'volunteering.dart';
 import 'portfolio.dart';
 import 'package:universal_html/html.dart' as html;
+import 'package:firebase_analytics/firebase_analytics.dart';
 
+// Global Firebase Analytics instance
+final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

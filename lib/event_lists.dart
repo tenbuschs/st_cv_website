@@ -251,7 +251,9 @@ List<CvEvent> getExperiences(BuildContext context) {
       description: AppLocalizations.of(context)!.schuetzDescription,
       category: 'seasonal',
       imageAssets: [
-        'assets/schuetz_01.jpg'
+        'assets/schuetz_01.jpg',
+        'assets/schuetz_02.jpg',
+        'assets/schuetz_03.jpg'
       ],
       highlights: [
         AppLocalizations.of(context)!.schuetzHighlight1,
@@ -276,8 +278,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       endDate: '2016-08-31',
       description: AppLocalizations.of(context)!.saudhofDescription,
       category: 'seasonal',
-      imageAssets: ['assets/saudhof_01.jpg',
-        'assets/saudhof_02.jpg'],
+      imageAssets: [
+        'assets/saudhof_01.jpg',
+        'assets/saudhof_02.jpg',
+        'assets/saudhof_03.jpg'
+      ],
       highlights: [
         AppLocalizations.of(context)!.saudhofHighlight1,
         AppLocalizations.of(context)!.saudhofHighlight2,
@@ -300,7 +305,11 @@ List<CvEvent> getExperiences(BuildContext context) {
       endDate: '2017-07-30',
       description: AppLocalizations.of(context)!.dalhausDescription,
       category: 'part-time',
-      imageAssets: [],
+      imageAssets: [
+        'assets/dalhaus_01.jpg',
+        'assets/dalhaus_02.jpg',
+        'assets/dalhaus_03.jpg'
+      ],
       highlights: [
         AppLocalizations.of(context)!.dalhausHighlight1,
         AppLocalizations.of(context)!.dalhausHighlight2,
@@ -463,7 +472,10 @@ List<CvEvent> getVolunteering(BuildContext context) {
       endDate: null,
       description: AppLocalizations.of(context)!.buddyDescription,
       category: 'volunteer',
-      imageAssets: [],
+      imageAssets: [
+        'assets/buddy_01.jpg',
+        'assets/buddy_02.jpg'
+      ],
       highlights: [],
       links: [
         'https://www.lincoln.ac.nz/life-at-lincoln/starting-at-lincoln/kaiwhakarite-tauira-student-buddy-programme/'
